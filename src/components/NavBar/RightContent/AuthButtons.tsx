@@ -18,7 +18,7 @@ const AuthButtons = () =>
                     md: '110px'
                 }}
                 mr={2}
-                onClick={() => { }}
+            // onClick={() => { }}
             >
                 Log In
             </Button>
