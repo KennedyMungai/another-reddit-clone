@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Layout = () =>
+type Props = {}
+
+const Layout = (props: Props) =>
 {
     return (
         <div>Layout</div>
