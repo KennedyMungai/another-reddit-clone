@@ -1,5 +1,6 @@
 import { Flex, Image } from '@chakra-ui/react'
 import React from 'react'
+import SearchInput from './SearchInput'
 
 type Props = {}
 
@@ -28,7 +29,7 @@ const NavBar = (props: Props) =>
                     }}
                 />
                 {/* <Directory /> */}
-                {/* <SearchInput /> */}
+                <SearchInput />
                 {/* <RightContent /> */}
             </Flex>
         </Flex>
