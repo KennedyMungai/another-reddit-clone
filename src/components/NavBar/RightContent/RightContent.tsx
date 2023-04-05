@@ -10,7 +10,9 @@ const RightContent = (props: Props) =>
     return (
         <>
             {/* <AuthModal /> */}
-            <Flex>
+            <Flex
+                justify='center'
+            >
                 {/* <AuthButtons /> */}
             </Flex>
         </>
