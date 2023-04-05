@@ -1,10 +1,13 @@
 import React from 'react'
 
 
-const Layout = () =>
+const Layout = ({ children }) =>
 {
     return (
-        <div>Layout</div>
+        <>
+            {/* <NavBar /> */}
+            <main>{children}</main>
+        </>
     )
 }
 
