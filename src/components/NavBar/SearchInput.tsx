@@ -1,4 +1,4 @@
-import { PhoneIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
 import
 {
     Flex,
@@ -16,9 +16,9 @@ const SearchInput = (props: Props) =>
             <InputGroup>
                 <InputLeftElement
                     pointerEvents="none"
-                    children={<PhoneIcon color="gray.300" />}
+                    children={<SearchIcon color="gray.300" />}
                 />
-                <Input type="tel" placeholder="Phone number" />
+                <Input type="text" placeholder="Search Reddit" />
             </InputGroup>
         </Flex>
     );
