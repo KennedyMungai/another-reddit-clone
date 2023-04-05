@@ -14,6 +14,8 @@ const SearchInput = (props: Props) =>
     return (
         <Flex
             flexGrow={1}
+            mr={2}
+            align='center'
         >
             <InputGroup>
                 <InputLeftElement
