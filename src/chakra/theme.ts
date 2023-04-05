@@ -12,5 +12,12 @@ export const theme = extendTheme({
     },
     fonts: {
         body: "Open Sans, sans-serif"
+    },
+    styles: {
+        global: () => ({
+            body: {
+                bg: 'gray.200'
+            }
+        })
     }
 })
