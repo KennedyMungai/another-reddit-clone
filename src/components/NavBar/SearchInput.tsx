@@ -33,6 +33,7 @@ const SearchInput = (props: Props) =>
                         border: '1px solid',
                         borderColor: 'blue.500'
                     }}
+                    height='34px'
                 />
             </InputGroup>
         </Flex>
