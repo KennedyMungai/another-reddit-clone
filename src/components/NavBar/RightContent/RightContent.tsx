@@ -12,6 +12,7 @@ const RightContent = (props: Props) =>
             {/* <AuthModal /> */}
             <Flex
                 justify='center'
+                align='center'
             >
                 {/* <AuthButtons /> */}
             </Flex>
