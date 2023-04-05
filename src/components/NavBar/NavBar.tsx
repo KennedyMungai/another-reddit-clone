@@ -22,6 +22,10 @@ const NavBar = (props: Props) =>
                 <Image
                     src='/images/redditText.svg'
                     height='46px'
+                    display={{
+                        base: 'none',
+                        md: 'unset'
+                    }}
                 />
             </Flex>
         </Flex>
