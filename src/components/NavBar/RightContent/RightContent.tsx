@@ -7,7 +7,10 @@ type Props = {
 const RightContent = (props: Props) =>
 {
     return (
-        <div>RightContent</div>
+        <>
+            {/* <AuthModal /> */}
+
+        </>
     )
 }
 
