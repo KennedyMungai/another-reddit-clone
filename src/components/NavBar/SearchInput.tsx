@@ -21,10 +21,15 @@ const SearchInput = (props: Props) =>
                 <Input
                     type="text"
                     placeholder="Search Reddit"
-                    fontSize='10px'
+                    fontSize='10pt'
                     _placeholder={{ color: 'gray.500' }}
                     _hover={{
                         bg: 'white',
+                        border: '1px solid',
+                        borderColor: 'blue.500'
+                    }}
+                    _focus={{
+                        outline: 'none',
                         border: '1px solid',
                         borderColor: 'blue.500'
                     }}
