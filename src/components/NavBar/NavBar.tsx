@@ -1,3 +1,4 @@
+import { Flex } from '@chakra-ui/react'
 import React from 'react'
 
 type Props = {}
@@ -5,7 +6,9 @@ type Props = {}
 const NavBar = (props: Props) =>
 {
     return (
-        <div>NavBar</div>
+        <Flex>
+
+        </Flex>
     )
 }
 
