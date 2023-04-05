@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Image } from '@chakra-ui/react'
 import React from 'react'
 
 type Props = {}
@@ -13,7 +13,8 @@ const NavBar = (props: Props) =>
             padding='6px 12px'
         >
             <Flex>
-
+                <Image />
+                <Image />
             </Flex>
         </Flex>
     )
