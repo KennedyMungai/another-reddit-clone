@@ -18,7 +18,17 @@ const SearchInput = (props: Props) =>
                     pointerEvents="none"
                     children={<SearchIcon color="gray.300" />}
                 />
-                <Input type="text" placeholder="Search Reddit" />
+                <Input
+                    type="text"
+                    placeholder="Search Reddit"
+                    fontSize='10px'
+                    _placeholder={{ color: 'gray.500' }}
+                    _hover={{
+                        bg: 'white',
+                        border: '1px solid',
+                        borderColor: 'blue.500'
+                    }}
+                />
             </InputGroup>
         </Flex>
     );
