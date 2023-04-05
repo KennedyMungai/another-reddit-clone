@@ -27,6 +27,9 @@ const NavBar = (props: Props) =>
                         md: 'unset'
                     }}
                 />
+                {/* <Directory /> */}
+                {/* <SearchInput /> */}
+                {/* <RightContent /> */}
             </Flex>
         </Flex>
     )
