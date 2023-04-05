@@ -12,7 +12,9 @@ const NavBar = (props: Props) =>
             height='44px'
             padding='6px 12px'
         >
-            <Flex>
+            <Flex
+                align='center'
+            >
                 <Image
                     src='/images/redditFace.svg'
                     height='30px'
