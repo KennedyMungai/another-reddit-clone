@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
+import AuthButtons from './AuthButtons'
 
 type Props = {
     // user:  
@@ -14,7 +15,7 @@ const RightContent = (props: Props) =>
                 justify='center'
                 align='center'
             >
-                {/* <AuthButtons /> */}
+                <AuthButtons />
             </Flex>
         </>
     )
