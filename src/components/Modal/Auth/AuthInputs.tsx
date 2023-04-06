@@ -8,8 +8,8 @@ const AuthInputs = () => {
 
     return (
         <Flex flexDirection="column" align="center" width="100%" mt={4}>
-            {modalState.view === "login" && <Login />}
-            {modalState.view === "SignUp" && <SignUp />}
+            {/* {modalState.view === "login" && <Login />} */}
+            {/* {modalState.view === "SignUp" && <SignUp />} */}
         </Flex>
     );
 };
