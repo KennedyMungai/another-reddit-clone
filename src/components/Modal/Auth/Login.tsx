@@ -1,4 +1,4 @@
-import { Input } from "@chakra-ui/react";
+import { Button, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 type Props = {};
@@ -27,6 +27,7 @@ const Login = (props: Props) => {
                 placeholder="password"
                 onChange={() => {}}
             />
+            <Button>Log In</Button>
         </form>
     );
 };
