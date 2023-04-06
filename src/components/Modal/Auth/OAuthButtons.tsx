@@ -10,6 +10,7 @@ const OAuthButtons = (props: Props) => {
                 <Image src="./images/googlelogo.png" height="20px" mr={4} />
                 Continue with Google
             </Button>
+            <Button variant="oauth">Some Other Provider</Button>
         </Flex>
     );
 };
