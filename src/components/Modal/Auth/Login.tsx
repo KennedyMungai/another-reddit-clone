@@ -73,7 +73,7 @@ const Login = (props: Props) => {
                 Log In
             </Button>
             <Flex fontSize="9pt" justifyContent="center">
-                <Text>New Here?</Text>
+                <Text mr={1}>New Here?</Text>
                 <Text>SIGN UP</Text>
             </Flex>
         </form>
