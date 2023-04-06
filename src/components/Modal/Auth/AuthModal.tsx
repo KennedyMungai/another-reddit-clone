@@ -18,14 +18,6 @@ const AuthModal = () => {
 
     return (
         <>
-            <Box
-                ref={finalRef}
-                tabIndex={-1}
-                aria-label="Focus moved to this box"
-            >
-                Some other content that'll receive focus on close.
-            </Box>
-
             <Button mt={4} onClick={onOpen}>
                 Open Modal
             </Button>
