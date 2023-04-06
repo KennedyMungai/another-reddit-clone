@@ -14,7 +14,13 @@ const Login = (props: Props) => {
 
     return (
         <form action="">
-            <Input />
+            <Input
+                name="email"
+                placeholder="email"
+                type="email"
+                mb={2}
+                onChange={() => {}}
+            />
             <Input />
         </form>
     );
