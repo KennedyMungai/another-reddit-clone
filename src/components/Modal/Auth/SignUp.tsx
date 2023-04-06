@@ -18,7 +18,7 @@ const SignUp = () => {
         confirmPassword: "",
     });
 
-    const [formError, setFormError] = useState();
+    const [error, setError] = useState<string>("");
 
     const [createUserWithEmailAndPassword, user, loading, userError] =
         useCreateUserWithEmailAndPassword(auth);
