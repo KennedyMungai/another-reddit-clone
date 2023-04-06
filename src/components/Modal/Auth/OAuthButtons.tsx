@@ -6,7 +6,7 @@ type Props = {};
 const OAuthButtons = (props: Props) => {
     return (
         <Flex flexDirection="column" gap={1} width="100%">
-            <Button>
+            <Button variant="oauth">
                 <Image src="./images/googlelogo.png" height="20px" />
                 Continue with Google
             </Button>
