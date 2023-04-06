@@ -118,7 +118,13 @@ const SignUp = () => {
                     {error}
                 </Text>
             )}
-            <Button type="submit" width="100%" height="36px" mb={2}>
+            <Button
+                type="submit"
+                width="100%"
+                height="36px"
+                mb={2}
+                isLoading={loading}
+            >
                 Sign Up
             </Button>
             <Flex fontSize="9pt" justifyContent="center">
