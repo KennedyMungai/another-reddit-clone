@@ -5,7 +5,7 @@ type Props = {};
 
 const OAuthButtons = (props: Props) => {
     return (
-        <Flex flexDirection="column" gap={1}>
+        <Flex flexDirection="column" gap={1} width="100%">
             <Button>Continue with Google</Button>
         </Flex>
     );
