@@ -13,4 +13,5 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_IO
 };
 
+// Initializing storage for server side rendering
 const app = initializeApp(firebaseConfig);
