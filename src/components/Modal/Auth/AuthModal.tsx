@@ -15,6 +15,7 @@ import { useRecoilState } from "recoil";
 import { auth } from "../../../firebase/clientApp";
 import AuthInputs from "./AuthInputs";
 import OAuthButtons from "./OAuthButtons";
+import ResetPassword from "./ResetPassword";
 
 const AuthModal = () => {
     const [modalState, setModalState] = useRecoilState(authModalState);
