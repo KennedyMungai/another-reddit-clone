@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { useRecoilState } from "recoil";
 import AuthInputs from "./AuthInputs";
+import OAuthButtons from "./OAuthButtons";
 
 const AuthModal = () => {
     const [modalState, setModalState] = useRecoilState(authModalState);
@@ -53,7 +54,7 @@ const AuthModal = () => {
                             align="center"
                             width="70%"
                         >
-                            {/* <OAuthButtons /> */}
+                            <OAuthButtons />
                             <AuthInputs />
                             {/* <ResetPassword /> */}
                         </Flex>
