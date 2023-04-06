@@ -89,7 +89,7 @@ const SignUp = () => {
             />
             <Input
                 name="confirmPassword"
-                type="confirmPassword"
+                type="password"
                 placeholder="confirm password"
                 onChange={onChange}
                 mb={2}
