@@ -38,10 +38,10 @@ const SignUp = () => {
             setError("");
         }
 
-        setModalState((prev) => ({
-            ...prev,
-            open: false,
-        }));
+        // setModalState((prev) => ({
+        //     ...prev,
+        //     open: false,
+        // }));
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
