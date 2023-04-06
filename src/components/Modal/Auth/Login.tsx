@@ -1,9 +1,9 @@
 import { authModalState } from "@/atoms/AuthModalAtom";
 import { Button, Flex, Input, Text } from "@chakra-ui/react";
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import { auth } from "../../../firebase/clientApp";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 type Props = {};
 
