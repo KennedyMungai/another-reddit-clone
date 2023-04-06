@@ -80,6 +80,7 @@ const Login = (props: Props) => {
                 }}
                 bg="gray.50"
             />
+            {error && <Text>{error.message}</Text>}
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Log In
             </Button>
