@@ -32,6 +32,7 @@ const Login = (props: Props) => {
                 mb={2}
                 onChange={onChange}
                 required
+                fontSize="10pt"
             />
             <Input
                 name="password"
