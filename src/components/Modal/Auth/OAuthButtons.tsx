@@ -3,9 +3,7 @@ import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase/clientApp";
 
-type Props = {};
-
-const OAuthButtons = (props: Props) => {
+const OAuthButtons = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
     return (
