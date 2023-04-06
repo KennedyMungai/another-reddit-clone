@@ -123,7 +123,7 @@ const SignUp = () => {
             {error ||
                 (userError && (
                     <Text color="red" textAlign="center" fontSize="12pt">
-                        {error || userError.message}
+                        {error || FIREBASE_ERRORS[userError.message]}
                     </Text>
                 ))}
             <Button
