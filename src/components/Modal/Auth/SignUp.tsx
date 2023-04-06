@@ -121,7 +121,7 @@ const SignUp = () => {
                 bg="gray.50"
             />
             {(error || userError) && (
-                <Text color="red" textAlign="center" fontSize="12pt">
+                <Text color="red" textAlign="center" fontSize="8pt">
                     {error ||
                         FIREBASE_ERRORS[
                             userError?.message as keyof typeof FIREBASE_ERRORS
