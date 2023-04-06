@@ -27,11 +27,6 @@ const Login = (props: Props) => {
         e.preventDefault();
 
         signInWithEmailAndPassword(loginForm.email, loginForm.password);
-
-        // setModalState((prev) => ({
-        //     ...prev,
-        //     open: false,
-        // }));
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
