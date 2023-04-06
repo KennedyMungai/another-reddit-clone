@@ -31,7 +31,9 @@ const AuthModal = () => {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalHeader>
+                        {modalState.view === "login" ? "Login" : "Sign Up"}
+                    </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>Some text inside a modal body</ModalBody>
                 </ModalContent>
