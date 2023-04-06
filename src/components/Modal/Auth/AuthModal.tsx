@@ -33,7 +33,7 @@ const AuthModal = () => {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>
+                    <ModalHeader textAlign="center">
                         {modalState.view === "login" && "Login"}
                         {modalState.view === "SignUp" && "Sign Up"}
                         {modalState.view === "ResetPassword" &&
