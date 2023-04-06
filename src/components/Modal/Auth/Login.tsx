@@ -33,6 +33,7 @@ const Login = (props: Props) => {
                 onChange={onChange}
                 required
                 fontSize="10pt"
+                _placeholder={{ color: "gray.500" }}
             />
             <Input
                 name="password"
