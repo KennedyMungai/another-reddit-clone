@@ -16,3 +16,4 @@ const firebaseConfig = {
 // Initializing storage for server side rendering
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
 const firestore = getFirestore(app)
+const auth = getAuth(app)
