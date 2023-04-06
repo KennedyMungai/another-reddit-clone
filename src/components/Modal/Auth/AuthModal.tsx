@@ -32,7 +32,10 @@ const AuthModal = () => {
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>
-                        {modalState.view === "login" ? "Login" : "Sign Up"}
+                        {modalState.view === "login" && "Login"}
+                        {modalState.view === "SignUp" && "Sign Up"}
+                        {modalState.view === "ResetPassword" &&
+                            "Reset Password"}
                     </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>Some text inside a modal body</ModalBody>
