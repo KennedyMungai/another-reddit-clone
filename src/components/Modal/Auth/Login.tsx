@@ -42,6 +42,7 @@ const Login = (props: Props) => {
                 onChange={onChange}
                 mb={2}
                 required
+                fontSize="10pt"
                 _placeholder={{ color: "gray.500" }}
             />
             <Button type="submit" width="100%" height="36px" mb={2}>
