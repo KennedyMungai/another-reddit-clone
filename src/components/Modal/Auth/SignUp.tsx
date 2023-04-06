@@ -28,6 +28,7 @@ const SignUp = () => {
 
         if (signupForm.password !== signupForm.confirmPassword) {
             setError("Passwords do not match");
+            return;
         }
 
         createUserWithEmailAndPassword(signupForm.email, signupForm.password);
