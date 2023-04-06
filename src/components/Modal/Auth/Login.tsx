@@ -37,8 +37,11 @@ const Login = (props: Props) => {
                 type="password"
                 placeholder="password"
                 onChange={onChange}
+                mb={2}
             />
-            <Button type="submit">Log In</Button>
+            <Button type="submit" width="100%">
+                Log In
+            </Button>
         </form>
     );
 };
