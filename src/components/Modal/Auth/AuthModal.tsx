@@ -22,7 +22,7 @@ const AuthModal = () => {
             <Button mt={4} onClick={onOpen}>
                 Open Modal
             </Button>
-            <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+            <Modal finalFocusRef={finalRef} isOpen={modalState.open} onClose={}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
