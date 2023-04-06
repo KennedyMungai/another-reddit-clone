@@ -34,9 +34,7 @@ const AuthModal = () => {
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody>
-                        <Lorem count={2} />
-                    </ModalBody>
+                    <ModalBody></ModalBody>
 
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={onClose}>
