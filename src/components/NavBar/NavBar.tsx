@@ -6,7 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/clientApp";
 
 const NavBar = () => {
-    const [] = useAuthState(auth);
+    const [user, loading, error] = useAuthState(auth);
 
     return (
         <Flex
