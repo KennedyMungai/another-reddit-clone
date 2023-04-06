@@ -29,7 +29,7 @@ const AuthModal = () => {
         }));
     };
 
-    useEffect(() => {}, []);
+    useEffect(() => {}, [user]);
 
     return (
         <>
