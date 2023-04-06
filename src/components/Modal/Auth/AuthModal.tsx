@@ -17,12 +17,18 @@ const AuthModal = () => {
 
     const finalRef = React.useRef(null);
 
+    const handleClose = () => {};
+
     return (
         <>
             <Button mt={4} onClick={onOpen}>
                 Open Modal
             </Button>
-            <Modal finalFocusRef={finalRef} isOpen={modalState.open} onClose={}>
+            <Modal
+                finalFocusRef={finalRef}
+                isOpen={modalState.open}
+                onClose={handleClose}
+            >
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
