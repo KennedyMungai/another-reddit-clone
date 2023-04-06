@@ -6,12 +6,14 @@ import { useSetRecoilState } from "recoil";
 const SignUp = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
 
-    const [loginForm, setLoginForm] = useState<{
+    const [signupForm, setSignupForm] = useState<{
         email: string;
         password: string;
+        confirmPassword: string;
     }>({
         email: "",
         password: "",
+        confirmPassword: "",
     });
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -19,7 +21,7 @@ const SignUp = () => {
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setLoginForm((prev) => ({
+        setSignupForm((prev) => ({
             ...prev,
             [e.target.name]: e.target.value,
         }));
