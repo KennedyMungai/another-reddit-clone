@@ -45,6 +45,7 @@ const Login = (props: Props) => {
                     border: "1px solid",
                     borderColor: "blue.500",
                 }}
+                bg="gray.50"
             />
             <Input
                 name="password"
@@ -66,6 +67,7 @@ const Login = (props: Props) => {
                     border: "1px solid",
                     borderColor: "blue.500",
                 }}
+                bg="gray.50"
             />
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Log In
