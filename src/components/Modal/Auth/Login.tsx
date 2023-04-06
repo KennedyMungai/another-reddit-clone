@@ -74,7 +74,7 @@ const Login = (props: Props) => {
             </Button>
             <Flex fontSize="9pt" justifyContent="center">
                 <Text mr={1}>New Here?</Text>
-                <Text color="blue.500" fontWeight={700}>
+                <Text color="blue.500" fontWeight={700} cursor="pointer">
                     SIGN UP
                 </Text>
             </Flex>
