@@ -13,9 +13,12 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import AuthInputs from "./AuthInputs";
 import OAuthButtons from "./OAuthButtons";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebase/clientApp";
 
 const AuthModal = () => {
     const [modalState, setModalState] = useRecoilState(authModalState);
+    const [user, loading, error] = useAuthState(auth);
 
     const finalRef = React.useRef(null);
 
