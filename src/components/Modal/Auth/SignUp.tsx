@@ -76,7 +76,7 @@ const SignUp = () => {
             <Input
                 name="confirmPassword"
                 type="confirmPassword"
-                placeholder="Confirm Password"
+                placeholder="confirm password"
                 onChange={onChange}
                 mb={2}
                 required
