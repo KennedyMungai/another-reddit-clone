@@ -109,6 +109,11 @@ const SignUp = () => {
                 }}
                 bg="gray.50"
             />
+            {error && (
+                <Text color="red.800" textAlign="center">
+                    {error}
+                </Text>
+            )}
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Sign Up
             </Button>
