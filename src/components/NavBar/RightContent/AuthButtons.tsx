@@ -1,7 +1,11 @@
+import { authModalState } from "@/atoms/AuthModalAtom";
 import { Button } from "@chakra-ui/react";
 import React from "react";
+import { useSetRecoilState } from "recoil";
 
 const AuthButtons = () => {
+    const setAuthModalState = useSetRecoilState(authModalState);
+
     return (
         <>
             <Button
