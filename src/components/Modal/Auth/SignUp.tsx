@@ -120,15 +120,14 @@ const SignUp = () => {
                 }}
                 bg="gray.50"
             />
-            {error ||
-                (userError && (
-                    <Text color="red" textAlign="center" fontSize="12pt">
-                        {error ||
-                            FIREBASE_ERRORS[
-                                userError.message as keyof typeof FIREBASE_ERRORS
-                            ]}
-                    </Text>
-                ))}
+            {(error || userError) && (
+                <Text color="red" textAlign="center" fontSize="12pt">
+                    {error ||
+                        FIREBASE_ERRORS[
+                            userError?.message as keyof typeof FIREBASE_ERRORS
+                        ]}
+                </Text>
+            )}
             <Button
                 type="submit"
                 width="100%"
