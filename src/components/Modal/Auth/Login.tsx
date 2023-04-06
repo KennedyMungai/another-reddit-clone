@@ -39,7 +39,7 @@ const Login = (props: Props) => {
                 onChange={onChange}
                 mb={2}
             />
-            <Button type="submit" width="100%">
+            <Button type="submit" width="100%" height="36px">
                 Log In
             </Button>
         </form>
