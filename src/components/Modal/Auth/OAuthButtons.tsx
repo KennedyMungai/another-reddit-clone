@@ -19,7 +19,7 @@ const OAuthButtons = () => {
             <Button variant="oauth">Some Other Provider</Button>
             {error && (
                 <Text textAlign="center" fontSize="10pt" color="red" mt={2}>
-                    {error.message}
+                    {error}
                 </Text>
             )}
         </Flex>
