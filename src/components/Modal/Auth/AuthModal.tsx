@@ -13,7 +13,6 @@ import { Box } from "framer-motion";
 import React from "react";
 
 const AuthModal = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
     const finalRef = React.useRef(null);
 
     return (
