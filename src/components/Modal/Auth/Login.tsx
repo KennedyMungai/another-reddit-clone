@@ -16,6 +16,8 @@ const Login = (props: Props) => {
         e.preventDefault();
     };
 
+    const onChange = () => {};
+
     return (
         <form action="" onSubmit={onSubmit}>
             <Input
