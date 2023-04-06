@@ -56,7 +56,10 @@ const AuthModal = () => {
                             width="70%"
                         >
                             <OAuthButtons />
-                            <Text> OR </Text>
+                            <Text color="gray.400" fontWeight="500">
+                                {" "}
+                                OR{" "}
+                            </Text>
                             <AuthInputs />
                             {/* <ResetPassword /> */}
                         </Flex>
