@@ -32,6 +32,10 @@ const SignUp = () => {
         }
 
         createUserWithEmailAndPassword(signupForm.email, signupForm.password);
+
+        if (error) {
+            setError("");
+        }
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
