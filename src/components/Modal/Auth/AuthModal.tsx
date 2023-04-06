@@ -1,5 +1,5 @@
+import { authModalState } from "@/atoms/AuthModalAtom";
 import {
-    useDisclosure,
     Button,
     Modal,
     ModalOverlay,
@@ -9,10 +9,12 @@ import {
     ModalBody,
     ModalFooter,
 } from "@chakra-ui/react";
-import { Box } from "framer-motion";
 import React from "react";
+import { useRecoilState } from "recoil";
 
 const AuthModal = () => {
+    const [modalState, setModalState] = useRecoilState(authModalState);
+
     const finalRef = React.useRef(null);
 
     return (
