@@ -21,7 +21,12 @@ const Login = (props: Props) => {
                 mb={2}
                 onChange={() => {}}
             />
-            <Input />
+            <Input
+                name="password"
+                type="password"
+                placeholder="password"
+                onChange={() => {}}
+            />
         </form>
     );
 };
