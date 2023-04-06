@@ -20,7 +20,7 @@ const SignUp = () => {
 
     const [formError, setFormError] = useState();
 
-    const [createUserWithEmailAndPassword, user, loading, error] =
+    const [createUserWithEmailAndPassword, user, loading, userError] =
         useCreateUserWithEmailAndPassword(auth);
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
