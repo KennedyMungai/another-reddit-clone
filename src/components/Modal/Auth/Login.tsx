@@ -31,6 +31,7 @@ const Login = (props: Props) => {
                 type="email"
                 mb={2}
                 onChange={onChange}
+                required
             />
             <Input
                 name="password"
@@ -38,6 +39,7 @@ const Login = (props: Props) => {
                 placeholder="password"
                 onChange={onChange}
                 mb={2}
+                required
             />
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Log In
