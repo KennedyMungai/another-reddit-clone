@@ -51,7 +51,6 @@ const AuthModal = () => {
                             justify="center"
                             align="center"
                             width="70%"
-                            border="1px solid red"
                         >
                             {/* <OAuthButtons /> */}
                             <AuthInputs />
