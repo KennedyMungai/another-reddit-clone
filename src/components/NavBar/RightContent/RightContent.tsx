@@ -4,7 +4,7 @@ import AuthButtons from "./AuthButtons";
 import AuthModal from "@/components/Modal/Auth/AuthModal";
 
 type Props = {
-    // user:
+    user: any;
 };
 
 const RightContent = (props: Props) => {
@@ -12,7 +12,7 @@ const RightContent = (props: Props) => {
         <>
             <AuthModal />
             <Flex justify="center" align="center">
-                {user ? <div>You have logged in</div> : <AuthButtons />}
+                {props.user ? <div>You have logged in</div> : <AuthButtons />}
             </Flex>
         </>
     );
