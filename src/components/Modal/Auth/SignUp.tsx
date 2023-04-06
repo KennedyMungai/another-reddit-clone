@@ -38,11 +38,6 @@ const SignUp = () => {
         if (error) {
             setError("");
         }
-
-        // setModalState((prev) => ({
-        //     ...prev,
-        //     open: false,
-        // }));
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
