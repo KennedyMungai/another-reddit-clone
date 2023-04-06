@@ -1,16 +1,28 @@
-import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
-import { Box } from 'framer-motion'
-import React from 'react'
+import {
+    useDisclosure,
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    ModalFooter,
+} from "@chakra-ui/react";
+import { Box } from "framer-motion";
+import React from "react";
 
-
-const AuthModal = () =>
-{
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const finalRef = React.useRef(null)
+const AuthModal = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const finalRef = React.useRef(null);
 
     return (
         <>
-            <Box ref={finalRef} tabIndex={-1} aria-label='Focus moved to this box'>
+            <Box
+                ref={finalRef}
+                tabIndex={-1}
+                aria-label="Focus moved to this box"
+            >
                 Some other content that'll receive focus on close.
             </Box>
 
@@ -27,15 +39,15 @@ const AuthModal = () =>
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        <Button colorScheme="blue" mr={3} onClick={onClose}>
                             Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                        <Button variant="ghost">Secondary Action</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
         </>
-    )
-}
+    );
+};
 
-export default AuthModal
+export default AuthModal;
