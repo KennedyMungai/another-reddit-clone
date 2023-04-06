@@ -49,6 +49,8 @@ const AuthModal = () => {
                             direction="column"
                             justify="center"
                             align="center"
+                            width="70%"
+                            border="1px solid red"
                         ></Flex>
                     </ModalBody>
                 </ModalContent>
