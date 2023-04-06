@@ -29,7 +29,11 @@ const AuthModal = () => {
         }));
     };
 
-    useEffect(() => {}, [user]);
+    useEffect(() => {
+        if (user) {
+            handleClose();
+        }
+    }, [user]);
 
     return (
         <>
