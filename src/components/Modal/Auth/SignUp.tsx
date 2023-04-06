@@ -24,6 +24,10 @@ const SignUp = () => {
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        if (signupForm.password !== signupForm.confirmPassword) {
+            // Set an error
+        }
+
         createUserWithEmailAndPassword(signupForm.email, signupForm.password);
     };
 
