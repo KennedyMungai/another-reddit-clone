@@ -2,7 +2,7 @@ import { authModalState } from "@/atoms/AuthModalAtom";
 import { Button, Flex, Input, Text } from "@chakra-ui/react";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { auth } from "../../../firebase/clientApp";
 import { FIREBASE_ERRORS } from "@/firebase/Errors";
 
@@ -10,6 +10,7 @@ type Props = {};
 
 const Login = (props: Props) => {
     const setAuthModalState = useSetRecoilState(authModalState);
+    const [modalState, setModalState] = useRecoilState(authModalState);
 
     const [loginForm, setLoginForm] = useState<{
         email: string;
@@ -26,6 +27,11 @@ const Login = (props: Props) => {
         e.preventDefault();
 
         signInWithEmailAndPassword(loginForm.email, loginForm.password);
+
+        // setModalState((prev) => ({
+        //     ...prev,
+        //     open: false,
+        // }));
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
