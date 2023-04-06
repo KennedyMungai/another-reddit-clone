@@ -90,7 +90,13 @@ const Login = (props: Props) => {
                     }
                 </Text>
             )}
-            <Button type="submit" width="100%" height="36px" mb={2}>
+            <Button
+                type="submit"
+                width="100%"
+                height="36px"
+                mb={2}
+                isLoading={loading}
+            >
                 Log In
             </Button>
             <Flex fontSize="9pt" justifyContent="center">
