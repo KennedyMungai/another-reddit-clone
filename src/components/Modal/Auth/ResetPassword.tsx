@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import { Button, Flex, Icon, Input, Text } from "@chakra-ui/react";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 import { BsDot, BsReddit } from "react-icons/bs";
-import { authModalState, ModalView } from "@/atoms/AuthModalAtom";
+import { authModalState } from "@/atoms/AuthModalAtom";
 import { auth } from "../../../firebase/clientApp";
 import { useSetRecoilState } from "recoil";
 
-type ResetPasswordProps = {
-    toggleView: (view: ModalView) => void;
-};
-
-const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
+const ResetPassword = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
     const [email, setEmail] = useState("");
     const [success, setSuccess] = useState(false);
