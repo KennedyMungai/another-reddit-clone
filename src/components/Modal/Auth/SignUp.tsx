@@ -23,6 +23,8 @@ const SignUp = () => {
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        createUserWithEmailAndPassword(signupForm.email, signupForm.password);
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
