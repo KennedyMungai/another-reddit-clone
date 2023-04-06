@@ -19,7 +19,7 @@ const AuthButtons = () => {
                     md: "110px",
                 }}
                 mr={2}
-                onClick={() => {}}
+                onClick={() => setAuthModalState({ open: true, view: "login" })}
             >
                 Log In
             </Button>
@@ -34,7 +34,9 @@ const AuthButtons = () => {
                     md: "110px",
                 }}
                 mr={2}
-                onClick={() => {}}
+                onClick={() =>
+                    setAuthModalState({ open: true, view: "SignUp" })
+                }
             >
                 Sign Up
             </Button>
