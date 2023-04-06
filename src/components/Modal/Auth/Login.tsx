@@ -25,13 +25,13 @@ const Login = (props: Props) => {
                 placeholder="email"
                 type="email"
                 mb={2}
-                onChange={() => {}}
+                onChange={onChange}
             />
             <Input
                 name="password"
                 type="password"
                 placeholder="password"
-                onChange={() => {}}
+                onChange={onChange}
             />
             <Button type="submit">Log In</Button>
         </form>
