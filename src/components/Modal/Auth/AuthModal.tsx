@@ -9,7 +9,7 @@ import {
     ModalOverlay,
     Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState } from "recoil";
 import { auth } from "../../../firebase/clientApp";
@@ -28,6 +28,8 @@ const AuthModal = () => {
             open: false,
         }));
     };
+
+    useEffect(() => {}, []);
 
     return (
         <>
