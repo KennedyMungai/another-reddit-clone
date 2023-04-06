@@ -1,8 +1,7 @@
 import React from 'react'
 
-type Props = {}
 
-const AuthModal = (props: Props) =>
+const AuthModal = () =>
 {
     return (
         <div>AuthModal</div>
