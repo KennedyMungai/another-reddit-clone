@@ -12,3 +12,9 @@ export interface AuthModalState
     open: boolean
     view: View.Login | View.SignUp | View.ResetPassword
 }
+
+const defaultModalState: AuthModalState =
+{
+    open: false,
+    view: View.Login
+}
