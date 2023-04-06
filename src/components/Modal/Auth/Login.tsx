@@ -82,7 +82,7 @@ const Login = (props: Props) => {
                 bg="gray.50"
             />
             {error && (
-                <Text>
+                <Text color="red" textAlign="center" fontSize="10pt">
                     {
                         FIREBASE_ERRORS[
                             error.message as keyof typeof FIREBASE_ERRORS
