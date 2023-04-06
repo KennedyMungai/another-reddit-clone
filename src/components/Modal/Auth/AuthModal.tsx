@@ -64,13 +64,19 @@ const AuthModal = () => {
                             align="center"
                             width="70%"
                         >
-                            <OAuthButtons />
-                            <Text color="gray.400" fontWeight="500">
-                                {" "}
-                                OR{" "}
-                            </Text>
-                            <AuthInputs />
-                            {/* <ResetPassword /> */}
+                            {modalState.view === "SignUp" ||
+                            modalState.view === "login" ? (
+                                <>
+                                    <OAuthButtons />
+                                    <Text color="gray.400" fontWeight="500">
+                                        {" "}
+                                        OR{" "}
+                                    </Text>
+                                    <AuthInputs />
+                                </>
+                            ) : (
+                                <ResetPassword />
+                            )}
                         </Flex>
                     </ModalBody>
                 </ModalContent>
