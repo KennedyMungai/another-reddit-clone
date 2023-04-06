@@ -94,7 +94,7 @@ const ResetPassword = () => {
                     onClick={() =>
                         setAuthModalState((prev) => ({
                             ...prev,
-                            view: "signup",
+                            view: "SignUp",
                         }))
                     }
                 >
