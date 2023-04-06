@@ -73,6 +73,28 @@ const SignUp = () => {
                 }}
                 bg="gray.50"
             />
+            <Input
+                name="confirmPassword"
+                type="confirmPassword"
+                placeholder="Confirm Password"
+                onChange={onChange}
+                mb={2}
+                required
+                fontSize="10pt"
+                _placeholder={{ color: "gray.500" }}
+                _hover={{
+                    bg: "white",
+                    border: "1px solid",
+                    borderColor: "blue.500",
+                }}
+                _focus={{
+                    outline: "none",
+                    bg: "white",
+                    border: "1px solid",
+                    borderColor: "blue.500",
+                }}
+                bg="gray.50"
+            />
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Sign Up
             </Button>
