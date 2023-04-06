@@ -14,4 +14,4 @@ const firebaseConfig = {
 };
 
 // Initializing storage for server side rendering
-const app = initializeApp(firebaseConfig);
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
