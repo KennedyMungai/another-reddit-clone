@@ -1,9 +1,12 @@
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 
-type Props = {};
-
-const AuthInputs = (props: Props) => {
-    return <div>AuthInputs</div>;
+const AuthInputs = () => {
+    return;
+    <Flex flexDirection="column" align="center" width="100%" mt={4}>
+        <Login />
+        <SignUp />
+    </Flex>;
 };
 
 export default AuthInputs;
