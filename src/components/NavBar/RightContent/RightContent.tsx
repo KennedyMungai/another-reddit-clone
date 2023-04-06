@@ -7,12 +7,12 @@ type Props = {
     user: any;
 };
 
-const RightContent = (props: Props) => {
+const RightContent = ({ user }) => {
     return (
         <>
             <AuthModal />
             <Flex justify="center" align="center">
-                {props.user ? <div>You have logged in</div> : <AuthButtons />}
+                {user ? <div>You have logged in</div> : <AuthButtons />}
             </Flex>
         </>
     );
