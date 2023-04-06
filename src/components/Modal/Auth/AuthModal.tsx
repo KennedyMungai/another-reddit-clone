@@ -17,7 +17,12 @@ const AuthModal = () => {
 
     const finalRef = React.useRef(null);
 
-    const handleClose = () => {};
+    const handleClose = () => {
+        setModalState((prev) => ({
+            ...prev,
+            open: false,
+        }));
+    };
 
     return (
         <>
