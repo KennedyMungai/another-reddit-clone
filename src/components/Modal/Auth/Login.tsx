@@ -108,7 +108,7 @@ const Login = (props: Props) => {
                     fontSize="9pt"
                     color="blue.500"
                     cursor="pointer"
-                    onClick={() => {}}
+                    onClick={(prev) => ({ ...prev, view: "ResetPassword" })}
                 >
                     Reset
                 </Text>
