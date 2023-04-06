@@ -23,6 +23,8 @@ const Login = (props: Props) => {
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        signInWithEmailAndPassword(loginForm.email, loginForm.password);
     };
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
