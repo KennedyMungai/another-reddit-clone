@@ -34,6 +34,11 @@ const Login = (props: Props) => {
                 required
                 fontSize="10pt"
                 _placeholder={{ color: "gray.500" }}
+                _hover={{
+                    bg: "white",
+                    border: "1px solid",
+                    borderColor: "blue.500",
+                }}
             />
             <Input
                 name="password"
@@ -44,6 +49,11 @@ const Login = (props: Props) => {
                 required
                 fontSize="10pt"
                 _placeholder={{ color: "gray.500" }}
+                _hover={{
+                    bg: "white",
+                    border: "1px solid",
+                    borderColor: "blue.500",
+                }}
             />
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Log In
