@@ -23,7 +23,7 @@ const NavBar = () => {
                 />
                 {/* <Directory /> */}
                 <SearchInput />
-                <Right Content />
+                <RightContent />
             </Flex>
         </Flex>
     );
