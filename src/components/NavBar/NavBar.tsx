@@ -2,8 +2,12 @@ import { Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import SearchInput from "./SearchInput";
 import RightContent from "./RightContent/RightContent";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/clientApp";
 
 const NavBar = () => {
+    const [] = useAuthState(auth);
+
     return (
         <Flex
             bg="white"
