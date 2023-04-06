@@ -1,5 +1,5 @@
 import { Button, Input } from "@chakra-ui/react";
-import React, { FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 
 type Props = {};
 
@@ -16,7 +16,12 @@ const Login = (props: Props) => {
         e.preventDefault();
     };
 
-    const onChange = () => {};
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setLoginForm((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+        }));
+    };
 
     return (
         <form action="" onSubmit={onSubmit}>
