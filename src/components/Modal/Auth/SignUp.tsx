@@ -122,7 +122,7 @@ const SignUp = () => {
             {error ||
                 (userError && (
                     <Text color="red" textAlign="center" fontSize="12pt">
-                        {error}
+                        {error || userError.message}
                     </Text>
                 ))}
             <Button
