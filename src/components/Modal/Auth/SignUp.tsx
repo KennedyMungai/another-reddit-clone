@@ -72,10 +72,10 @@ const SignUp = () => {
                 bg="gray.50"
             />
             <Button type="submit" width="100%" height="36px" mb={2}>
-                Log In
+                Sign Up
             </Button>
             <Flex fontSize="9pt" justifyContent="center">
-                <Text mr={1}>New Here?</Text>
+                <Text mr={1}>Already a Member?</Text>
                 <Text
                     color="blue.500"
                     fontWeight={700}
@@ -83,11 +83,11 @@ const SignUp = () => {
                     onClick={() =>
                         setAuthModalState((prev) => ({
                             ...prev,
-                            view: "SignUp",
+                            view: "login",
                         }))
                     }
                 >
-                    SIGN UP
+                    Login
                 </Text>
             </Flex>
         </form>
