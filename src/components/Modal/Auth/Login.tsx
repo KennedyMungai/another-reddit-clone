@@ -4,6 +4,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 import { auth } from "../../../firebase/clientApp";
+import { FIREBASE_ERRORS } from "@/firebase/Errors";
 
 type Props = {};
 
@@ -80,7 +81,15 @@ const Login = (props: Props) => {
                 }}
                 bg="gray.50"
             />
-            {error && <Text>{error.message}</Text>}
+            {error && (
+                <Text>
+                    {
+                        FIREBASE_ERRORS[
+                            error.message as keyof typeof FIREBASE_ERRORS
+                        ]
+                    }
+                </Text>
+            )}
             <Button type="submit" width="100%" height="36px" mb={2}>
                 Log In
             </Button>
