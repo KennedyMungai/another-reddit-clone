@@ -1,6 +1,8 @@
 import { authModalState } from "@/atoms/AuthModalAtom";
-import { Input, Button, Flex, Text } from "@chakra-ui/react";
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { auth } from "@/firebase/clientApp";
+import { Button, Flex, Input, Text } from "@chakra-ui/react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSetRecoilState } from "recoil";
 
 const SignUp = () => {
@@ -15,6 +17,9 @@ const SignUp = () => {
         password: "",
         confirmPassword: "",
     });
+
+    const [createUserWithEmailAndPassword, user, loading, error] =
+        useCreateUserWithEmailAndPassword(auth);
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
