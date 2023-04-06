@@ -87,7 +87,7 @@ const SignUp = () => {
                         }))
                     }
                 >
-                    Login
+                    LOGIN
                 </Text>
             </Flex>
         </form>
