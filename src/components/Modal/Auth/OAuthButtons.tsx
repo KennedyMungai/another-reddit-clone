@@ -1,4 +1,4 @@
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, Image } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {};
@@ -6,7 +6,10 @@ type Props = {};
 const OAuthButtons = (props: Props) => {
     return (
         <Flex flexDirection="column" gap={1} width="100%">
-            <Button>Continue with Google</Button>
+            <Button>
+                <Image src="./images/googlelogo.png" height="20px" />
+                Continue with Google
+            </Button>
         </Flex>
     );
 };
