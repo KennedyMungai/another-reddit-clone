@@ -110,7 +110,7 @@ const SignUp = () => {
                 bg="gray.50"
             />
             {error && (
-                <Text color="red.800" textAlign="center">
+                <Text color="red.800" textAlign="center" fontSize="10pt">
                     {error}
                 </Text>
             )}
