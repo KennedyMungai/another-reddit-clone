@@ -8,7 +8,11 @@ const OAuthButtons = () => {
 
     return (
         <Flex flexDirection="column" gap={1} width="100%">
-            <Button variant="oauth" isLoading={loading}>
+            <Button
+                variant="oauth"
+                isLoading={loading}
+                onClick={() => signInWithGoogle()}
+            >
                 <Image src="./images/googlelogo.png" height="20px" mr={4} />
                 Continue with Google
             </Button>
