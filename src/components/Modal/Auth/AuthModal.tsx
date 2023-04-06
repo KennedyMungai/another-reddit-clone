@@ -45,6 +45,7 @@ const AuthModal = () => {
                         flexDirection="column"
                         alignItems="center"
                         justifyContent="center"
+                        pb={6}
                     >
                         <Flex
                             direction="column"
