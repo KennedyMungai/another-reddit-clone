@@ -1,5 +1,6 @@
 import { authModalState } from "@/atoms/AuthModalAtom";
 import {
+    Flex,
     Modal,
     ModalBody,
     ModalCloseButton,
@@ -43,7 +44,13 @@ const AuthModal = () => {
                         flexDirection="column"
                         alignItems="center"
                         justifyContent="center"
-                    ></ModalBody>
+                    >
+                        <Flex
+                            direction="column"
+                            justify="center"
+                            align="center"
+                        ></Flex>
+                    </ModalBody>
                 </ModalContent>
             </Modal>
         </>
