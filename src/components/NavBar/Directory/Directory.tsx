@@ -17,7 +17,11 @@ const Directory = () => {
                 ml={{ base: 0, md: 2 }}
                 _hover={{ outline: "1px solid", outlineColor: "gray.200" }}
             >
-                <Flex align="center" justify="space-between">
+                <Flex
+                    align="center"
+                    justify="space-between"
+                    width={{ base: "auto", lg: "200px" }}
+                >
                     <Flex align="center">
                         <Icon
                             as={TiHome}
