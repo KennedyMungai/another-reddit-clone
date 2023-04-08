@@ -11,7 +11,7 @@ import {
 const Icons = () => {
     return (
         <Flex>
-            <Flex>icons</Flex>
+            <Flex display={{ base: "none", md: "flex" }}>icons</Flex>
             <></>
         </Flex>
     );
