@@ -23,21 +23,21 @@ const Icons = () => {
                     borderRadius={4}
                     _hover={{ bg: "gray.200" }}
                 >
-                    <Icon as={BsArrowUpRightCircle} />
+                    <Icon as={BsArrowUpRightCircle} fontSize={22} />
                 </Flex>
                 <Flex
                     cursor="pointer"
                     borderRadius={4}
                     _hover={{ bg: "gray.200" }}
                 >
-                    <Icon as={IoFilterCircleOutline} />
+                    <Icon as={IoFilterCircleOutline} fontSize={20} />
                 </Flex>
                 <Flex
                     cursor="pointer"
                     borderRadius={4}
                     _hover={{ bg: "gray.200" }}
                 >
-                    <Icon as={IoVideocamOutline} />
+                    <Icon as={IoVideocamOutline} fontSize={20} />
                 </Flex>
             </Flex>
             <></>
