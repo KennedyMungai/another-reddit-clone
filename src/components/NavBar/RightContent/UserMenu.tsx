@@ -6,6 +6,7 @@ import {
     MenuItem,
     Menu,
     Icon,
+    Flex,
 } from "@chakra-ui/react";
 import { User } from "firebase/auth";
 import React from "react";
@@ -22,13 +23,15 @@ const UserMenu = ({ user }) => {
         <Menu>
             <MenuButton>
                 {user ? (
-                    <>
-                        <Icon
-                            as={FaRedditSquare}
-                            fontSize={24}
-                            color="gray.300"
-                        />
-                    </>
+                    <Flex>
+                        <>
+                            <Icon
+                                as={FaRedditSquare}
+                                fontSize={24}
+                                color="gray.300"
+                            />
+                        </>
+                    </Flex>
                 ) : (
                     <div>No User</div>
                 )}
