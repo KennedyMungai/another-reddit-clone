@@ -25,7 +25,7 @@ const NavBar = () => {
                         md: "unset",
                     }}
                 />
-                <Directory />
+                {user && <Directory />}
                 <SearchInput user={user} />
                 <RightContent user={user} />
             </Flex>
