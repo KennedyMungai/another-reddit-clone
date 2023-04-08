@@ -1,23 +1,7 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import {
-    Flex,
-    Icon,
-    Menu,
-    MenuButton,
-    MenuDivider,
-    MenuItem,
-    MenuList,
-    Text,
-} from "@chakra-ui/react";
-import { User, signOut } from "firebase/auth";
-import { CgProfile } from "react-icons/cg";
-import { FaRedditSquare } from "react-icons/fa";
-import { IoSparkles } from "react-icons/io5";
-import { MdOutlineLogin } from "react-icons/md";
-import { VscAccount } from "react-icons/vsc";
-import { auth } from "../../../firebase/clientApp";
-import { useSetRecoilState } from "recoil";
 import { authModalState } from "@/atoms/AuthModalAtom";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Flex, Menu, MenuButton, MenuList } from "@chakra-ui/react";
+import { useSetRecoilState } from "recoil";
 
 const Directory = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
