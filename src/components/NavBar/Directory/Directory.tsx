@@ -19,11 +19,7 @@ import { auth } from "../../../firebase/clientApp";
 import { useSetRecoilState } from "recoil";
 import { authModalState } from "@/atoms/AuthModalAtom";
 
-type Props = {
-    user: User;
-};
-
-const Directory = ({ user }) => {
+const Directory = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
 
     return (
