@@ -23,7 +23,7 @@ type Props = {
     user: User;
 };
 
-const UserMenu = ({ user }) => {
+const Directory = ({ user }) => {
     const setAuthModalState = useSetRecoilState(authModalState);
 
     return (
@@ -123,4 +123,4 @@ const UserMenu = ({ user }) => {
     );
 };
 
-export default UserMenu;
+export default Directory;
