@@ -9,7 +9,11 @@ import {
 } from "react-icons/io5";
 
 const Icons = () => {
-    return <Flex></Flex>;
+    return (
+        <Flex>
+            <Flex>icons</Flex>
+        </Flex>
+    );
 };
 
 export default Icons;
