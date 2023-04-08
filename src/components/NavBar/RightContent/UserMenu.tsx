@@ -23,7 +23,7 @@ const UserMenu = ({ user }) => {
             <MenuButton>
                 {user ? (
                     <>
-                        <Icon as={FaRedditSquare} />
+                        <Icon as={FaRedditSquare} fontSize={24} />
                     </>
                 ) : (
                     <div>No User</div>
