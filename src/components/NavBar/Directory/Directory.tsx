@@ -2,6 +2,7 @@ import { authModalState } from "@/atoms/AuthModalAtom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Flex, Menu, MenuButton, MenuList } from "@chakra-ui/react";
 import { useSetRecoilState } from "recoil";
+import { TiHome } from "react-icons/ti";
 
 const Directory = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
