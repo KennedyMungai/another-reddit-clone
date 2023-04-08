@@ -54,7 +54,7 @@ const UserMenu = ({ user }) => {
             <MenuList>
                 <MenuItem>
                     <Flex align="center" gap={2}>
-                        <Icon as={CgProfile} />
+                        <Icon as={CgProfile} fontSize={20} />
                         Profile
                     </Flex>
                 </MenuItem>
