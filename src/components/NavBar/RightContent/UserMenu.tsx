@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const UserMenu = (props: Props) => {
+const UserMenu = () => {
     return <div>UserMenu</div>;
 };
 
