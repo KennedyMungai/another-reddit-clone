@@ -55,6 +55,7 @@ const UserMenu = ({ user }) => {
                 <MenuItem>
                     <Flex>
                         <Icon as={CgProfile} />
+                        Profile
                     </Flex>
                 </MenuItem>
             </MenuList>
