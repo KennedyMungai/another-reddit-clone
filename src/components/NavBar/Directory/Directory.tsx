@@ -37,7 +37,7 @@ const Directory = () => {
                     <ChevronDownIcon />
                 </Flex>
             </MenuButton>
-            <MenuList>{/* <Communities /> */}</MenuList>
+            <MenuList>{/* <Communities /> */}Communities</MenuList>
         </Menu>
     );
 };
