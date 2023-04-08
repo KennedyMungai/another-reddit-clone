@@ -13,6 +13,7 @@ import React from "react";
 import { FaRedditSquare } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoSparkles } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
 type Props = {
     user: User;
@@ -51,7 +52,11 @@ const UserMenu = ({ user }) => {
                 )}
             </MenuButton>
             <MenuList>
-                <MenuItem>Download</MenuItem>
+                <MenuItem>
+                    <Flex>
+                        <Icon as={CgProfile} />
+                    </Flex>
+                </MenuItem>
             </MenuList>
         </Menu>
     );
