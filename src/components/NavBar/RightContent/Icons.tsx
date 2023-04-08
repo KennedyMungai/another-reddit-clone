@@ -40,7 +40,29 @@ const Icons = () => {
                     <Icon as={IoVideocamOutline} fontSize={20} />
                 </Flex>
             </Flex>
-            <></>
+            <>
+                <Flex
+                    cursor="pointer"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                >
+                    <Icon as={BsChatDots} fontSize={20} />
+                </Flex>
+                <Flex
+                    cursor="pointer"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                >
+                    <Icon as={IoNotificationsOutline} fontSize={20} />
+                </Flex>
+                <Flex
+                    cursor="pointer"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                >
+                    <Icon as={GrAdd} fontSize={20} />
+                </Flex>
+            </>
         </Flex>
     );
 };
