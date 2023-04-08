@@ -23,7 +23,9 @@ const Directory = () => {
                             fontSize={24}
                             mr={{ base: 1, md: 2 }}
                         />
-                        <Text>Home</Text>
+                        <Flex display={{ base: "none", lg: "flex" }}>
+                            <Text>Home</Text>
+                        </Flex>
                     </Flex>
                     <ChevronDownIcon />
                 </Flex>
