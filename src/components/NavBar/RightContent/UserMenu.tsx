@@ -10,7 +10,7 @@ type Props = {
 const UserMenu = ({ user }) => {
     return (
         <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+            <MenuButton>
                 {user ? <div>User</div> : <div>No User</div>}
             </MenuButton>
             <MenuList>
