@@ -23,8 +23,8 @@ const UserMenu = ({ user }) => {
         <Menu>
             <MenuButton>
                 {user ? (
-                    <Flex>
-                        <Flex>
+                    <Flex align="center">
+                        <Flex align="center">
                             <>
                                 <Icon
                                     as={FaRedditSquare}
