@@ -8,7 +8,7 @@ type Props = {
 
 const SearchInput = ({ user }) => {
     return (
-        <Flex grow={1} mr={2} align="center">
+        <Flex grow={1} mr={2} align="center" maxWidth={user ? "auto" : "600px"}>
             <InputGroup>
                 <InputLeftElement
                     pointerEvents="none"
