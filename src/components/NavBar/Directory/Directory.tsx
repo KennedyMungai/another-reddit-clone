@@ -13,7 +13,8 @@ const Directory = () => {
                 cursor="pointer"
                 padding="0px 6px"
                 borderRadius={4}
-                mr={1}
+                mr={2}
+                ml={{ base: 0, md: 2 }}
                 _hover={{ outline: "1px solid", outlineColor: "gray.200" }}
             >
                 <Flex align="center">
