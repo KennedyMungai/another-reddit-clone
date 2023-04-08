@@ -1,7 +1,17 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { MenuButton, Button, MenuList, MenuItem, Menu } from "@chakra-ui/react";
+import {
+    MenuButton,
+    Button,
+    MenuList,
+    MenuItem,
+    Menu,
+    Icon,
+} from "@chakra-ui/react";
 import { User } from "firebase/auth";
 import React from "react";
+import { FaRedditSquare } from "react-icons/fa";
+import { VscAccount } from "react-icons/vsc";
+import { IoSparkles } from "react-icons/io5";
 
 type Props = {
     user: User;
@@ -11,7 +21,13 @@ const UserMenu = ({ user }) => {
     return (
         <Menu>
             <MenuButton>
-                {user ? <div>User</div> : <div>No User</div>}
+                {user ? (
+                    <>
+                        <Icon as={FaRedditSquare} />
+                    </>
+                ) : (
+                    <div>No User</div>
+                )}
             </MenuButton>
             <MenuList>
                 <MenuItem>Download</MenuItem>
