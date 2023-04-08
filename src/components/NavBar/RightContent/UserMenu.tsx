@@ -7,6 +7,7 @@ import {
     Menu,
     Icon,
     Flex,
+    MenuDivider,
 } from "@chakra-ui/react";
 import { User } from "firebase/auth";
 import React from "react";
@@ -63,6 +64,7 @@ const UserMenu = ({ user }) => {
                         Profile
                     </Flex>
                 </MenuItem>
+                <MenuDivider />
                 <MenuItem
                     fontSize="10pt"
                     fontWeight={700}
