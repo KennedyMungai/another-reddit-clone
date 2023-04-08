@@ -14,6 +14,7 @@ const NavBar = () => {
             border="1px solid red"
             height="44px"
             padding="6px 12px"
+            justify={{ md: "space-between" }}
         >
             <Flex align="center">
                 <Image src="/images/redditFace.svg" height="30px" />
