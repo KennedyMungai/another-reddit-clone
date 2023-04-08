@@ -26,7 +26,7 @@ const NavBar = () => {
                     }}
                 />
                 <Directory />
-                <SearchInput />
+                <SearchInput user={user} />
                 <RightContent user={user} />
             </Flex>
         </Flex>
