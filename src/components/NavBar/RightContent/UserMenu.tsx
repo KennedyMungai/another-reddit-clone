@@ -31,6 +31,7 @@ const UserMenu = ({ user }) => {
                                 color="gray.300"
                             />
                         </>
+                        <ChevronDownIcon />
                     </Flex>
                 ) : (
                     <div>No User</div>
