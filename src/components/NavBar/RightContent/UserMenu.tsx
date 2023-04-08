@@ -86,6 +86,9 @@ const UserMenu = ({ user }) => {
                         fontSize="10pt"
                         fontWeight={700}
                         _hover={{ bg: "blue.500", color: "white" }}
+                        onClick={() =>
+                            setAuthModalState({ open: true, view: "login" })
+                        }
                     >
                         <Flex align="center" gap={2}>
                             <Icon as={MdOutlineLogin} fontSize={20} />
