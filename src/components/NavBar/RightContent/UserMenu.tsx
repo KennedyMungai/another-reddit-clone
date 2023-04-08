@@ -14,6 +14,7 @@ import { FaRedditSquare } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { IoSparkles } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
+import { MdOutlineLogin } from "react-icons/md";
 
 type Props = {
     user: User;
@@ -60,6 +61,16 @@ const UserMenu = ({ user }) => {
                     <Flex align="center" gap={2}>
                         <Icon as={CgProfile} fontSize={20} />
                         Profile
+                    </Flex>
+                </MenuItem>
+                <MenuItem
+                    fontSize="10pt"
+                    fontWeight={700}
+                    _hover={{ bg: "blue.500", color: "white" }}
+                >
+                    <Flex align="center" gap={2}>
+                        <Icon as={MdOutlineLogin} fontSize={20} />
+                        Log Out
                     </Flex>
                 </MenuItem>
             </MenuList>
