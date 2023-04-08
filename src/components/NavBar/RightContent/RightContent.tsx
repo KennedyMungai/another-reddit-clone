@@ -16,7 +16,7 @@ const RightContent = ({ user }) => {
             <AuthModal />
             <Flex justify="center" align="center">
                 {user ? <Icons /> : <AuthButtons />}
-                <UserMenu />
+                <UserMenu user={user} />
             </Flex>
         </>
     );
