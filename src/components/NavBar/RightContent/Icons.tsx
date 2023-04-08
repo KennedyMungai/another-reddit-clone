@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Icon } from "@chakra-ui/react";
 import React from "react";
 import { BsArrowUpRightCircle, BsChatDots } from "react-icons/bs";
 import { GrAdd } from "react-icons/gr";
@@ -16,8 +16,15 @@ const Icons = () => {
                 align="center"
                 borderRight="1px solid"
                 borderColor="gray.200"
+                gap={1}
             >
-                icons
+                <Flex
+                    cursor="pointer"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                >
+                    <Icon as={BsArrowUpRightCircle} />
+                </Flex>
             </Flex>
             <></>
         </Flex>
