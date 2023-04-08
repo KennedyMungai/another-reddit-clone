@@ -1,6 +1,6 @@
 import { authModalState } from "@/atoms/AuthModalAtom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Flex, Menu, MenuButton, MenuList } from "@chakra-ui/react";
+import { Flex, Icon, Menu, MenuButton, MenuList } from "@chakra-ui/react";
 import { useSetRecoilState } from "recoil";
 import { TiHome } from "react-icons/ti";
 
@@ -18,8 +18,9 @@ const Directory = () => {
             >
                 <Flex align="center">
                     <Flex align="center">
-                        <ChevronDownIcon />
+                        <Icon as={TiHome} />
                     </Flex>
+                    <ChevronDownIcon />
                 </Flex>
             </MenuButton>
             <MenuList></MenuList>
