@@ -1,21 +1,18 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
-    MenuButton,
-    Button,
-    MenuList,
-    MenuItem,
-    Menu,
-    Icon,
     Flex,
+    Icon,
+    Menu,
+    MenuButton,
     MenuDivider,
+    MenuItem,
+    MenuList,
 } from "@chakra-ui/react";
 import { User, signOut } from "firebase/auth";
-import React from "react";
-import { FaRedditSquare } from "react-icons/fa";
-import { VscAccount } from "react-icons/vsc";
-import { IoSparkles } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
+import { FaRedditSquare } from "react-icons/fa";
 import { MdOutlineLogin } from "react-icons/md";
+import { VscAccount } from "react-icons/vsc";
 import { auth } from "../../../firebase/clientApp";
 
 type Props = {
