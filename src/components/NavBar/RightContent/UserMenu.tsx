@@ -52,7 +52,11 @@ const UserMenu = ({ user }) => {
                 )}
             </MenuButton>
             <MenuList>
-                <MenuItem>
+                <MenuItem
+                    fontSize="10pt"
+                    fontWeight={700}
+                    _hover={{ bg: "blue.500", color: "white" }}
+                >
                     <Flex align="center" gap={2}>
                         <Icon as={CgProfile} fontSize={20} />
                         Profile
