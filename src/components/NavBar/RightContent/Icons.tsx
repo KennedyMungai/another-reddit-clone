@@ -59,6 +59,7 @@ const Icons = () => {
                     cursor="pointer"
                     borderRadius={4}
                     _hover={{ bg: "gray.200" }}
+                    display={{ sm: "none", md: "flex" }}
                 >
                     <Icon as={GrAdd} fontSize={20} />
                 </Flex>
