@@ -32,9 +32,9 @@ const UserMenu = ({ user }) => {
                 mr={1}
                 _hover={{ outline: "1px solid", outlineColor: "gray.200" }}
             >
-                {user ? (
+                <Flex align="center">
                     <Flex align="center">
-                        <Flex align="center">
+                        {user ? (
                             <>
                                 <Icon
                                     as={FaRedditSquare}
@@ -42,17 +42,17 @@ const UserMenu = ({ user }) => {
                                     color="gray.300"
                                 />
                             </>
-                            <ChevronDownIcon />
-                        </Flex>
+                        ) : (
+                            <Icon
+                                as={VscAccount}
+                                fontSize={24}
+                                color="gray.400"
+                                mr={1}
+                            />
+                        )}
+                        <ChevronDownIcon />
                     </Flex>
-                ) : (
-                    <Icon
-                        as={VscAccount}
-                        fontSize={24}
-                        color="gray.400"
-                        mr={1}
-                    />
-                )}
+                </Flex>
             </MenuButton>
             <MenuList>
                 <MenuItem
