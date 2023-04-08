@@ -5,7 +5,7 @@ import { auth } from "../../../firebase/clientApp";
 import AuthButtons from "./AuthButtons";
 
 type Props = {
-    user: User;
+    user?: User | null;
 };
 
 const RightContent = ({ user }) => {
