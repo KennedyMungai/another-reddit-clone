@@ -52,28 +52,43 @@ const UserMenu = ({ user }) => {
                 </Flex>
             </MenuButton>
             <MenuList>
-                <MenuItem
-                    fontSize="10pt"
-                    fontWeight={700}
-                    _hover={{ bg: "blue.500", color: "white" }}
-                >
-                    <Flex align="center" gap={2}>
-                        <Icon as={CgProfile} fontSize={20} />
-                        Profile
-                    </Flex>
-                </MenuItem>
-                <MenuDivider />
-                <MenuItem
-                    fontSize="10pt"
-                    fontWeight={700}
-                    _hover={{ bg: "blue.500", color: "white" }}
-                    onClick={() => signOut(auth)}
-                >
-                    <Flex align="center" gap={2}>
-                        <Icon as={MdOutlineLogin} fontSize={20} />
-                        Log Out
-                    </Flex>
-                </MenuItem>
+                {user ? (
+                    <>
+                        <MenuItem
+                            fontSize="10pt"
+                            fontWeight={700}
+                            _hover={{ bg: "blue.500", color: "white" }}
+                        >
+                            <Flex align="center" gap={2}>
+                                <Icon as={CgProfile} fontSize={20} />
+                                Profile
+                            </Flex>
+                        </MenuItem>
+                        <MenuDivider />
+                        <MenuItem
+                            fontSize="10pt"
+                            fontWeight={700}
+                            _hover={{ bg: "blue.500", color: "white" }}
+                            onClick={() => signOut(auth)}
+                        >
+                            <Flex align="center" gap={2}>
+                                <Icon as={MdOutlineLogin} fontSize={20} />
+                                Log Out
+                            </Flex>
+                        </MenuItem>
+                    </>
+                ) : (
+                    <MenuItem
+                            fontSize="10pt"
+                            fontWeight={700}
+                            _hover={{ bg: "blue.500", color: "white" }}
+                        >
+                            <Flex align="center" gap={2}>
+                                <Icon as={MdOutlineLogin} fontSize={20} />
+                                Log In / Sign Up
+                            </Flex>
+                        </MenuItem> 
+                )}
             </MenuList>
         </Menu>
     );
