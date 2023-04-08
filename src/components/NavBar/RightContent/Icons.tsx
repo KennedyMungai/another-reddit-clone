@@ -11,7 +11,14 @@ import {
 const Icons = () => {
     return (
         <Flex>
-            <Flex display={{ base: "none", md: "flex" }}>icons</Flex>
+            <Flex
+                display={{ base: "none", md: "flex" }}
+                align="center"
+                borderRight="1px solid"
+                borderColor="gray.200"
+            >
+                icons
+            </Flex>
             <></>
         </Flex>
     );
