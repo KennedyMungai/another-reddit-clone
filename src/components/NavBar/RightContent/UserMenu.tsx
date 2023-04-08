@@ -3,9 +3,9 @@ import { MenuButton, Button, MenuList, MenuItem, Menu } from "@chakra-ui/react";
 import { User } from "firebase/auth";
 import React from "react";
 
-interface Props {
+type Props = {
     user: User;
-}
+};
 
 const UserMenu = ({ user }) => {
     return (
