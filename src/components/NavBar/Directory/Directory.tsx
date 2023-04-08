@@ -18,7 +18,11 @@ const Directory = () => {
             >
                 <Flex align="center">
                     <Flex align="center">
-                        <Icon as={TiHome} />
+                        <Icon
+                            as={TiHome}
+                            fontSize={24}
+                            mr={{ base: 1, md: 2 }}
+                        />
                         <Text>Home</Text>
                     </Flex>
                     <ChevronDownIcon />
