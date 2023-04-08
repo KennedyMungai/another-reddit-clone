@@ -14,12 +14,16 @@ import { FaRedditSquare } from "react-icons/fa";
 import { MdOutlineLogin } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
 import { auth } from "../../../firebase/clientApp";
+import { useSetRecoilState } from "recoil";
+import { authModalState } from "@/atoms/AuthModalAtom";
 
 type Props = {
     user: User;
 };
 
 const UserMenu = ({ user }) => {
+    const setAuthModalState = useSetRecoilState(authModalState);
+
     return (
         <Menu>
             <MenuButton
@@ -79,15 +83,15 @@ const UserMenu = ({ user }) => {
                     </>
                 ) : (
                     <MenuItem
-                            fontSize="10pt"
-                            fontWeight={700}
-                            _hover={{ bg: "blue.500", color: "white" }}
-                        >
-                            <Flex align="center" gap={2}>
-                                <Icon as={MdOutlineLogin} fontSize={20} />
-                                Log In / Sign Up
-                            </Flex>
-                        </MenuItem> 
+                        fontSize="10pt"
+                        fontWeight={700}
+                        _hover={{ bg: "blue.500", color: "white" }}
+                    >
+                        <Flex align="center" gap={2}>
+                            <Icon as={MdOutlineLogin} fontSize={20} />
+                            Log In / Sign Up
+                        </Flex>
+                    </MenuItem>
                 )}
             </MenuList>
         </Menu>
