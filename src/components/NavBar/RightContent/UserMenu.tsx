@@ -25,6 +25,7 @@ const UserMenu = ({ user }) => {
                 cursor="pointer"
                 padding="0px 6px"
                 borderRadius={4}
+                mr={1}
                 _hover={{ outline: "1px solid", outlineColor: "gray.200" }}
             >
                 {user ? (
@@ -41,7 +42,12 @@ const UserMenu = ({ user }) => {
                         </Flex>
                     </Flex>
                 ) : (
-                    <Icon as={VscAccount} />
+                    <Icon
+                        as={VscAccount}
+                        fontSize={24}
+                        color="gray.400"
+                        mr={1}
+                    />
                 )}
             </MenuButton>
             <MenuList>
