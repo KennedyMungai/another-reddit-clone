@@ -16,7 +16,7 @@ const NavBar = () => {
             padding="6px 12px"
             justify={{ md: "space-between" }}
         >
-            <Flex align="center">
+            <Flex align="center" width={{ base: "40px", md: "auto" }}>
                 <Image src="/images/redditFace.svg" height="30px" />
                 <Image
                     src="/images/redditText.svg"
