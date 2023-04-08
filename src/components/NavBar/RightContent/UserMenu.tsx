@@ -1,8 +1,8 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Menu, MenuButton, Button, MenuList, MenuItem } from "@chakra-ui/react";
+import { MenuButton, Button, MenuList, MenuItem, Menu } from "@chakra-ui/react";
 import React from "react";
 
-const Menu = () => {
+const UserMenu = () => {
     return (
         <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
@@ -19,4 +19,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default UserMenu;

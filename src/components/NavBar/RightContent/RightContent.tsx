@@ -4,7 +4,7 @@ import { User, signOut } from "firebase/auth";
 import { auth } from "../../../firebase/clientApp";
 import AuthButtons from "./AuthButtons";
 import Icons from "./Icons";
-import Menu from "./UserMenu";
+import UserMenu from "./UserMenu";
 
 type Props = {
     user: User;
@@ -16,7 +16,7 @@ const RightContent = ({ user }) => {
             <AuthModal />
             <Flex justify="center" align="center">
                 {user ? <Icons /> : <AuthButtons />}
-                <Menu />
+                <UserMenu />
             </Flex>
         </>
     );
