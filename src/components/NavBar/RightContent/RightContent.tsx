@@ -8,12 +8,12 @@ type Props = {
     user: User;
 };
 
-const RightContent = ({ user }) => {
+const RightContent = (props: Props) => {
     return (
         <>
             <AuthModal />
             <Flex justify="center" align="center">
-                {user ? (
+                {props.user ? (
                     <Button onClick={() => signOut(auth)}>Logout</Button>
                 ) : (
                     <AuthButtons />
