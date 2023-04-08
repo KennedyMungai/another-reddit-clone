@@ -10,7 +10,7 @@ import {
 
 const Icons = () => {
     return (
-        <Flex>
+        <Flex gap={1}>
             <Flex
                 display={{ base: "none", md: "flex" }}
                 align="center"
