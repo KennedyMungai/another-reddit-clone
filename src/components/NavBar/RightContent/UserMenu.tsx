@@ -21,7 +21,7 @@ type Props = {
 const UserMenu = ({ user }) => {
     return (
         <Menu>
-            <MenuButton>
+            <MenuButton cursor="pointer" padding="0px 6px" borderRadius={4}>
                 {user ? (
                     <Flex align="center">
                         <Flex align="center">
