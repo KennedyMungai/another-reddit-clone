@@ -41,7 +41,7 @@ const UserMenu = ({ user }) => {
                         </Flex>
                     </Flex>
                 ) : (
-                    <div>No User</div>
+                    <Icon as={VscAccount} />
                 )}
             </MenuButton>
             <MenuList>
