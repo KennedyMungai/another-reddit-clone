@@ -12,7 +12,7 @@ import {
 import { User, signOut } from "firebase/auth";
 import { CgProfile } from "react-icons/cg";
 import { FaRedditSquare } from "react-icons/fa";
-import { IoSparkles } from "react-icons/io";
+import { IoSparkles } from "react-icons/io5";
 import { MdOutlineLogin } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
 import { auth } from "../../../firebase/clientApp";
