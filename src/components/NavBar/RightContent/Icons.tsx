@@ -25,6 +25,20 @@ const Icons = () => {
                 >
                     <Icon as={BsArrowUpRightCircle} />
                 </Flex>
+                <Flex
+                    cursor="pointer"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                >
+                    <Icon as={IoFilterCircleOutline} />
+                </Flex>
+                <Flex
+                    cursor="pointer"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                >
+                    <Icon as={IoVideocamOutline} />
+                </Flex>
             </Flex>
             <></>
         </Flex>
