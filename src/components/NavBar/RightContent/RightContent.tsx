@@ -18,6 +18,7 @@ const RightContent = ({ user }) => {
                 ) : (
                     <AuthButtons />
                 )}
+                {/* <Menu /> */}
             </Flex>
         </>
     );
