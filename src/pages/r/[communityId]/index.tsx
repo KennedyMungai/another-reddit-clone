@@ -1,3 +1,4 @@
+import { Community } from "@/atoms/communitiesAtom";
 import { firestore } from "@/firebase/clientApp";
 import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
