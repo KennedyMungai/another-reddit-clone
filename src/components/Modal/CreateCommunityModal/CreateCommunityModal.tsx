@@ -174,7 +174,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                         </ModalBody>
                     </Box>
 
-                    <ModalFooter bg="gray.100">
+                    <ModalFooter bg="gray.100" borderRadius="0px 0px 10px 10px">
                         <Button colorScheme="blue" mr={3} onClick={handleClose}>
                             Close
                         </Button>
