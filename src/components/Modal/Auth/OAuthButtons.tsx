@@ -14,7 +14,7 @@ const OAuthButtons = () => {
         await setDoc(userDocRef, user);
     };
 
-    useEffect(() => {}, []);
+    useEffect(() => {}, [userCred]);
 
     return (
         <Flex flexDirection="column" gap={1} width="100%">
