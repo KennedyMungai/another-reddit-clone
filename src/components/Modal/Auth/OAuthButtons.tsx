@@ -2,11 +2,12 @@ import { Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebase/clientApp";
+import { User } from "firebase/auth";
 
 const OAuthButtons = () => {
     const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
 
-    const createUserDocument = async () => {};
+    const createUserDocument = async (user: User) => {};
 
     return (
         <Flex flexDirection="column" gap={1} width="100%">
