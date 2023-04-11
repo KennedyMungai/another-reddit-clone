@@ -13,7 +13,7 @@ import {
     ModalOverlay,
     Text,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 
 type Prop = {
     open: boolean;
@@ -24,7 +24,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     const [communityName, setCommunityName] = useState<string>("");
     const [charsRemaining, setCharsRemaining] = useState<number>(21);
 
-    const handleChange = (e) => {};
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {};
 
     return (
         <>
