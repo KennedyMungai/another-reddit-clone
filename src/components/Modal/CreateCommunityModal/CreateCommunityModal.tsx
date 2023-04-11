@@ -89,13 +89,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 <Text fontWeight={600} fontSize={15}>
                                     Community Type
                                 </Text>
-                                <Checkbox>
-                                    <Stack spacing={2}>
-                                        <Checkbox></Checkbox>
-                                        <Checkbox></Checkbox>
-                                        <Checkbox></Checkbox>
-                                    </Stack>
-                                </Checkbox>
+                                <Stack spacing={2}>
+                                    <Checkbox></Checkbox>
+                                    <Checkbox></Checkbox>
+                                    <Checkbox></Checkbox>
+                                </Stack>
                             </Box>
                         </ModalBody>
                     </Box>
