@@ -43,7 +43,9 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         setCommunityType(e.target.name);
     };
 
-    const handleCreateCommunity = async () => {};
+    const handleCreateCommunity = async () => {
+        const format = /[ `!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?~]/;
+    };
 
     return (
         <>
