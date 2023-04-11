@@ -1,8 +1,10 @@
 import {
     Box,
     Button,
-    Divider,
     Checkbox,
+    Divider,
+    Flex,
+    Icon,
     Input,
     Modal,
     ModalBody,
@@ -11,12 +13,10 @@ import {
     ModalFooter,
     ModalHeader,
     ModalOverlay,
-    Text,
     Stack,
-    Flex,
-    Icon,
+    Text,
 } from "@chakra-ui/react";
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
 import { HiLockClosed } from "react-icons/hi";
 
