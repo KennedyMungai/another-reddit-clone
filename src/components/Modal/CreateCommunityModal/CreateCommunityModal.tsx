@@ -1,4 +1,5 @@
 import {
+    Box,
     Button,
     Flex,
     Modal,
@@ -31,8 +32,10 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                     >
                         Create a community
                     </ModalHeader>
+                    <Box>
                     <ModalCloseButton />
                     <ModalBody>Here is the modal body</ModalBody>
+                    </Box>
 
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={handleClose}>
