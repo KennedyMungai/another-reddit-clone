@@ -20,6 +20,12 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
         );
 
         const communityDoc = await getDoc(communityDocRef);
+
+        return {
+            props: {
+                communityData: communityDoc.data(),
+            },
+        };
     } catch (error) {}
 }
 
