@@ -19,7 +19,7 @@ type Prop = {
 const CreateCommunityModal = ({ open }) => {
     return (
         <>
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={open} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
