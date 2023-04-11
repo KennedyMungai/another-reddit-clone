@@ -38,7 +38,9 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         setCharsRemaining(21 - e.target.value.length);
     };
 
-    const onCommunityTypeChange = (e: ChangeEvent<HTMLInputElement>) => {};
+    const onCommunityTypeChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setCommunityType(e.target.name);
+    };
 
     return (
         <>
