@@ -49,7 +49,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     };
 
     const handleCreateCommunity = async () => {
-        setError("");
+        if (error) setError("");
 
         const format = /[ `!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?~]/;
 
