@@ -47,6 +47,8 @@ const SignUp = () => {
         }));
     };
 
+    const createUserDocument = async () => {};
+
     return (
         <form action="" onSubmit={onSubmit}>
             <Input
