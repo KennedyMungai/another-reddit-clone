@@ -17,12 +17,11 @@ import {
     Text,
 } from "@chakra-ui/react";
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
-import { validateConfig } from "next/dist/server/config-shared";
 import { ChangeEvent, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
 import { HiLockClosed } from "react-icons/hi";
 import { auth, firestore } from "../../../firebase/clientApp";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 type Prop = {
     open: boolean;
