@@ -65,7 +65,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         const communityDoc = await getDoc(communityDocRef);
 
         if (communityDoc.exists()) {
-            setError("Sorry, than name has already been taken");
+            setError(`Sorry, r/${communityName} is taken`);
         }
     };
 
