@@ -22,6 +22,7 @@ type Prop = {
 
 const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     const [communityName, setCommunityName] = useState<string>("");
+    const [charsRemaining, setCharsRemaining] = useState<number>(21);
 
     return (
         <>
