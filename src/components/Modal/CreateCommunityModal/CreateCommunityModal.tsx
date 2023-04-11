@@ -52,7 +52,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 be changed!
                             </Text>
                             <Text>r/</Text>
-                            <Input />
+                            <Input value={communityName} />
                         </ModalBody>
                     </Box>
 
