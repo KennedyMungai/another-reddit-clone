@@ -3,7 +3,7 @@ import { firestore } from "@/firebase/clientApp";
 import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
-import safeJsonStringify from 'safe-json-stringify'
+import safeJsonStringify from "safe-json-stringify";
 
 type CommunityPageProps = {
     communityData: Community;
@@ -27,7 +27,12 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
         return {
             props: {
-                communityData: communityDoc.data(),
+                communityData: JSON.parse(
+                    safeJsonStringify({
+                        id: communityDoc.id,
+                        ...communityDoc.data,
+                    })
+                ),
             },
         };
     } catch (error) {
