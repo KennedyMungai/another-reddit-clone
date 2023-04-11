@@ -25,6 +25,10 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     const [charsRemaining, setCharsRemaining] = useState<number>(21);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        if(e.target.value.length > 21)
+        {
+            return
+        }
         setCommunityName(e.target.value);
         setCharsRemaining(21 - e.target.value.length);
     };
