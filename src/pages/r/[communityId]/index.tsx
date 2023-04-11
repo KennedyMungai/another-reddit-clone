@@ -3,6 +3,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
 
+type CommunityPageProps = {};
+
 const CommunityPage = ({ communityData }) => {
     return <div>Community Page</div>;
 };
