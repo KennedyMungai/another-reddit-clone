@@ -16,7 +16,7 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { validateConfig } from "next/dist/server/config-shared";
 import { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
@@ -77,6 +77,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
             // createdAt
             // numberOfMembers
             // privacyType
+
+            creatorId: user?.uid,
+            createdAt: serverTimestamp(),
+            numberOfMembers: 1,
+            privacyType: communityType,
         });
     };
 
