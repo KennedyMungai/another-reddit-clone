@@ -42,6 +42,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         setCommunityType(e.target.name);
     };
 
+    const handleCreateCommunity = () => {};
+
     return (
         <>
             <Modal isOpen={open} onClose={handleClose} size="lg">
