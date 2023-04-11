@@ -49,6 +49,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     };
 
     const handleCreateCommunity = async () => {
+        setError("");
+
         const format = /[ `!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?~]/;
 
         if (format.test(communityName) || communityName.length < 3) {
@@ -97,7 +99,6 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         }
 
         setLoading(false);
-        setError("");
     };
 
     return (
