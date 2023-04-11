@@ -76,7 +76,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
 
             if (communityDoc.exists()) {
                 throw new Error(
-                    `Sorry, r/${communityName} is taken. Try another`
+                    `Sorry, r/${communityName} is taken. Try another community name`
                 );
             }
 
