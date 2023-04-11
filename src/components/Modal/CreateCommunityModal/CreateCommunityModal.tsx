@@ -138,9 +138,18 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         isChecked={communityType === "private"}
                                         onChange={onCommunityTypeChange}
                                     >
-                                        <Text fontSize="10pt" mr={1}>
-                                            Private
-                                        </Text>
+                                        <Flex align="center" gap={3}>
+                                            <Text fontSize="10pt" mr={1}>
+                                                Private
+                                            </Text>
+                                            <Text
+                                                fontSize="8pt"
+                                                color="gray.500"
+                                            >
+                                                Only approved users can view and
+                                                submit to this community
+                                            </Text>
+                                        </Flex>
                                     </Checkbox>
                                 </Stack>
                             </Box>
