@@ -1,5 +1,5 @@
 import CreateCommunityModal from "@/components/Modal/CreateCommunityModal/CreateCommunityModal";
-import { Flex, MenuItem } from "@chakra-ui/react";
+import { Flex, Icon, MenuItem } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {};
@@ -9,7 +9,10 @@ const Communities = (props: Props) => {
         <>
             <CreateCommunityModal />
             <MenuItem>
-                <Flex></Flex>
+                <Flex>
+                    <Icon />
+                    Create Community
+                </Flex>
             </MenuItem>
         </>
     );
