@@ -45,6 +45,14 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
 
     const handleCreateCommunity = async () => {
         const format = /[ `!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+        if (format.test(communityName) || communityName.length < 3) {
+            setError(
+                "Community names must be between 3-21 characters, and can only contain letters, numbers or underscores"
+            );
+
+            return;
+        }
     };
 
     return (
