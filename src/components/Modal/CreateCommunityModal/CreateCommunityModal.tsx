@@ -26,6 +26,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setCommunityName(e.target.value);
+        setCharsRemaining(21 - e.target.value.length);
     };
 
     return (
