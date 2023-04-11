@@ -28,7 +28,7 @@ const CreateCommunityModal = ({ open, handleClose }) => {
                     <ModalBody></ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
+                        <Button colorScheme="blue" mr={3} onClick={handleClose}>
                             Close
                         </Button>
                         <Button variant="ghost">Secondary Action</Button>
