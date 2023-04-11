@@ -9,7 +9,7 @@ const Communities = (props: Props) => {
     return (
         <>
             <CreateCommunityModal />
-            <MenuItem>
+            <MenuItem width="100%">
                 <Flex gap={2} alignItems="center">
                     <Icon as={GrAdd} fontSize={20} />
                     Create Community
