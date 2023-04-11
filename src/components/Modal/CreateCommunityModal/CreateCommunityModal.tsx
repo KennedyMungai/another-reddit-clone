@@ -14,6 +14,7 @@ import {
     Text,
     Stack,
     Flex,
+    Icon,
 } from "@chakra-ui/react";
 import React, { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
@@ -102,6 +103,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         onChange={onCommunityTypeChange}
                                     >
                                         <Flex align="center" gap={3}>
+                                            <Icon as={BsFillPersonFill} />
                                             <Text fontSize="10pt" mr={1}>
                                                 Public
                                             </Text>
@@ -122,6 +124,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         onChange={onCommunityTypeChange}
                                     >
                                         <Flex align="center" gap={3}>
+                                            <Icon as={BsFillEyeFill} />
                                             <Text fontSize="10pt" mr={1}>
                                                 Restricted
                                             </Text>
@@ -141,6 +144,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         onChange={onCommunityTypeChange}
                                     >
                                         <Flex align="center" gap={3}>
+                                            <Icon as={HiLockClosed} />
                                             <Text fontSize="10pt" mr={1}>
                                                 Private
                                             </Text>
