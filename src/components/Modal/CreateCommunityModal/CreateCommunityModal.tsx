@@ -63,6 +63,10 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         const communityDocRef = doc(firestore, "communities", communityName);
 
         const communityDoc = await getDoc(communityDocRef);
+
+        if (communityDoc.exists()) {
+            setError("Sorry, than name has already been taken");
+        }
     };
 
     return (
