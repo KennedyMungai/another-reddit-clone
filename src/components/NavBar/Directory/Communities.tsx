@@ -3,9 +3,7 @@ import { Flex, Icon, MenuItem } from "@chakra-ui/react";
 import React from "react";
 import { GrAdd } from "react-icons/gr";
 
-type Props = {};
-
-const Communities = (props: Props) => {
+const Communities = () => {
     return (
         <>
             <CreateCommunityModal />
