@@ -183,7 +183,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                         >
                             Cancel
                         </Button>
-                        <Button variant="ghost">Create Community</Button>
+                        <Button height="30px">Create Community</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
