@@ -31,7 +31,6 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                         <Button colorScheme="blue" mr={3} onClick={handleClose}>
                             Close
                         </Button>
-                        <Button variant="ghost">Secondary Action</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
