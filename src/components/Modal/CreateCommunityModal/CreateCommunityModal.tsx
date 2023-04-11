@@ -119,9 +119,19 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         }
                                         onChange={onCommunityTypeChange}
                                     >
-                                        <Text fontSize="10pt" mr={1}>
-                                            Restricted
-                                        </Text>
+                                        <Flex align="center" gap={3}>
+                                            <Text fontSize="10pt" mr={1}>
+                                                Restricted
+                                            </Text>
+                                            <Text
+                                                fontSize="8pt"
+                                                color="gray.500"
+                                            >
+                                                Anyone can view these
+                                                communities but only approved
+                                                users can post
+                                            </Text>
+                                        </Flex>
                                     </Checkbox>
                                     <Checkbox
                                         name="private"
