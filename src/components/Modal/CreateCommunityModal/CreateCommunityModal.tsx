@@ -42,7 +42,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         setCommunityType(e.target.name);
     };
 
-    const handleCreateCommunity = () => {};
+    const handleCreateCommunity = async () => {};
 
     return (
         <>
