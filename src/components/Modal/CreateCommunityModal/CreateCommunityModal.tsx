@@ -101,6 +101,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                     numberOfMembers: 1,
                     privacyType: communityType,
                 });
+
+                // Create community snippet on the user
             });
         } catch (error: any) {
             console.log("handleCreateCommunity error", error);
