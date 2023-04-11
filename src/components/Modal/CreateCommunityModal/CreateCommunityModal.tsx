@@ -14,12 +14,13 @@ import React from "react";
 
 type Prop = {
     open: boolean;
+    handleClose: () => {};
 };
 
-const CreateCommunityModal = ({ open }) => {
+const CreateCommunityModal = ({ open, handleClose }) => {
     return (
         <>
-            <Modal isOpen={open} onClose={onClose}>
+            <Modal isOpen={open} onClose={handleClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
