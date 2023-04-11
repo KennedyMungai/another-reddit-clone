@@ -96,7 +96,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                     <Checkbox
                                         name="public"
                                         isChecked={communityType === "public"}
-                                        onChanged={onCommunityTypeChange}
+                                        onChange={onCommunityTypeChange}
                                     >
                                         Public
                                     </Checkbox>
@@ -105,14 +105,14 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         isChecked={
                                             communityType === "restricted"
                                         }
-                                        onChanged={onCommunityTypeChange}
+                                        onChange={onCommunityTypeChange}
                                     >
                                         Restricted
                                     </Checkbox>
                                     <Checkbox
                                         name="private"
                                         isChecked={communityType === "private"}
-                                        onChanged={onCommunityTypeChange}
+                                        onChange={onCommunityTypeChange}
                                     >
                                         Private
                                     </Checkbox>
