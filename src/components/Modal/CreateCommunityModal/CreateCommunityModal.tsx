@@ -248,7 +248,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                         >
                             Cancel
                         </Button>
-                        <Button height="30px" onClick={handleCreateCommunity}>
+                        <Button
+                            height="30px"
+                            onClick={handleCreateCommunity}
+                            onLoad={loading}
+                        >
                             Create Community
                         </Button>
                     </ModalFooter>
