@@ -42,7 +42,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
 
     return (
         <>
-            <Modal isOpen={open} onClose={handleClose}>
+            <Modal isOpen={open} onClose={handleClose} size="lg">
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader
