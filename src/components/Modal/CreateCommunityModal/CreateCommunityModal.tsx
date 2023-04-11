@@ -68,7 +68,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 value={communityName}
                                 size="sm"
                                 pl="22px"
-                                onChange={() => {}}
+                                onChange={handleChange}
                             />
                             <Text>{21} Characters Remaining</Text>
                         </ModalBody>
