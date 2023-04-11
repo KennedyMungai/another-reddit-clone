@@ -25,7 +25,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                 <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody></ModalBody>
+                    <ModalBody>Here is the modal body</ModalBody>
 
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={handleClose}>
