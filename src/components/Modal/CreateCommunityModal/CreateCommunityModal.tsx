@@ -2,7 +2,7 @@ import {
     Box,
     Button,
     Divider,
-    Flex,
+    Checkbox,
     Input,
     Modal,
     ModalBody,
@@ -88,6 +88,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 <Text fontWeight={600} fontSize={15}>
                                     Community Type
                                 </Text>
+                                <Checkbox></Checkbox>
                             </Box>
                         </ModalBody>
                     </Box>
