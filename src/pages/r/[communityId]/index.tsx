@@ -26,7 +26,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
                 communityData: communityDoc.data(),
             },
         };
-    } catch (error) {}
+    } catch (error) {
+        console.log("getServerSideProps error: ", error);
+    }
 }
 
 export default CommunityPage;
