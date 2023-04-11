@@ -88,19 +88,19 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                         `Sorry, r/${communityName} is taken. Try another community name`
                     );
                 }
-            });
 
-            // Create a community
-            await setDoc(communityDocRef, {
-                // creatorId
-                // createdAt
-                // numberOfMembers
-                // privacyType
+                // Create a community
+                await setDoc(communityDocRef, {
+                    // creatorId
+                    // createdAt
+                    // numberOfMembers
+                    // privacyType
 
-                creatorId: user?.uid,
-                createdAt: serverTimestamp(),
-                numberOfMembers: 1,
-                privacyType: communityType,
+                    creatorId: user?.uid,
+                    createdAt: serverTimestamp(),
+                    numberOfMembers: 1,
+                    privacyType: communityType,
+                });
             });
         } catch (error: any) {
             console.log("handleCreateCommunity error", error);
