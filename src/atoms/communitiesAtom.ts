@@ -1,3 +1,6 @@
 import { atom } from "recoil";
 
-atom
+export interface Community 
+{
+
+}
