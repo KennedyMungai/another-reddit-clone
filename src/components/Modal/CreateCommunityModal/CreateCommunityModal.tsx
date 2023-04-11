@@ -103,7 +103,10 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                             <Text fontSize="10pt" mr={1}>
                                                 Public
                                             </Text>
-                                            <Text fontSize="8pt">
+                                            <Text
+                                                fontSize="8pt"
+                                                color="gray.500"
+                                            >
                                                 Anyone can view, post and
                                                 comment to this community
                                             </Text>
