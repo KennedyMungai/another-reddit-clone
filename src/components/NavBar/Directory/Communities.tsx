@@ -13,7 +13,7 @@ const Communities = () => {
                 width="100%"
                 fontSize="10pt"
                 _hover={{ bg: "gray.100" }}
-                onClick={() => {}}
+                onClick={() => setOpen(true)}
             >
                 <Flex gap={2} alignItems="center">
                     <Icon as={GrAdd} fontSize={20} />
