@@ -11,10 +11,14 @@ const OAuthButtons = () => {
 
     const createUserDocument = async (user: User) => {
         const userDocRef = doc(firestore, "users", user.uid);
-        await setDoc(userDocRef, user);
+        await setDoc(userDocRef, JSON.parse(JSON.stringify(user)));
     };
 
-    useEffect(() => {}, [userCred]);
+    useEffect(() => {
+        if (userCred) {
+            createUserDocument(userCred.user);
+        }
+    }, [userCred]);
 
     return (
         <Flex flexDirection="column" gap={1} width="100%">
