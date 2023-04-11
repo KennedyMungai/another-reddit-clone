@@ -3,9 +3,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
 
-type CommunityPageProps = {};
-
-const CommunityPage = (props: CommunityPageProps) => {
+const CommunityPage = () => {
     return <div>Community Page</div>;
 };
 
