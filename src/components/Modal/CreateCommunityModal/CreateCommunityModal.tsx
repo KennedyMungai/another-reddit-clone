@@ -35,6 +35,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     const [charsRemaining, setCharsRemaining] = useState<number>(21);
     const [communityType, setCommunityType] = useState("public");
     const [error, setError] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.value.length > 21) {
