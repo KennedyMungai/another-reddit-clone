@@ -2,8 +2,8 @@ import React from "react";
 
 type CommunityPageProps = {};
 
-const Communities = (props: CommunityPageProps) => {
+const CommunityPage = (props: CommunityPageProps) => {
     return <div>Communities</div>;
 };
 
-export default Communities;
+export default CommunityPage;
