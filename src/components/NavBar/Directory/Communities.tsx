@@ -1,9 +1,11 @@
 import CreateCommunityModal from "@/components/Modal/CreateCommunityModal/CreateCommunityModal";
 import { Flex, Icon, MenuItem } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { GrAdd } from "react-icons/gr";
 
 const Communities = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <>
             <CreateCommunityModal />
