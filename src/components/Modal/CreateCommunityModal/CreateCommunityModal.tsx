@@ -1,6 +1,7 @@
 import {
     Box,
     Button,
+    Divider,
     Flex,
     Modal,
     ModalBody,
@@ -33,6 +34,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                         Create a community
                     </ModalHeader>
                     <Box pl={3} pr={3}>
+                        <Divider />
                         <ModalCloseButton />
                         <ModalBody>Here is the modal body</ModalBody>
                     </Box>
