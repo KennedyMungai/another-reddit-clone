@@ -14,7 +14,7 @@ import React from "react";
 
 type Prop = {
     open: boolean;
-    handleClose: () => {};
+    handleClose: () => void;
 };
 
 const CreateCommunityModal = ({ open, handleClose }) => {
