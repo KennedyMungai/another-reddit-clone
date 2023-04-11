@@ -16,6 +16,8 @@ import {
     Flex,
 } from "@chakra-ui/react";
 import React, { ChangeEvent, useState } from "react";
+import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
+import { HiLockClosed } from "react-icons/hi";
 
 type Prop = {
     open: boolean;
