@@ -97,7 +97,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                             >
                                 {charsRemaining} Characters Remaining
                             </Text>
-                            {error && <Text>{error}</Text>}
+                            {error && (
+                                <Text color="red" fontSize="9pt" pt={1}>
+                                    {error}
+                                </Text>
+                            )}
                             <Box mt={4} mb={4}>
                                 <Text fontWeight={600} fontSize={15}>
                                     Community Type
