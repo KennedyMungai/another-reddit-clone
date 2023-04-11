@@ -76,7 +76,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 pl="22px"
                                 onChange={handleChange}
                             />
-                            <Text color={charsRemaining === 0 ? "red" : ""}>
+                            <Text
+                                color={
+                                    charsRemaining === 0 ? "red" : "gray.500"
+                                }
+                            >
                                 {charsRemaining} Characters Remaining
                             </Text>
                         </ModalBody>
