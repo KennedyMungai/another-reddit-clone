@@ -17,7 +17,7 @@ type Prop = {
     handleClose: () => void;
 };
 
-const CreateCommunityModal = ({ open, handleClose }) => {
+const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     return (
         <>
             <Modal isOpen={open} onClose={handleClose}>
