@@ -90,7 +90,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                 }
 
                 // Create a community
-                await setDoc(communityDocRef, {
+                await transaction.set(communityDocRef, {
                     // creatorId
                     // createdAt
                     // numberOfMembers
