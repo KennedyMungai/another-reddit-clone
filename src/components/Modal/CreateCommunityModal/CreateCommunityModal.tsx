@@ -24,7 +24,9 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     const [communityName, setCommunityName] = useState<string>("");
     const [charsRemaining, setCharsRemaining] = useState<number>(21);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {};
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setCommunityName(e.target.value);
+    };
 
     return (
         <>
