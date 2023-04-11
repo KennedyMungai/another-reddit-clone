@@ -23,7 +23,14 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
             <Modal isOpen={open} onClose={handleClose}>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalHeader
+                        display="flex"
+                        flexDirection="column"
+                        fontSize={15}
+                        padding={3}
+                    >
+                        Create a community
+                    </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>Here is the modal body</ModalBody>
 
