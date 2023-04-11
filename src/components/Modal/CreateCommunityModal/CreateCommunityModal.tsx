@@ -103,7 +103,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         onChange={onCommunityTypeChange}
                                     >
                                         <Flex align="center" gap={3}>
-                                            <Icon as={BsFillPersonFill} />
+                                            <Icon
+                                                as={BsFillPersonFill}
+                                                color="gray.500"
+                                                mr={2}
+                                            />
                                             <Text fontSize="10pt" mr={1}>
                                                 Public
                                             </Text>
@@ -124,7 +128,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         onChange={onCommunityTypeChange}
                                     >
                                         <Flex align="center" gap={3}>
-                                            <Icon as={BsFillEyeFill} />
+                                            <Icon
+                                                as={BsFillEyeFill}
+                                                color="gray.500"
+                                                mr={2}
+                                            />
                                             <Text fontSize="10pt" mr={1}>
                                                 Restricted
                                             </Text>
@@ -144,7 +152,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         onChange={onCommunityTypeChange}
                                     >
                                         <Flex align="center" gap={3}>
-                                            <Icon as={HiLockClosed} />
+                                            <Icon
+                                                as={HiLockClosed}
+                                                color="gray.500"
+                                                mr={2}
+                                            />
                                             <Text fontSize="10pt" mr={1}>
                                                 Private
                                             </Text>
