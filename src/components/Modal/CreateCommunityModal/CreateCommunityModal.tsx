@@ -84,6 +84,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                             >
                                 {charsRemaining} Characters Remaining
                             </Text>
+                            <Box></Box>
                         </ModalBody>
                     </Box>
 
