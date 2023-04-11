@@ -93,13 +93,26 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                     Community Type
                                 </Text>
                                 <Stack spacing={2}>
-                                    <Checkbox name="public" isChecked>
+                                    <Checkbox
+                                        name="public"
+                                        isChecked={communityType === "public"}
+                                    >
                                         Public
                                     </Checkbox>
-                                    <Checkbox name="restricted">
+                                    <Checkbox
+                                        name="restricted"
+                                        isChecked={
+                                            communityType === "restricted"
+                                        }
+                                    >
                                         Restricted
                                     </Checkbox>
-                                    <Checkbox name="private">Private</Checkbox>
+                                    <Checkbox
+                                        name="private"
+                                        isChecked={communityType === "private"}
+                                    >
+                                        Private
+                                    </Checkbox>
                                 </Stack>
                             </Box>
                         </ModalBody>
