@@ -81,7 +81,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
 
             await runTransaction(firestore, async (transaction) => {
                 //Check if the community exists in the db
-                const communityDoc = await getDoc(communityDocRef);
+                const communityDoc = await transaction.get(communityDocRef);
 
                 if (communityDoc.exists()) {
                     throw new Error(
