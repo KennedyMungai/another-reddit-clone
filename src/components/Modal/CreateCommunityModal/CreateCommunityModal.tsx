@@ -60,6 +60,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
             return;
         }
 
+        setLoading(true);
+
         // Create the community document in firestore
         // Check that the name is not taken
         // If name is valid, create the community
@@ -84,6 +86,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
             numberOfMembers: 1,
             privacyType: communityType,
         });
+
+        setLoading(false);
     };
 
     return (
