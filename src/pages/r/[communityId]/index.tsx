@@ -9,7 +9,7 @@ type CommunityPageProps = {
 };
 
 const CommunityPage = ({ communityData }: CommunityPageProps) => {
-    return <div>Community Page</div>;
+    return <div>Welcome to {communityData.id}</div>;
 };
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
