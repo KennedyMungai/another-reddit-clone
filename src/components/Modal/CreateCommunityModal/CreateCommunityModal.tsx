@@ -62,7 +62,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         // If name is valid, create the community
         const communityDocRef = doc(firestore, "communities", communityName);
 
-        const commmunityDoc = await getDoc(communityDocRef);
+        const communityDoc = await getDoc(communityDocRef);
     };
 
     return (
