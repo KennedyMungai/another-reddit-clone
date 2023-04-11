@@ -1,5 +1,5 @@
 import { firestore } from "@/firebase/clientApp";
-import { doc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
 
@@ -18,6 +18,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
             "communities",
             context.query.communityId as string
         );
+
+        const communityDoc = await getDoc(communityDocRef);
     } catch (error) {}
 }
 
