@@ -7,7 +7,7 @@ const Communities = () => {
     return (
         <>
             <CreateCommunityModal />
-            <MenuItem width="100%">
+            <MenuItem width="100%" fontSize="10pt" _hover={{ bg: "gray.100" }}>
                 <Flex gap={2} alignItems="center">
                     <Icon as={GrAdd} fontSize={20} />
                     Create Community
