@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
+type CommunityPageProps = {};
 
-const Communities = (props: Props) => {
+const Communities = (props: CommunityPageProps) => {
     return <div>Communities</div>;
 };
 
