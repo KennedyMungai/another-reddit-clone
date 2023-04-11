@@ -78,7 +78,6 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                 throw new Error(
                     `Sorry, r/${communityName} is taken. Try another`
                 );
-                return;
             }
 
             // Create a community
