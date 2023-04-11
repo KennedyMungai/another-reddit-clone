@@ -51,8 +51,17 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 Community name, including capitalization, cannot
                                 be changed!
                             </Text>
-                            <Text>r/</Text>
+                            <Text
+                                position="relative"
+                                top="28px"
+                                left="10px"
+                                width="20px"
+                                color="gray.400"
+                            >
+                                r/
+                            </Text>
                             <Input
+                                position="relative"
                                 value={communityName}
                                 size="sm"
                                 pl="22px"
