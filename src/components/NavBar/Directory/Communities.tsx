@@ -8,7 +8,7 @@ const Communities = () => {
 
     return (
         <>
-            <CreateCommunityModal />
+            <CreateCommunityModal open={open} />
             <MenuItem
                 width="100%"
                 fontSize="10pt"
