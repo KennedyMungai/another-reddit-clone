@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { FIREBASE_ERRORS } from "../../../firebase/Errors";
 import { auth } from "../../../firebase/clientApp";
+import { User } from "firebase/auth";
 
 const SignUp = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
@@ -47,7 +48,7 @@ const SignUp = () => {
         }));
     };
 
-    const createUserDocument = async () => {};
+    const createUserDocument = async (user: User) => {};
 
     return (
         <form action="" onSubmit={onSubmit}>
