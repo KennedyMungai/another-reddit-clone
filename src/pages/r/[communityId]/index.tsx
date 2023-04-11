@@ -9,6 +9,9 @@ const CommunityPage = (props: CommunityPageProps) => {
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
     // Get community data and pass it onto the client
+
+    try {
+    } catch (error) {}
 }
 
 export default CommunityPage;
