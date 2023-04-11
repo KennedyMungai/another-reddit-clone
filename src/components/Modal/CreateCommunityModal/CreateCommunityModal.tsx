@@ -3,6 +3,7 @@ import {
     Button,
     Divider,
     Flex,
+    Input,
     Modal,
     ModalBody,
     ModalCloseButton,
@@ -12,7 +13,7 @@ import {
     ModalOverlay,
     Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 type Prop = {
     open: boolean;
@@ -20,6 +21,8 @@ type Prop = {
 };
 
 const CreateCommunityModal = ({ open, handleClose }: Prop) => {
+    const [communityName, setCommunityName] = useState<string>("");
+
     return (
         <>
             <Modal isOpen={open} onClose={handleClose}>
@@ -41,7 +44,15 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                             flexDirection="column"
                             padding="10px 0px"
                         >
-                            Here is the modal body
+                            <Text fontWeight={600} fontSize="15">
+                                Name:{" "}
+                            </Text>
+                            <Text fontSize={11} color="gray.500">
+                                Community name, including capitalization, cannot
+                                be changed!
+                            </Text>
+                            <Text>r/</Text>
+                            <Input />
                         </ModalBody>
                     </Box>
 
