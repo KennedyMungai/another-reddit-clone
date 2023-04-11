@@ -25,9 +25,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
     const [charsRemaining, setCharsRemaining] = useState<number>(21);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        if(e.target.value.length > 21)
-        {
-            return
+        if (e.target.value.length > 21) {
+            return;
         }
         setCommunityName(e.target.value);
         setCharsRemaining(21 - e.target.value.length);
@@ -77,7 +76,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 pl="22px"
                                 onChange={handleChange}
                             />
-                            <Text>{21} Characters Remaining</Text>
+                            <Text>{charsRemaining} Characters Remaining</Text>
                         </ModalBody>
                     </Box>
 
