@@ -80,6 +80,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 color={
                                     charsRemaining === 0 ? "red" : "gray.500"
                                 }
+                                fontSize="9pt"
                             >
                                 {charsRemaining} Characters Remaining
                             </Text>
