@@ -16,7 +16,13 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
-import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
+import {
+    doc,
+    getDoc,
+    runTransaction,
+    serverTimestamp,
+    setDoc,
+} from "firebase/firestore";
 import { ChangeEvent, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
@@ -73,13 +79,16 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                 communityName
             );
 
-            const communityDoc = await getDoc(communityDocRef);
+            await runTransaction(firestore, async (transaction) => {
+                //Check if the community exists in the db
+                const communityDoc = await getDoc(communityDocRef);
 
-            if (communityDoc.exists()) {
-                throw new Error(
-                    `Sorry, r/${communityName} is taken. Try another community name`
-                );
-            }
+                if (communityDoc.exists()) {
+                    throw new Error(
+                        `Sorry, r/${communityName} is taken. Try another community name`
+                    );
+                }
+            });
 
             // Create a community
             await setDoc(communityDocRef, {
