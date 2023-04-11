@@ -92,7 +92,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                 privacyType: communityType,
             });
         } catch (error) {
-            console.log(error);
+            console.log("handleCreateCommunity error", error);
         }
 
         setLoading(false);
