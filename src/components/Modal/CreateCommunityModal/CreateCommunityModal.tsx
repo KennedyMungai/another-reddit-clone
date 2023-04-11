@@ -93,6 +93,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
             });
         } catch (error) {
             console.log("handleCreateCommunity error", error);
+            setError(error.message);
         }
 
         setLoading(false);
