@@ -16,7 +16,7 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { validateConfig } from "next/dist/server/config-shared";
 import { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
@@ -68,6 +68,14 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
             setError(`Sorry, r/${communityName} is taken. Try another`);
             return;
         }
+
+        // Create a community
+        await setDoc(communityDocRef, {
+            // creatorId
+            // createdAt
+            // numberOfMembers
+            // privacyType
+        });
     };
 
     return (
