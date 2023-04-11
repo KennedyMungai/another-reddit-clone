@@ -84,7 +84,11 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                             >
                                 {charsRemaining} Characters Remaining
                             </Text>
-                            <Box></Box>
+                            <Box mt={4} mb={4}>
+                                <Text fontWeight={600} fontSize={15}>
+                                    Community Type
+                                </Text>
+                            </Box>
                         </ModalBody>
                     </Box>
 
