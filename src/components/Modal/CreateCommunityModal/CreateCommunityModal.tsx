@@ -36,7 +36,13 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                     <Box pl={3} pr={3}>
                         <Divider />
                         <ModalCloseButton />
-                        <ModalBody>Here is the modal body</ModalBody>
+                        <ModalBody
+                            display="flex"
+                            flexDirection="column"
+                            padding="10px 0px"
+                        >
+                            Here is the modal body
+                        </ModalBody>
                     </Box>
 
                     <ModalFooter>
