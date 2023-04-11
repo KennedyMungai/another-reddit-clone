@@ -21,7 +21,8 @@ import { validateConfig } from "next/dist/server/config-shared";
 import { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
 import { HiLockClosed } from "react-icons/hi";
-import { firestore } from "../../../firebase/clientApp";
+import { auth, firestore } from "../../../firebase/clientApp";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 type Prop = {
     open: boolean;
@@ -29,6 +30,7 @@ type Prop = {
 };
 
 const CreateCommunityModal = ({ open, handleClose }: Prop) => {
+    const [user] = useAuthState(auth);
     const [communityName, setCommunityName] = useState<string>("");
     const [charsRemaining, setCharsRemaining] = useState<number>(21);
     const [communityType, setCommunityType] = useState("public");
