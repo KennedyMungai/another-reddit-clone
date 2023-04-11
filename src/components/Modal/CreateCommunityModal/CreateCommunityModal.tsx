@@ -16,7 +16,7 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
-import { doc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { validateConfig } from "next/dist/server/config-shared";
 import { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
@@ -61,6 +61,8 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         // Check that the name is not taken
         // If name is valid, create the community
         const communityDocRef = doc(firestore, "communities", communityName);
+
+        const commmunityDoc = await getDoc(communityDocRef);
     };
 
     return (
