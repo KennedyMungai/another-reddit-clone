@@ -6,7 +6,8 @@ import { User } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
 const OAuthButtons = () => {
-    const [signInWithGoogle, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, userCred, loading, error] =
+        useSignInWithGoogle(auth);
 
     const createUserDocument = async (user: User) => {
         const userDocRef = doc(firestore, "users", user.uid);
