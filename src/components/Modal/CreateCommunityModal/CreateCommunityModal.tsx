@@ -12,6 +12,7 @@ import {
     ModalHeader,
     ModalOverlay,
     Text,
+    Stack,
 } from "@chakra-ui/react";
 import React, { ChangeEvent, useState } from "react";
 
@@ -88,7 +89,13 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                 <Text fontWeight={600} fontSize={15}>
                                     Community Type
                                 </Text>
-                                <Checkbox></Checkbox>
+                                <Checkbox>
+                                    <Stack spacing={2}>
+                                        <Checkbox></Checkbox>
+                                        <Checkbox></Checkbox>
+                                        <Checkbox></Checkbox>
+                                    </Stack>
+                                </Checkbox>
                             </Box>
                         </ModalBody>
                     </Box>
