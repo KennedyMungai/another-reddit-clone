@@ -13,6 +13,7 @@ import {
     ModalOverlay,
     Text,
     Stack,
+    Flex,
 } from "@chakra-ui/react";
 import React, { ChangeEvent, useState } from "react";
 
@@ -98,9 +99,15 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                                         isChecked={communityType === "public"}
                                         onChange={onCommunityTypeChange}
                                     >
-                                        <Text fontSize="10pt" mr={1}>
-                                            Public
-                                        </Text>
+                                        <Flex align="center" gap={3}>
+                                            <Text fontSize="10pt" mr={1}>
+                                                Public
+                                            </Text>
+                                            <Text fontSize="8pt">
+                                                Anyone can view, post and
+                                                comment to this community
+                                            </Text>
+                                        </Flex>
                                     </Checkbox>
                                     <Checkbox
                                         name="restricted"
