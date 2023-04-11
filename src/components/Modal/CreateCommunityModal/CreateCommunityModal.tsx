@@ -103,6 +103,17 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
                 });
 
                 // Create community snippet on the user
+                transaction.set(
+                    doc(
+                        firestore,
+                        `users/${user?.uid}/communitySnippets`,
+                        communityName
+                    ),
+                    {
+                        communityId: communityName,
+                        isModerator: true,
+                    }
+                );
             });
         } catch (error: any) {
             console.log("handleCreateCommunity error", error);
