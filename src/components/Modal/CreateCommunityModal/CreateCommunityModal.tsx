@@ -62,30 +62,38 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
 
         setLoading(true);
 
-        // Create the community document in firestore
-        // Check that the name is not taken
-        // If name is valid, create the community
-        const communityDocRef = doc(firestore, "communities", communityName);
+        try {
+            // Create the community document in firestore
+            // Check that the name is not taken
+            // If name is valid, create the community
+            const communityDocRef = doc(
+                firestore,
+                "communities",
+                communityName
+            );
 
-        const communityDoc = await getDoc(communityDocRef);
+            const communityDoc = await getDoc(communityDocRef);
 
-        if (communityDoc.exists()) {
-            setError(`Sorry, r/${communityName} is taken. Try another`);
-            return;
+            if (communityDoc.exists()) {
+                setError(`Sorry, r/${communityName} is taken. Try another`);
+                return;
+            }
+
+            // Create a community
+            await setDoc(communityDocRef, {
+                // creatorId
+                // createdAt
+                // numberOfMembers
+                // privacyType
+
+                creatorId: user?.uid,
+                createdAt: serverTimestamp(),
+                numberOfMembers: 1,
+                privacyType: communityType,
+            });
+        } catch (error) {
+            console.log(error);
         }
-
-        // Create a community
-        await setDoc(communityDocRef, {
-            // creatorId
-            // createdAt
-            // numberOfMembers
-            // privacyType
-
-            creatorId: user?.uid,
-            createdAt: serverTimestamp(),
-            numberOfMembers: 1,
-            privacyType: communityType,
-        });
 
         setLoading(false);
     };
