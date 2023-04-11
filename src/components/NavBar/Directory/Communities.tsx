@@ -1,4 +1,4 @@
-import CreateCommunityModal from "@/components/Modal/CreateCommunityModal";
+import CreateCommunityModal from "@/components/Modal/CreateCommunityModal/CreateCommunityModal";
 import React from "react";
 
 type Props = {};
