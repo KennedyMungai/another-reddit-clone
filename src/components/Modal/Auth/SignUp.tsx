@@ -53,7 +53,11 @@ const SignUp = () => {
         await addDoc(collection(firestore, "users"), user);
     };
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        if (userCred) {
+            createUserDocument(userCred.user);
+        }
+    }, [userCred]);
 
     return (
         <form action="" onSubmit={onSubmit}>
