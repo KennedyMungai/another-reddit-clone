@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const CreateCommunityModal = (props: Props) => {
+const CreateCommunityModal = () => {
     return <div>Community Modal</div>;
 };
 
