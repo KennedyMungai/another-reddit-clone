@@ -16,10 +16,12 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
+import { doc } from "firebase/firestore";
 import { validateConfig } from "next/dist/server/config-shared";
 import { ChangeEvent, useState } from "react";
 import { BsFillEyeFill, BsFillPersonFill } from "react-icons/bs";
 import { HiLockClosed } from "react-icons/hi";
+import { firestore } from "../../../firebase/clientApp";
 
 type Prop = {
     open: boolean;
@@ -58,6 +60,7 @@ const CreateCommunityModal = ({ open, handleClose }: Prop) => {
         // Create the community document in firestore
         // Check that the name is not taken
         // If name is valid, create the community
+        const communityDocRef = doc(firestore, "communities", communityName);
     };
 
     return (
