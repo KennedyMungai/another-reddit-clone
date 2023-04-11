@@ -5,7 +5,7 @@ import React from "react";
 
 type CommunityPageProps = {};
 
-const CommunityPage = ({ communityData }) => {
+const CommunityPage = ({ communityData }: CommunityPageProps) => {
     return <div>Community Page</div>;
 };
 
