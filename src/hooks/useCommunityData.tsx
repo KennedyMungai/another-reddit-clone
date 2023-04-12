@@ -18,10 +18,10 @@ const useCommunityData = () => {
             return;
         }
 
-        joinCommunity(communityData.id);
+        joinCommunity(communityData);
     };
 
-    const joinCommunity = (communityData: string) => {};
+    const joinCommunity = (communityData: Community) => {};
 
     const leaveCommunity = (communityId: string) => {};
 
