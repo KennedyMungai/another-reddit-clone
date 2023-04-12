@@ -6,6 +6,8 @@ const useCommunityData = () => {
     const [communityStateValue, setCommunityStateValue] =
         useRecoilState(communityState);
 
+    const joinCommunity = () => {};
+
     return {
         // Data and functions
     };
