@@ -13,7 +13,15 @@ const Header = ({ communityData }: Props) => {
             <Box height="50%" bg="blue.400" />
             <Flex justify="center" bg="white" flexGrow={1}>
                 <Flex width="95%" maxWidth="860px" border="1px solid red">
-                    <Icon as={FaReddit} fontSize={64} />
+                    <Icon
+                        as={FaReddit}
+                        fontSize={64}
+                        position="relative"
+                        top={-3}
+                        color="blue.500"
+                        border="1px solid white"
+                        borderRadius="50%"
+                    />
                 </Flex>
             </Flex>
         </Flex>
