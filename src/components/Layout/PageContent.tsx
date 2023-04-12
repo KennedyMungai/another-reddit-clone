@@ -7,12 +7,16 @@ type Props = {
 
 const PageContent = ({ children }: Props) => {
     return (
-        <Flex>
+        <Flex border="1px solid red">
             <Flex>
                 {/* LHS */}
-                <Flex>{children && children[0 as keyof typeof children]}</Flex>
+                <Flex border="1px solid green">
+                    {children && children[0 as keyof typeof children]}
+                </Flex>
                 {/* RHS */}
-                <Flex>{children && children[1 as keyof typeof children]}</Flex>
+                <Flex border="1px solid blue">
+                    {children && children[1 as keyof typeof children]}
+                </Flex>
             </Flex>
         </Flex>
     );
