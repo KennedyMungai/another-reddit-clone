@@ -1,5 +1,6 @@
 import { Community, communityState } from "@/atoms/communitiesAtom";
-import { auth } from "@/firebase/clientApp";
+import { auth, firestore } from "@/firebase/clientApp";
+import { collection, getDocs } from "firebase/firestore";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState } from "recoil";
@@ -30,6 +31,9 @@ const useCommunityData = () => {
         setLoading(true);
 
         try {
+            const snippetDocs = await getDocs(
+                collection(firestore, `users/${user?.uid}/communitySnippets`)
+            );
         } catch (error) {
             console.log("getMySnippets error", error);
         }
