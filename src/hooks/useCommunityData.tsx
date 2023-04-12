@@ -49,7 +49,9 @@ const useCommunityData = () => {
 
     const leaveCommunity = (communityId: string) => {};
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        getMySnippets();
+    }, []);
 
     return {
         // Data and functions
