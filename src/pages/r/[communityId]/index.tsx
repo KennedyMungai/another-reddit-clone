@@ -11,6 +11,10 @@ type CommunityPageProps = {
 const CommunityPage = ({ communityData }: CommunityPageProps) => {
     console.log("here is some data", communityData);
 
+    if (!communityData) {
+        return <div>Does not exist</div>;
+    }
+
     return <div>Welcome to {communityData.id}</div>;
 };
 
