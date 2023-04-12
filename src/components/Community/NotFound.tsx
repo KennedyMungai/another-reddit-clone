@@ -11,7 +11,7 @@ const NotFound = () => {
             minHeight="60vh"
         >
             Sorry, that community does not exist or has been banned
-            <Link>
+            <Link href="/">
                 <Button mt={4}>GO HOME</Button>
             </Link>
         </Flex>
