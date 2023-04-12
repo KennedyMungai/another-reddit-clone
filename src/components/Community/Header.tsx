@@ -12,7 +12,7 @@ const Header = ({ communityData }: Props) => {
     // Dummy identifier for a value that will be replaced by community snippets
     const isJoined = false;
 
-    const { communityStateValue } = useCommunityData();
+    const { communityStateValue, onJoinOrLeaveCommunity } = useCommunityData();
 
     return (
         <Flex direction="column" width="100%" height="146px">
