@@ -45,6 +45,9 @@ const Header = ({ communityData }: Props) => {
                         <Button
                             height="30px"
                             variant={isJoined ? "outline" : "solid"}
+                            pr={6}
+                            pl={6}
+                            onClick={() => {}}
                         >
                             {isJoined ? "Joined" : "Join"}
                         </Button>
