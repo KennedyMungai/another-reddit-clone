@@ -15,11 +15,11 @@ const PageContent = ({ children }: Props) => {
                 maxWidth="860px"
             >
                 {/* LHS */}
-                <Flex border="1px solid green">
+                <Flex border="1px solid green" direction="column">
                     {children && children[0 as keyof typeof children]}
                 </Flex>
                 {/* RHS */}
-                <Flex border="1px solid blue">
+                <Flex border="1px solid blue" direction="column">
                     {children && children[1 as keyof typeof children]}
                 </Flex>
             </Flex>
