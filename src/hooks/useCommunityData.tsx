@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const useCommunityData = (props: Props) => {
+const useCommunityData = () => {
     return <div>useCommunityData</div>;
 };
 
