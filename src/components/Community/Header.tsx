@@ -31,7 +31,11 @@ const Header = ({ communityData }: Props) => {
                             <Text fontWeight={800} fontSize="16pt">
                                 {communityData.id}
                             </Text>
-                            <Text fontWeight={600} fontSize="10pt">
+                            <Text
+                                fontWeight={600}
+                                fontSize="10pt"
+                                color="gray.400"
+                            >
                                 r/{communityData.id}
                             </Text>
                         </Flex>
