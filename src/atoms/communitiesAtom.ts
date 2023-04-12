@@ -10,6 +10,11 @@ export interface Community
     imageURL?: string
 }
 
+interface CommunitySnippet
+{
+
+}
+
 export interface CommunityState
 {
     mySnippets: []
