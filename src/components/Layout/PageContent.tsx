@@ -1,7 +1,11 @@
 import { Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { ReactNode } from "react";
 
-const PageContent = ({ children }) => {
+type Props = {
+    children: ReactNode;
+};
+
+const PageContent = ({ children }: Props) => {
     return (
         <Flex>
             <Flex>
