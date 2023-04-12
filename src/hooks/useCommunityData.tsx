@@ -1,8 +1,11 @@
 import { Community, communityState } from "@/atoms/communitiesAtom";
+import { auth } from "@/firebase/clientApp";
 import React, { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState } from "recoil";
 
 const useCommunityData = () => {
+    const [user] = useAuthState(auth);
     const [communityStateValue, setCommunityStateValue] =
         useRecoilState(communityState);
     const [loading, setLoading] = useState<boolean>(false);
