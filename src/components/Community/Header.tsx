@@ -28,7 +28,7 @@ const Header = ({ communityData }: Props) => {
                     )}
                     <Flex>
                         <Flex direction="column" mr={6}>
-                            <Text fontWeight={600}>{communityData.id}</Text>
+                            <Text fontWeight={800}>{communityData.id}</Text>
                         </Flex>
                     </Flex>
                 </Flex>
