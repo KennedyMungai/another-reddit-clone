@@ -9,11 +9,21 @@ const useCommunityData = () => {
     const onJoinOrLeaveCommunity = (
         communityData: Community,
         isJoined: boolean
-    ) => {};
+    ) => {
+        // Check if the user is signed in
+        // If the user is not signed in, prompt the modal to make them sign in
 
-    const joinCommunity = () => {};
+        if (isJoined) {
+            leaveCommunity(communityData.id);
+            return;
+        }
 
-    const leaveCommunity = () => {};
+        joinCommunity(communityData.id);
+    };
+
+    const joinCommunity = (communityData: string) => {};
+
+    const leaveCommunity = (communityId: string) => {};
 
     return {
         // Data and functions
