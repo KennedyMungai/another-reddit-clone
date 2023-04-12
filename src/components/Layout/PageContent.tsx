@@ -12,7 +12,7 @@ const PageContent = ({ children }: Props) => {
                 border="1px solid orange"
                 width="95%"
                 justify="center"
-                maxWidth="800px"
+                maxWidth="860px"
             >
                 {/* LHS */}
                 <Flex border="1px solid green">
