@@ -10,3 +10,8 @@ export interface Community
     createdAt?: Timestamp
     imageURL?: string
 }
+
+export interface CommunityState
+{
+
+}
