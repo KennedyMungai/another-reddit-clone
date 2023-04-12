@@ -1,10 +1,11 @@
 import { Community, communityState } from "@/atoms/communitiesAtom";
-import React from "react";
+import React, { useState } from "react";
 import { useRecoilState } from "recoil";
 
 const useCommunityData = () => {
     const [communityStateValue, setCommunityStateValue] =
         useRecoilState(communityState);
+    const [loading, setLoading] = useState<boolean>(false);
 
     const onJoinOrLeaveCommunity = (
         communityData: Community,
