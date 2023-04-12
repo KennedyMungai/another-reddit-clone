@@ -12,9 +12,9 @@ const PageContent = ({ children }: Props) => {
         <Flex>
             <Flex>
                 {/* LHS */}
-                <Flex></Flex>
+                <Flex>{children[0]}</Flex>
                 {/* RHS */}
-                <Flex></Flex>
+                <Flex>{children[1]}</Flex>
             </Flex>
         </Flex>
     );
