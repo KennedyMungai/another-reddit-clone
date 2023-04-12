@@ -51,7 +51,7 @@ const useCommunityData = () => {
 
     useEffect(() => {
         getMySnippets();
-    }, []);
+    }, [user]);
 
     return {
         // Data and functions
