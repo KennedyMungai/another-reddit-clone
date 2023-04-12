@@ -30,12 +30,14 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
         return {
             props: {
-                communityData: JSON.parse(
-                    safeJsonStringify({
-                        id: communityDoc.id,
-                        ...communityDoc.data,
-                    })
-                ),
+                communityData: communityDoc.exists()
+                    ? JSON.parse(
+                          safeJsonStringify({
+                              id: communityDoc.id,
+                              ...communityDoc.data,
+                          })
+                      )
+                    : "",
             },
         };
     } catch (error) {
