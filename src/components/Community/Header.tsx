@@ -27,7 +27,7 @@ const Header = ({ communityData }: Props) => {
                         />
                     )}
                     <Flex>
-                        <Flex></Flex>
+                        <Flex direction="column" mr={6}></Flex>
                     </Flex>
                 </Flex>
             </Flex>
