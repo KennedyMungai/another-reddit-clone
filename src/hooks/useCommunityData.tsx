@@ -7,6 +7,7 @@ const useCommunityData = () => {
         useRecoilState(communityState);
 
     const joinCommunity = () => {};
+
     const leaveCommunity = () => {};
 
     return {
