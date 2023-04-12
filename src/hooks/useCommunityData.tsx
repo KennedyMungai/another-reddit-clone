@@ -21,7 +21,7 @@ const useCommunityData = () => {
         joinCommunity(communityData);
     };
 
-    const getMySnippets = () => {};
+    const getMySnippets = async () => {};
 
     const joinCommunity = (communityData: Community) => {};
 
