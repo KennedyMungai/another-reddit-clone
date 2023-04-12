@@ -68,6 +68,7 @@ const useCommunityData = () => {
         // Data and functions
         communityStateValue,
         onJoinOrLeaveCommunity,
+        loading,
     };
 };
 
