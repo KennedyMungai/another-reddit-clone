@@ -21,6 +21,8 @@ const useCommunityData = () => {
         joinCommunity(communityData);
     };
 
+    const getMySnippets = () => {};
+
     const joinCommunity = (communityData: Community) => {};
 
     const leaveCommunity = (communityId: string) => {};
