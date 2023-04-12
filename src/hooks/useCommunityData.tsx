@@ -1,4 +1,8 @@
-import { Community, communityState } from "@/atoms/communitiesAtom";
+import {
+    Community,
+    CommunitySnippet,
+    communityState,
+} from "@/atoms/communitiesAtom";
 import { auth, firestore } from "@/firebase/clientApp";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
@@ -36,6 +40,11 @@ const useCommunityData = () => {
             );
 
             const snippets = snippetDocs.docs.map((doc) => ({ ...doc.data() }));
+
+            setCommunityStateValue((prev) => ({
+                ...prev,
+                mySnippets: snippets as CommunitySnippet[],
+            }));
 
             console.log("getMySnippets snippets", snippets);
         } catch (error) {
