@@ -50,6 +50,8 @@ const useCommunityData = () => {
     const leaveCommunity = (communityId: string) => {};
 
     useEffect(() => {
+        if (!user) return;
+
         getMySnippets();
     }, [user]);
 
