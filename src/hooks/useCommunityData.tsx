@@ -36,6 +36,8 @@ const useCommunityData = () => {
             );
 
             const snippets = snippetDocs.docs.map((doc) => ({ ...doc.data() }));
+
+            console.log("getMySnippets snippets", snippets);
         } catch (error) {
             console.log("getMySnippets error", error);
         }
