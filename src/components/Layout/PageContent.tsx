@@ -7,7 +7,7 @@ type Props = {
 
 const PageContent = ({ children }: Props) => {
     return (
-        <Flex border="1px solid red" justify="center">
+        <Flex border="1px solid red" justify="center" p="16px 0px">
             <Flex border="1px solid orange">
                 {/* LHS */}
                 <Flex border="1px solid green">
