@@ -19,5 +19,5 @@ interface CommunitySnippet
 
 export interface CommunityState
 {
-    mySnippets: []
+    mySnippets: CommunitySnippet[]
 }
