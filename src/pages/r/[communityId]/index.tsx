@@ -17,7 +17,7 @@ const CommunityPage = ({ communityData }: CommunityPageProps) => {
 
     return (
         <>
-            <Header />
+            <Header communityData={communityData} />
             <div>Welcome to {communityData.id}</div>
         </>
     );
