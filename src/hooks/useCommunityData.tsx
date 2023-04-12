@@ -34,6 +34,8 @@ const useCommunityData = () => {
             const snippetDocs = await getDocs(
                 collection(firestore, `users/${user?.uid}/communitySnippets`)
             );
+
+            const snippets = snippetDocs.docs.map((doc) => ({ ...doc.data() }));
         } catch (error) {
             console.log("getMySnippets error", error);
         }
