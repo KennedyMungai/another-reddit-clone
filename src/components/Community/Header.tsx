@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Box, Flex, Icon, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Icon, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaReddit } from "react-icons/fa";
 
@@ -39,6 +39,7 @@ const Header = ({ communityData }: Props) => {
                                 r/{communityData.id}
                             </Text>
                         </Flex>
+                        <Button>{}</Button>
                     </Flex>
                 </Flex>
             </Flex>
