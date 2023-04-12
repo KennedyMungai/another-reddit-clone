@@ -42,7 +42,10 @@ const Header = ({ communityData }: Props) => {
                                 r/{communityData.id}
                             </Text>
                         </Flex>
-                        <Button height="30px">
+                        <Button
+                            height="30px"
+                            variant={isJoined ? "outline" : "solid"}
+                        >
                             {isJoined ? "Joined" : "Join"}
                         </Button>
                     </Flex>
