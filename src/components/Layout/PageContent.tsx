@@ -10,9 +10,9 @@ const PageContent = ({ children }: Props) => {
         <Flex>
             <Flex>
                 {/* LHS */}
-                <Flex>{children[0]}</Flex>
+                <Flex>{children && children[0 as keyof typeof children]}</Flex>
                 {/* RHS */}
-                <Flex>{children[1]}</Flex>
+                <Flex>{children && children[1 as keyof typeof children]}</Flex>
             </Flex>
         </Flex>
     );
