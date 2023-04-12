@@ -6,6 +6,7 @@ const useCommunityData = () => {
     const [communityStateValue, setCommunityStateValue] =
         useRecoilState(communityState);
     const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string>("");
 
     const onJoinOrLeaveCommunity = (
         communityData: Community,
