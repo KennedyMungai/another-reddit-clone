@@ -23,7 +23,9 @@ const useCommunityData = () => {
 
     const getMySnippets = async () => {
         try {
-        } catch (error) {}
+        } catch (error) {
+            console.log("getMySnippets error", error);
+        }
     };
 
     const joinCommunity = (communityData: Community) => {};
