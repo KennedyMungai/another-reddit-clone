@@ -26,6 +26,9 @@ const Header = ({ communityData }: Props) => {
                             borderRadius="50%"
                         />
                     )}
+                    <Flex>
+                        <Flex></Flex>
+                    </Flex>
                 </Flex>
             </Flex>
         </Flex>
