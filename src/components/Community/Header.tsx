@@ -50,7 +50,9 @@ const Header = ({ communityData }: Props) => {
                             variant={isJoined ? "outline" : "solid"}
                             pr={6}
                             pl={6}
-                            onClick={() => {}}
+                            onClick={() =>
+                                onJoinOrLeaveCommunity(communityData, isJoined)
+                            }
                         >
                             {isJoined ? "Joined" : "Join"}
                         </Button>
