@@ -27,7 +27,7 @@ const PageContent = ({ children }: Props) => {
                 <Flex
                     border="1px solid blue"
                     direction="column"
-                    display={{ base: "none" }}
+                    display={{ base: "none", md: "flex" }}
                 >
                     {children && children[1 as keyof typeof children]}
                 </Flex>
