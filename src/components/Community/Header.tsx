@@ -19,7 +19,7 @@ const Header = ({ communityData }: Props) => {
                         position="relative"
                         top={-3}
                         color="blue.500"
-                        border="1px solid white"
+                        border="4px solid white"
                         borderRadius="50%"
                     />
                 </Flex>
