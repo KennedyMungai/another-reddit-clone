@@ -7,7 +7,9 @@ const PageContent = (props: Props) => {
     return (
         <Flex>
             <Flex>
+                {/* LHS */}
                 <Flex></Flex>
+                {/* RHS */}
                 <Flex></Flex>
             </Flex>
         </Flex>
