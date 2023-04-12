@@ -24,10 +24,14 @@ const useCommunityData = () => {
     };
 
     const getMySnippets = async () => {
+        setLoading(true);
+
         try {
         } catch (error) {
             console.log("getMySnippets error", error);
         }
+
+        setLoading(false);
     };
 
     const joinCommunity = (communityData: Community) => {};
