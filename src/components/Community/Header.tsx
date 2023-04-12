@@ -1,6 +1,7 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { Box, Flex, Icon } from "@chakra-ui/react";
 import React from "react";
+import { FaReddit } from "react-icons/fa";
 
 type Props = {
     communityData: Community;
@@ -12,7 +13,7 @@ const Header = ({ communityData }: Props) => {
             <Box height="50%" bg="blue.400" />
             <Flex justify="center" bg="white" flexGrow={1}>
                 <Flex width="95%" maxWidth="860px" border="1px solid red">
-                    <Icon as={} />
+                    <Icon as={FaReddit} />
                 </Flex>
             </Flex>
         </Flex>
