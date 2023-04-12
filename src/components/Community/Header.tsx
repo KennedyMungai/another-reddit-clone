@@ -26,7 +26,7 @@ const Header = ({ communityData }: Props) => {
                             borderRadius="50%"
                         />
                     )}
-                    <Flex>
+                    <Flex padding="10px 16px">
                         <Flex direction="column" mr={6}>
                             <Text fontWeight={800} fontSize="16pt">
                                 {communityData.id}
