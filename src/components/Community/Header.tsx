@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 const Header = ({ communityData }: Props) => {
     return (
         <Flex direction="column" width="100%" height="146px">
-            Header
+            <Box height="50%" bg="blue.400" />
         </Flex>
     );
 };
