@@ -12,6 +12,9 @@ const useCommunityData = () => {
 
     return {
         // Data and functions
+        communityStateValue,
+        joinCommunity,
+        leaveCommunity,
     };
 };
 
