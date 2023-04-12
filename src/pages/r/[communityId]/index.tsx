@@ -19,7 +19,10 @@ const CommunityPage = ({ communityData }: CommunityPageProps) => {
     return (
         <>
             <Header communityData={communityData} />
-            <PageContent></PageContent>
+            <PageContent>
+                <></>
+                <></>
+            </PageContent>
         </>
     );
 };
