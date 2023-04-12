@@ -6,8 +6,6 @@ type Props = {
 };
 
 const PageContent = ({ children }: Props) => {
-    console.log("Here is children", children);
-
     return (
         <Flex>
             <Flex>
