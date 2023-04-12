@@ -9,6 +9,8 @@ type CommunityPageProps = {
 };
 
 const CommunityPage = ({ communityData }: CommunityPageProps) => {
+    console.log("here is some data", communityData);
+
     return <div>Welcome to {communityData.id}</div>;
 };
 
