@@ -6,7 +6,9 @@ const useCommunityData = () => {
     const [communityStateValue, setCommunityStateValue] =
         useRecoilState(communityState);
 
-    return <div>useCommunityData</div>;
+    return {
+        // Data and functions
+    };
 };
 
 export default useCommunityData;
