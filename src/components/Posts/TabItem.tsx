@@ -3,7 +3,7 @@ import { TabItem } from "./NewPostForm";
 
 type Props = { item: TabItem };
 
-const TabItem = (props: Props) => {
+const TabItem = ({ item }: Props) => {
     return <div>TabItem</div>;
 };
 
