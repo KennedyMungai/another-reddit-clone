@@ -24,6 +24,8 @@ const NewPostForm = () => {
 
     const handleCreatePost = async () => {};
 
+    const onSelectImage = () => {};
+
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
             <Flex width="100%">
