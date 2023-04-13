@@ -22,7 +22,7 @@ const TextInputs = (props: Props) => {
                 }}
             />
             <Textarea
-                placeholder="Post"
+                placeholder="Text (Optional)"
                 name="title"
                 // value={}
                 fontSize="10pt"
