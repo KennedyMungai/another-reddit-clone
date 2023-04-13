@@ -5,6 +5,7 @@ type Props = {
     textInputs: { title: string; body: string };
     onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     handleCreatePost: () => {};
+    loading: boolean;
 };
 
 const TextInputs = ({ textInputs, onChange, handleCreatePost }: Props) => {
