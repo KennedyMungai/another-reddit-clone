@@ -29,6 +29,7 @@ const NewPostForm = () => {
                     <TabItem
                         item={item}
                         selected={item.title === selectedTab}
+                        setSelectedTab={setSelectedTab}
                     />
                 ))}
             </Flex>
