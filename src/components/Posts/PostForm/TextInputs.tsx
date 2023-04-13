@@ -14,6 +14,12 @@ const TextInputs = (props: Props) => {
                 borderRadius={4}
                 onChange={() => {}}
                 _placeholder={{ color: "gray.500" }}
+                _focus={{
+                    outline: "none",
+                    bg: "white",
+                    border: "1px solid",
+                    borderColor: "black",
+                }}
             />
             <Textarea placeholder="Post" />
             <Flex>
