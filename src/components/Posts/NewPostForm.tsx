@@ -12,7 +12,7 @@ import { Post } from "@/atoms/postsAtom";
 import { User } from "firebase/auth";
 
 type Props = {
-    user: User;
+    user: User | null;
 };
 
 export type TabItemType = {
