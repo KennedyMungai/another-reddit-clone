@@ -6,7 +6,9 @@ type Props = {};
 const ImageUpload = (props: Props) => {
     return (
         <Flex justify="center" align="center" width="100%">
-            <Button>Image Upload</Button>
+            <Flex justify="center" align="center" p={20}>
+                <Button>Image Upload</Button>
+            </Flex>
         </Flex>
     );
 };
