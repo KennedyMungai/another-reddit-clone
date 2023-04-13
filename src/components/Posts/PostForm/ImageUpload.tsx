@@ -28,9 +28,7 @@ const ImageUpload = ({
                         maxHeight="400px"
                     />
                     <Stack direction="row">
-                        <Button
-                        // onClick={() => router.push()}
-                        >
+                        <Button onClick={() => setSelectedTab("Post")}>
                             Back to Post
                         </Button>
                         <Button onClick={() => setSelectedFile("")}>
