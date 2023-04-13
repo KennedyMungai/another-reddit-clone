@@ -26,6 +26,8 @@ const NewPostForm = () => {
 
     const onSelectImage = () => {};
 
+    const onTextChange = () => {};
+
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
             <Flex width="100%">
