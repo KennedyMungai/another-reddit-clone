@@ -10,6 +10,7 @@ import { ValueAnimationOptions } from "framer-motion";
 import ImageUpload from "./PostForm/ImageUpload";
 import { Post } from "@/atoms/postsAtom";
 import { User } from "firebase/auth";
+import { useRouter } from "next/router";
 
 type Props = {
     user: User | null;
@@ -29,6 +30,7 @@ const formTabs: TabItemType[] = [
 ];
 
 const NewPostForm = ({ user }: Props) => {
+    const router = useRouter();
     const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
     const [textInputs, setTextInputs] = useState<{
         title: string;
