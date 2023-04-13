@@ -25,8 +25,11 @@ const NewPostForm = () => {
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
             <Flex width="100%">
-                {formTabs.map((tab) => (
-                    <TabItem item={tab} />
+                {formTabs.map((item) => (
+                    <TabItem
+                        item={item}
+                        selected={item.title === selectedTab}
+                    />
                 ))}
             </Flex>
         </Flex>
