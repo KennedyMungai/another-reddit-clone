@@ -8,7 +8,12 @@ type Props = {
     loading: boolean;
 };
 
-const TextInputs = ({ textInputs, onChange, handleCreatePost }: Props) => {
+const TextInputs = ({
+    textInputs,
+    onChange,
+    handleCreatePost,
+    loading,
+}: Props) => {
     return (
         <Stack spacing={3} width="100%">
             <Input
