@@ -14,7 +14,6 @@ const NavBar = () => {
     return (
         <Flex
             bg="white"
-            border="1px solid red"
             height="44px"
             padding="6px 12px"
             justify={{ md: "space-between" }}
