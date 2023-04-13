@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 type Props = {};
 
 const ImageUpload = (props: Props) => {
-    const selectedFileRef = useRef();
+    const selectedFileRef = useRef<HTMLInputElement>(null);
 
     return (
         <Flex justify="center" align="center" width="100%">
