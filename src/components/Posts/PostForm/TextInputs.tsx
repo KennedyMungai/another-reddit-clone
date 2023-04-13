@@ -53,7 +53,7 @@ const TextInputs = ({
                     padding="0px 30px"
                     isLoading={loading}
                     disabled={!textInputs.title}
-                    onClick={() => {}}
+                    onClick={handleCreatePost}
                 >
                     Post
                 </Button>
