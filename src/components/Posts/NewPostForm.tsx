@@ -9,6 +9,7 @@ import TextInputs from "./PostForm/TextInputs";
 import { ValueAnimationOptions } from "framer-motion";
 import ImageUpload from "./PostForm/ImageUpload";
 import { Post } from "@/atoms/postsAtom";
+import { User } from "firebase/auth";
 
 export type TabItemType = {
     title: string;
@@ -23,7 +24,7 @@ const formTabs: TabItemType[] = [
     { title: "Talk", icon: BsMic },
 ];
 
-const NewPostForm = () => {
+const NewPostForm = (user: User) => {
     const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
     const [textInputs, setTextInputs] = useState<{
         title: string;
