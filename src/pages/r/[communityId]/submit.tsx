@@ -1,7 +1,13 @@
+import PageContent from "@/components/Layout/PageContent";
 import React from "react";
 
 const SubmitPostPage = () => {
-    return <div>Submit Page</div>;
+    return (
+        <PageContent>
+            <></>
+            <></>
+        </PageContent>
+    );
 };
 
 export default SubmitPostPage;
