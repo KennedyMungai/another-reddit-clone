@@ -23,7 +23,7 @@ const TextInputs = (props: Props) => {
             />
             <Textarea
                 placeholder="Text (Optional)"
-                name="title"
+                name="body"
                 // value={}
                 fontSize="10pt"
                 borderRadius={4}
