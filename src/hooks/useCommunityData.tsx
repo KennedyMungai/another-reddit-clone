@@ -56,7 +56,9 @@ const useCommunityData = () => {
 
     const joinCommunity = (communityData: Community) => {
         try {
-        } catch (error) {}
+        } catch (error) {
+            console.log("Join community error", error);
+        }
     };
 
     const leaveCommunity = (communityId: string) => {};
