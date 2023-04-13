@@ -54,7 +54,10 @@ const useCommunityData = () => {
         setLoading(false);
     };
 
-    const joinCommunity = (communityData: Community) => {};
+    const joinCommunity = (communityData: Community) => {
+        try {
+        } catch (error) {}
+    };
 
     const leaveCommunity = (communityId: string) => {};
 
