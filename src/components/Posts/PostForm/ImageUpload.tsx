@@ -1,4 +1,4 @@
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, Image } from "@chakra-ui/react";
 import React, { ChangeEvent, useRef } from "react";
 
 type Props = {
@@ -19,7 +19,9 @@ const ImageUpload = ({
     return (
         <Flex justify="center" align="center" width="100%">
             {selectedFile ? (
-                <img src={selectedFile} />
+                <>
+                    <Image src={selectedFile} />
+                </>
             ) : (
                 <Flex
                     justify="center"
