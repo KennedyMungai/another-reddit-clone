@@ -13,6 +13,7 @@ const ImageUpload = (props: Props) => {
                 border="1px dashed"
                 borderColor="gray.200"
                 width="100%"
+                borderRadius={4}
             >
                 <Button>Image Upload</Button>
             </Flex>
