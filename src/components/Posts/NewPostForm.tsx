@@ -46,7 +46,12 @@ const NewPostForm = () => {
                 ))}
             </Flex>
             <Flex p="1rem 2rem">
-                <TextInputs />
+                <TextInputs
+                    textInputs={textInputs}
+                    onChange={onTextChange}
+                    handleCreatePost={handleCreatePost}
+                    loading={false}
+                />
             </Flex>
         </Flex>
     );
