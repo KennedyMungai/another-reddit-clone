@@ -44,7 +44,7 @@ const NewPostForm = () => {
                     />
                 ))}
             </Flex>
-            <Flex></Flex>
+            <Flex>{/* <TextInputs /> */}</Flex>
         </Flex>
     );
 };
