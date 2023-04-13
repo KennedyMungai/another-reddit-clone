@@ -28,7 +28,7 @@ const ImageUpload = (props: Props) => {
                     type="file"
                     style={{ display: "none" }}
                     ref={selectedFileRef}
-                    onChange={onSelectImage}
+                    // onChange={onSelectImage}
                 />
             </Flex>
         </Flex>
