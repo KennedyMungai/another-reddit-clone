@@ -62,6 +62,8 @@ const NewPostForm = ({ user }: Props) => {
             createdAt: serverTimestamp() as Timestamp,
         };
 
+        setLoading(true);
+
         try {
             const postDocRef = await addDoc(
                 collection(firestore, "posts"),
@@ -78,6 +80,8 @@ const NewPostForm = ({ user }: Props) => {
         } catch (error: any) {
             console.log("Handle Create Post error", error);
         }
+
+        setLoading(false);
     };
 
     const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
