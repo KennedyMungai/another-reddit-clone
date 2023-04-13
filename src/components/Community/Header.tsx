@@ -9,7 +9,8 @@ type Props = {
 };
 
 const Header = ({ communityData }: Props) => {
-    const { communityStateValue, onJoinOrLeaveCommunity } = useCommunityData();
+    const { communityStateValue, onJoinOrLeaveCommunity, loading } =
+        useCommunityData();
 
     // Dummy identifier for a value that will be replaced by community snippets
     const isJoined = !!communityStateValue.mySnippets.find(
