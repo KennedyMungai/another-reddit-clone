@@ -4,8 +4,8 @@ import React from "react";
 const SubmitPostPage = () => {
     return (
         <PageContent>
-            <></>
-            <></>
+            <>{/* <NewPostForm /> */}</>
+            <>{/* <About /> */}</>
         </PageContent>
     );
 };
