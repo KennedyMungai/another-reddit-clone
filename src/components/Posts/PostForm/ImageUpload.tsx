@@ -27,7 +27,9 @@ const ImageUpload = ({
                     />
                     <Stack direction="row">
                         <Button>Back to Post</Button>
-                        <Button>Remove</Button>
+                        <Button onClick={() => setSelectedFile("")}>
+                            Remove
+                        </Button>
                     </Stack>
                 </>
             ) : (
