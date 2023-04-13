@@ -4,9 +4,12 @@ import { auth } from "../../firebase/clientApp";
 import Directory from "./Directory/Directory";
 import RightContent from "./RightContent/RightContent";
 import SearchInput from "./SearchInput";
+import { useRouter } from "next/router";
 
 const NavBar = () => {
     const [user, loading, error] = useAuthState(auth);
+
+    const router = useRouter();
 
     return (
         <Flex
@@ -20,8 +23,13 @@ const NavBar = () => {
                 align="center"
                 width={{ base: "40px", md: "auto" }}
                 mr={{ base: 0, md: 2 }}
+                _hover={{ cursor: "pointer" }}
             >
-                <Image src="/images/redditFace.svg" height="30px" />
+                <Image
+                    src="/images/redditFace.svg"
+                    height="30px"
+                    onClick={() => router.push("/")}
+                />
                 <Image
                     src="/images/redditText.svg"
                     height="46px"
@@ -29,6 +37,7 @@ const NavBar = () => {
                         base: "none",
                         md: "unset",
                     }}
+                    onClick={() => router.push("/")}
                 />
                 {user && <Directory />}
                 <SearchInput user={user} />
