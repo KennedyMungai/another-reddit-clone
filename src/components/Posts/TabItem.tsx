@@ -1,7 +1,7 @@
 import React from "react";
-import { TabItem } from "./NewPostForm";
+import { TabItemType } from "./NewPostForm";
 
-type Props = { item: TabItem };
+type Props = { item: TabItemType };
 
 const TabItem = ({ item }: Props) => {
     return <div>{item.title}</div>;

@@ -14,7 +14,7 @@ const formTabs = [
     { title: "Talk", icon: BsMic },
 ];
 
-export type TabItem = {
+export type TabItemType = {
     title: string;
     icon: typeof Icon.arguments;
 };
