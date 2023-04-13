@@ -15,7 +15,7 @@ const SubmitPostPage = () => {
                         Create a post
                     </Text>
                 </Box>
-                <NewPostForm user={user} />
+                {user && <NewPostForm user={user} />}
             </>
 
             <>{/* <About /> */}</>
