@@ -17,7 +17,11 @@ const ImageUpload = (props: Props) => {
                 width="100%"
                 borderRadius={4}
             >
-                <Button variant={"outline"} height={"28px"} onClick={() => {}}>
+                <Button
+                    variant={"outline"}
+                    height={"28px"}
+                    onClick={() => selectedFileRef.current?.click()}
+                >
                     Image Upload
                 </Button>
                 <input
