@@ -39,6 +39,8 @@ const NewPostForm = ({ user }: Props) => {
     const [selectedFile, setSelectedFile] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
 
+    const { communityId } = router.query;
+
     const handleCreatePost = async () => {
         const newPost: Post = {};
     };
