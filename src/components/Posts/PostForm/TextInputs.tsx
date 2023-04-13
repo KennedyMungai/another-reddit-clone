@@ -21,7 +21,21 @@ const TextInputs = (props: Props) => {
                     borderColor: "black",
                 }}
             />
-            <Textarea placeholder="Post" />
+            <Textarea
+                placeholder="Post"
+                name="title"
+                // value={}
+                fontSize="10pt"
+                borderRadius={4}
+                onChange={() => {}}
+                _placeholder={{ color: "gray.500" }}
+                _focus={{
+                    outline: "none",
+                    bg: "white",
+                    border: "1px solid",
+                    borderColor: "black",
+                }}
+            />
             <Flex>
                 <Button>Post</Button>
             </Flex>
