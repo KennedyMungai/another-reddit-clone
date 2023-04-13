@@ -16,8 +16,10 @@ import {
     addDoc,
     collection,
     serverTimestamp,
+    updateDoc,
 } from "firebase/firestore";
-import { firestore } from "@/firebase/clientApp";
+import { firestore, storage } from "@/firebase/clientApp";
+import { getDownloadURL, ref, uploadString } from "firebase/storage";
 
 type Props = {
     user: User;
@@ -65,6 +67,14 @@ const NewPostForm = ({ user }: Props) => {
                 collection(firestore, "posts"),
                 newPost
             );
+
+            if (selectedFile) {
+                const imageRef = ref(storage, `posts/${postDocRef.id}/image`);
+                await uploadString(imageRef, selectedFile, "data_url");
+                const downloadURL = await getDownloadURL(imageRef);
+
+                await updateDoc(postDocRef, { imageURL: downloadURL });
+            }
         } catch (error: any) {
             console.log("Handle Create Post error", error);
         }
