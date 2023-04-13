@@ -1,4 +1,5 @@
 import { Button, Flex, Image, Stack } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React, { ChangeEvent, useRef } from "react";
 
 type Props = {
