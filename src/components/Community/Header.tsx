@@ -53,6 +53,7 @@ const Header = ({ communityData }: Props) => {
                             variant={isJoined ? "outline" : "solid"}
                             pr={6}
                             pl={6}
+                            isLoading={loading}
                             onClick={() =>
                                 onJoinOrLeaveCommunity(communityData, isJoined)
                             }
