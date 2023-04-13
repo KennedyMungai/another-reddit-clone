@@ -13,6 +13,7 @@ const TabItem = ({ item, selected }: Props) => {
             p="14px 0px"
             cursor="pointer"
             _hover={{ bg: "gray.50" }}
+            color={selected ? "blue.500" : "gray.500"}
         >
             <Flex align="center" height="20px" mr={2}>
                 <Icon as={item.icon} />
