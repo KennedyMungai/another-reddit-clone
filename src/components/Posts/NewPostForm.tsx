@@ -31,7 +31,9 @@ const NewPostForm = () => {
     const [selectedFile, setSelectedFile] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
 
-    const handleCreatePost = async () => {};
+    const handleCreatePost = async () => {
+        const newPost = {};
+    };
 
     const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
         const reader = new FileReader();
