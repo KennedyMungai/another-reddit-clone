@@ -6,18 +6,18 @@ import { IoDocumentText, IoImageOutline } from "react-icons/io5";
 import { AiFillCloseCircle } from "react-icons/ai";
 import TabItem from "./TabItem";
 
-const formTabs = [
+export type TabItemType = {
+    title: string;
+    icon: typeof Icon.arguments;
+};
+
+const formTabs: TabItemType[] = [
     { title: "Post", icon: IoDocumentText },
     { title: "Images & Video", icon: IoImageOutline },
     { title: "Link", icon: BsLink45Deg },
     { title: "Poll", icon: BiPoll },
     { title: "Talk", icon: BsMic },
 ];
-
-export type TabItemType = {
-    title: string;
-    icon: typeof Icon.arguments;
-};
 
 const NewPostForm = () => {
     const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
