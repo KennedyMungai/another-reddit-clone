@@ -4,9 +4,10 @@ import React, { ChangeEvent } from "react";
 type Props = {
     textInputs: { title: string; body: string };
     onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    handleCreatePost: () => {};
 };
 
-const TextInputs = ({ textInputs, onChange }: Props) => {
+const TextInputs = ({ textInputs, onChange, handleCreatePost }: Props) => {
     return (
         <Stack spacing={3} width="100%">
             <Input
