@@ -104,7 +104,7 @@ const UserMenu = ({ user }: Props) => {
                             fontSize="10pt"
                             fontWeight={700}
                             _hover={{ bg: "blue.500", color: "white" }}
-                            onClick={() => logOut()}
+                            onClick={logOut}
                         >
                             <Flex align="center" gap={2}>
                                 <Icon as={MdOutlineLogin} fontSize={20} />
