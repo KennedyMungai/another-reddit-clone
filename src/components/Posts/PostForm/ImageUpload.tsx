@@ -1,9 +1,14 @@
+import { Button, Flex } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {};
 
 const ImageUpload = (props: Props) => {
-    return <div>ImageUpload</div>;
+    return (
+        <Flex justify="center" align="center" width="100%">
+            <Button>Image Upload</Button>
+        </Flex>
+    );
 };
 
 export default ImageUpload;
