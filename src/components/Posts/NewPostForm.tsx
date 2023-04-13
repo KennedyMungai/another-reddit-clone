@@ -53,6 +53,11 @@ const NewPostForm = ({ user }: Props) => {
             voteStatus: 0,
             createdAt: serverTimestamp() as Timestamp,
         };
+
+        try {
+        } catch (error: any) {
+            console.log("Handle Create Post error", error.message);
+        }
     };
 
     const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
