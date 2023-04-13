@@ -20,7 +20,7 @@ export type TabItemType = {
 };
 
 const NewPostForm = () => {
-    const [selectedTab, setSelectedTab] = useState(formTabs[0]);
+    const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
 
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
