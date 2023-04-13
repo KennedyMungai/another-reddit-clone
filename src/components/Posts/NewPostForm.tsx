@@ -83,6 +83,7 @@ const NewPostForm = () => {
                         selectedFile={selectedFile}
                         onSelectImage={onSelectImage}
                         setSelectedTab={setSelectedTab}
+                        setSelectedFile={setSelectedFile}
                     />
                 )}
             </Flex>
