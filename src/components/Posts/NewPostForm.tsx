@@ -6,6 +6,7 @@ import { IoDocumentText, IoImageOutline } from "react-icons/io5";
 import { AiFillCloseCircle } from "react-icons/ai";
 import TabItem from "./TabItem";
 import TextInputs from "./PostForm/TextInputs";
+import { ValueAnimationOptions } from "framer-motion";
 
 export type TabItemType = {
     title: string;
@@ -34,7 +35,13 @@ const NewPostForm = () => {
 
     const onTextChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {};
+    ) => {
+        const {
+            target: { name, value },
+        } = e;
+
+        setTextInputs((prev) => ({ ...prev, [name]: value }));
+    };
 
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
