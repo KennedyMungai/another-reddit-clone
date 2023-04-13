@@ -16,7 +16,11 @@ const formTabs = [
 const NewPostForm = () => {
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
-            <Flex width="100%"></Flex>
+            <Flex width="100%">
+                {formTabs.map((tab) => (
+                    <></>
+                ))}
+            </Flex>
         </Flex>
     );
 };
