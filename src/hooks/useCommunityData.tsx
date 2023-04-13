@@ -61,6 +61,8 @@ const useCommunityData = () => {
     };
 
     const joinCommunity = async (communityData: Community) => {
+        setLoading(true);
+
         try {
             const batch = writeBatch(firestore);
 
@@ -92,6 +94,8 @@ const useCommunityData = () => {
             console.log("Join community error", error);
             setError(error.message);
         }
+
+        setLoading(false);
     };
 
     const leaveCommunity = (communityId: string) => {};
