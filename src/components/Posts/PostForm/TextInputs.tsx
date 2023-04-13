@@ -6,8 +6,8 @@ type Props = {};
 const TextInputs = (props: Props) => {
     return (
         <Stack spacing={3} width="100%">
-            <Input />
-            <Textarea />
+            <Input placeholder="Title" />
+            <Textarea placeholder="Post" />
             <Flex>
                 <Button>Post</Button>
             </Flex>
