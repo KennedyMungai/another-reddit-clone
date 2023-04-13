@@ -50,6 +50,7 @@ const NewPostForm = () => {
             <Flex width="100%">
                 {formTabs.map((item) => (
                     <TabItem
+                        key={item.title}
                         item={item}
                         selected={item.title === selectedTab}
                         setSelectedTab={setSelectedTab}
