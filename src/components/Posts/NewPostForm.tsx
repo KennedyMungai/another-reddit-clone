@@ -21,6 +21,7 @@ const formTabs: TabItemType[] = [
 
 const NewPostForm = () => {
     const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
+    const [textInput, setTextInput] = useState<string>("");
 
     const handleCreatePost = async () => {};
 
