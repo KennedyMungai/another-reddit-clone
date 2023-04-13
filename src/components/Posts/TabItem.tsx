@@ -10,7 +10,7 @@ const TabItem = ({ item, selected }: Props) => {
             <Flex align="center" height="20px" mr={2}>
                 <Icon as={item.icon} />
             </Flex>
-            <Text>{item.title}</Text>
+            <Text fontSize="10pt">{item.title}</Text>
         </Flex>
     );
 };
