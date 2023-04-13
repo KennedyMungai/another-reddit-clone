@@ -18,30 +18,34 @@ const ImageUpload = ({
 
     return (
         <Flex justify="center" align="center" width="100%">
-            <Flex
-                justify="center"
-                align="center"
-                p={20}
-                border="1px dashed"
-                borderColor="gray.200"
-                width="100%"
-                borderRadius={4}
-            >
-                <Button
-                    variant={"outline"}
-                    height={"28px"}
-                    onClick={() => selectedFileRef.current?.click()}
-                >
-                    Image Upload
-                </Button>
-                <input
-                    type="file"
-                    style={{ display: "none" }}
-                    ref={selectedFileRef}
-                    onChange={onSelectImage}
-                />
+            {selectedFile ? (
                 <img src={selectedFile} />
-            </Flex>
+            ) : (
+                <Flex
+                    justify="center"
+                    align="center"
+                    p={20}
+                    border="1px dashed"
+                    borderColor="gray.200"
+                    width="100%"
+                    borderRadius={4}
+                >
+                    <Button
+                        variant={"outline"}
+                        height={"28px"}
+                        onClick={() => selectedFileRef.current?.click()}
+                    >
+                        Image Upload
+                    </Button>
+                    <input
+                        type="file"
+                        style={{ display: "none" }}
+                        ref={selectedFileRef}
+                        onChange={onSelectImage}
+                    />
+                    <img src={selectedFile} />
+                </Flex>
+            )}
         </Flex>
     );
 };
