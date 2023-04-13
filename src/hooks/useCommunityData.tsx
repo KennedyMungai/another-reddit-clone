@@ -122,9 +122,10 @@ const useCommunityData = () => {
             }));
         } catch (error: any) {
             console.log("Leave Community error", error.message);
+            setError(error.message);
         }
 
-        setLoading(false)
+        setLoading(false);
     };
 
     useEffect(() => {
