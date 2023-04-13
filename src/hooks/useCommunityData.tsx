@@ -81,6 +81,8 @@ const useCommunityData = () => {
             batch.update(doc(firestore, "communities", communityData.id), {
                 numberOfMembers: increment(1),
             });
+
+            batch.commit();
         } catch (error: any) {
             console.log("Join community error", error);
             setError(error.message);
