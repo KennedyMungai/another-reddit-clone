@@ -6,7 +6,14 @@ type Props = {};
 const TextInputs = (props: Props) => {
     return (
         <Stack spacing={3} width="100%">
-            <Input placeholder="Title" />
+            <Input
+                placeholder="Title"
+                name="title"
+                // value={}
+                fontSize="10pt"
+                borderRadius={4}
+                onChange={() => {}}
+            />
             <Textarea placeholder="Post" />
             <Flex>
                 <Button>Post</Button>
