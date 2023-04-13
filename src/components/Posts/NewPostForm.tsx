@@ -1,5 +1,5 @@
 import { Flex, Icon } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { BiPoll } from "react-icons/bi";
 import { BsLink45Deg, BsMic } from "react-icons/bs";
 import { IoDocumentText, IoImageOutline } from "react-icons/io5";
@@ -32,7 +32,9 @@ const NewPostForm = () => {
 
     const onSelectImage = () => {};
 
-    const onTextChange = () => {};
+    const onTextChange = (
+        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {};
 
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
