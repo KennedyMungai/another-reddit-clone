@@ -40,6 +40,7 @@ const ImageUpload = ({
                     ref={selectedFileRef}
                     onChange={onSelectImage}
                 />
+                <img src={selectedFile} />
             </Flex>
         </Flex>
     );
