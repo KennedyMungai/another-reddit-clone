@@ -47,7 +47,7 @@ const useCommunityData = () => {
             }));
 
             console.log("getMySnippets snippets", snippets);
-        } catch (error) {
+        } catch (error: any) {
             console.log("getMySnippets error", error);
         }
 
