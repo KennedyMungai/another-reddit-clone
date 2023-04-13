@@ -1,4 +1,4 @@
-import { Button, Flex, Image } from "@chakra-ui/react";
+import { Button, Flex, Image, Stack } from "@chakra-ui/react";
 import React, { ChangeEvent, useRef } from "react";
 
 type Props = {
@@ -25,6 +25,10 @@ const ImageUpload = ({
                         maxWidth="400px"
                         maxHeight="400px"
                     />
+                    <Stack direction="row">
+                        <Button>Back to Post</Button>
+                        <Button>Remove</Button>
+                    </Stack>
                 </>
             ) : (
                 <Flex
