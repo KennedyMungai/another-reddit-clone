@@ -28,7 +28,11 @@ const ImageUpload = ({
                         maxHeight="400px"
                     />
                     <Stack direction="row">
-                        <Button>Back to Post</Button>
+                        <Button
+                        // onClick={() => router.push()}
+                        >
+                            Back to Post
+                        </Button>
                         <Button onClick={() => setSelectedFile("")}>
                             Remove
                         </Button>
