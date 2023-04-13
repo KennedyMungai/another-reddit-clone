@@ -98,8 +98,8 @@ const useCommunityData = () => {
 
     const leaveCommunity = (communityId: string) => {
         try {
-        } catch (error) {
-            console.log("Leave Community error", error);
+        } catch (error: any) {
+            console.log("Leave Community error", error.message);
         }
     };
 
