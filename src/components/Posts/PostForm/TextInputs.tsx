@@ -38,7 +38,9 @@ const TextInputs = (props: Props) => {
                 }}
             />
             <Flex justify="flex-end">
-                <Button>Post</Button>
+                <Button height="34px" padding="0px 30px">
+                    Post
+                </Button>
             </Flex>
         </Stack>
     );
