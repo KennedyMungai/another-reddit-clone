@@ -51,6 +51,7 @@ const TextInputs = ({
                 <Button
                     height="34px"
                     padding="0px 30px"
+                    isLoading={loading}
                     // disabled={}
                     onClick={() => {}}
                 >
