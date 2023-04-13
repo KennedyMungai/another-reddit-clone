@@ -37,7 +37,7 @@ const TextInputs = (props: Props) => {
                     borderColor: "black",
                 }}
             />
-            <Flex>
+            <Flex justify="flex-end">
                 <Button>Post</Button>
             </Flex>
         </Stack>
