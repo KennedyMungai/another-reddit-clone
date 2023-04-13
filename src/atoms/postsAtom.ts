@@ -28,7 +28,7 @@ const defaultState: PostState = {
     posts: []
 }
 
-export const postState = atom({
+export const postState = atom<PostState>({
     key: 'postState',
     default: defaultState
 })
