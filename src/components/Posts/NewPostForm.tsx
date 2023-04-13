@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Icon } from "@chakra-ui/react";
 import React from "react";
 import { BiPoll } from "react-icons/bi";
 import { BsLink45Deg, BsMic } from "react-icons/bs";
@@ -12,6 +12,11 @@ const formTabs = [
     { title: "Poll", icon: BiPoll },
     { title: "Talk", icon: BsMic },
 ];
+
+export type TabItem = {
+    title: string;
+    icon: typeof Icon.arguments;
+};
 
 const NewPostForm = () => {
     return (
