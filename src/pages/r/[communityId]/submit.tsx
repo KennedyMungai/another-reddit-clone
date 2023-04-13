@@ -7,7 +7,9 @@ const SubmitPostPage = () => {
         <PageContent>
             <>
                 <Box p="14px 0px" borderBottom="1px solid" borderColor="white">
-                    <Text>Create a post</Text>
+                    <Text fontSize="11pt" fontWeight={600} color="gray.600">
+                        Create a post
+                    </Text>
                 </Box>
                 <NewPostForm />
             </>
