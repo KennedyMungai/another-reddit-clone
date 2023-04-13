@@ -8,6 +8,7 @@ import TabItem from "./TabItem";
 import TextInputs from "./PostForm/TextInputs";
 import { ValueAnimationOptions } from "framer-motion";
 import ImageUpload from "./PostForm/ImageUpload";
+import { Post } from "@/atoms/postsAtom";
 
 export type TabItemType = {
     title: string;
