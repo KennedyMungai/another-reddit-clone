@@ -78,7 +78,13 @@ const NewPostForm = () => {
                         loading={loading}
                     />
                 )}
-                {selectedTab === "Images & Video" && <ImageUpload />}
+                {selectedTab === "Images & Video" && (
+                    <ImageUpload
+                        selectedFile={selectedFile}
+                        onSelectImage={onSelectImage}
+                        setSelectedTab={setSelectedTab}
+                    />
+                )}
             </Flex>
         </Flex>
     );
