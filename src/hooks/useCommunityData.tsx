@@ -56,7 +56,7 @@ const useCommunityData = () => {
 
     const joinCommunity = (communityData: Community) => {
         try {
-        } catch (error) {
+        } catch (error: any) {
             console.log("Join community error", error);
             setError(error.message);
         }
