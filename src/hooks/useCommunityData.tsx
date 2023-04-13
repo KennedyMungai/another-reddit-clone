@@ -98,7 +98,9 @@ const useCommunityData = () => {
 
     const leaveCommunity = (communityId: string) => {
         try {
-        } catch (error) {}
+        } catch (error) {
+            console.log("Leave Community error", error);
+        }
     };
 
     useEffect(() => {
