@@ -4,7 +4,7 @@ import {
     communityState,
 } from "@/atoms/communitiesAtom";
 import { auth, firestore } from "@/firebase/clientApp";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, writeBatch } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState } from "recoil";
@@ -56,6 +56,12 @@ const useCommunityData = () => {
 
     const joinCommunity = (communityData: Community) => {
         try {
+            const batch = writeBatch(firestore);
+
+            const newSnippet: CommunitySnippet = {
+                communityId: communityData.id,
+                imageURL: communityData.imageURL || "",
+            };
         } catch (error: any) {
             console.log("Join community error", error);
             setError(error.message);
