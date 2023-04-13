@@ -6,7 +6,13 @@ type Props = { item: TabItemType; selected: boolean };
 
 const TabItem = ({ item, selected }: Props) => {
     return (
-        <Flex justify="center" align="center" flexGrow={1}>
+        <Flex
+            justify="center"
+            align="center"
+            flexGrow={1}
+            p="14px 0px"
+            cursor="pointer"
+        >
             <Flex align="center" height="20px" mr={2}>
                 <Icon as={item.icon} />
             </Flex>
