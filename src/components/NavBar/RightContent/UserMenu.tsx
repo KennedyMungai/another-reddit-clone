@@ -23,7 +23,7 @@ type Props = {
     user: User;
 };
 
-const UserMenu = ({ user }) => {
+const UserMenu = ({ user }: Props) => {
     const setAuthModalState = useSetRecoilState(authModalState);
 
     return (
