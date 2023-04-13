@@ -16,6 +16,7 @@ const ImageUpload = ({
     setSelectedTab,
 }: Props) => {
     const selectedFileRef = useRef<HTMLInputElement>(null);
+    const router = useRouter();
 
     return (
         <Flex justify="center" align="center" width="100%">
