@@ -82,6 +82,8 @@ const NewPostForm = ({ user }: Props) => {
         }
 
         setLoading(false);
+
+        router.back();
     };
 
     const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
