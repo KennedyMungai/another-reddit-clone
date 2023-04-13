@@ -34,7 +34,10 @@ const ImageUpload = ({
                         <Button onClick={() => setSelectedTab("Post")}>
                             Back to Post
                         </Button>
-                        <Button onClick={() => setSelectedFile("")}>
+                        <Button
+                            variant="outline"
+                            onClick={() => setSelectedFile("")}
+                        >
                             Remove
                         </Button>
                     </Stack>
