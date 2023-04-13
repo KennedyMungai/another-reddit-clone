@@ -7,6 +7,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import TabItem from "./TabItem";
 import TextInputs from "./PostForm/TextInputs";
 import { ValueAnimationOptions } from "framer-motion";
+import ImageUpload from "./PostForm/ImageUpload";
 
 export type TabItemType = {
     title: string;
@@ -64,9 +65,7 @@ const NewPostForm = () => {
                         loading={loading}
                     />
                 )}
-                {selectedTab === "Images & Video" && 
-                // <ImageUpload />
-                }
+                {selectedTab === "Images & Video" && <ImageUpload />}
             </Flex>
         </Flex>
     );
