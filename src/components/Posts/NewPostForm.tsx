@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const NewPostForm = (props: Props) => {
+const NewPostForm = () => {
     return <div>NewPostForm</div>;
 };
 
