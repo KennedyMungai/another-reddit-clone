@@ -20,7 +20,11 @@ const ImageUpload = (props: Props) => {
                 <Button variant={"outline"} height={"28px"} onClick={() => {}}>
                     Image Upload
                 </Button>
-                <input type="file" style={{ display: "none" }} />
+                <input
+                    type="file"
+                    style={{ display: "none" }}
+                    ref={selectedFileRef}
+                />
             </Flex>
         </Flex>
     );
