@@ -26,6 +26,7 @@ const TextInputs = (props: Props) => {
                 name="body"
                 // value={}
                 fontSize="10pt"
+                height="100px"
                 borderRadius={4}
                 onChange={() => {}}
                 _placeholder={{ color: "gray.500" }}
