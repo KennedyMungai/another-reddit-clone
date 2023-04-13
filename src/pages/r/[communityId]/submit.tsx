@@ -5,7 +5,7 @@ import React from "react";
 const SubmitPostPage = () => {
     return (
         <PageContent>
-            <Box>
+            <Box p="14px 0px">
                 <Text>Create a post</Text>
             </Box>
             <>{/* <NewPostForm /> */}</>
