@@ -8,7 +8,12 @@ type Props = {
     setSelectedFile: (value: string) => void;
 };
 
-const ImageUpload = (props: Props) => {
+const ImageUpload = ({
+    selectedFile,
+    onSelectImage,
+    setSelectedFile,
+    setSelectedTab,
+}: Props) => {
     const selectedFileRef = useRef<HTMLInputElement>(null);
 
     return (
