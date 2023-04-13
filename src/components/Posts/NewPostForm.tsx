@@ -61,7 +61,7 @@ const NewPostForm = () => {
                         textInputs={textInputs}
                         onChange={onTextChange}
                         handleCreatePost={handleCreatePost}
-                        loading={false}
+                        loading={loading}
                     />
                 )}
             </Flex>
