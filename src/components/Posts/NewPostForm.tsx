@@ -56,7 +56,7 @@ const NewPostForm = ({ user }: Props) => {
 
         try {
         } catch (error: any) {
-            console.log("Handle Create Post error", error.message);
+            console.log("Handle Create Post error", error);
         }
     };
 
