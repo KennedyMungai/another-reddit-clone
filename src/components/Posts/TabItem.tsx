@@ -12,6 +12,7 @@ const TabItem = ({ item, selected }: Props) => {
             flexGrow={1}
             p="14px 0px"
             cursor="pointer"
+            _hover={{ bg: "gray.50" }}
         >
             <Flex align="center" height="20px" mr={2}>
                 <Icon as={item.icon} />
