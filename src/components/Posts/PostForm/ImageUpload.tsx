@@ -31,12 +31,16 @@ const ImageUpload = ({
                         maxHeight="400px"
                     />
                     <Stack direction="row">
-                        <Button onClick={() => setSelectedTab("Post")}>
+                        <Button
+                            onClick={() => setSelectedTab("Post")}
+                            height={"28px"}
+                        >
                             Back to Post
                         </Button>
                         <Button
                             variant="outline"
                             onClick={() => setSelectedFile("")}
+                            height={"28px"}
                         >
                             Remove
                         </Button>
