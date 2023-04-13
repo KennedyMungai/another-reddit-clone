@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const SubmitPostPage = (props: Props) => {
+const SubmitPostPage = () => {
     return <div>submit</div>;
 };
 
