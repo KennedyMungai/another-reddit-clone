@@ -11,7 +11,13 @@ import ImageUpload from "./PostForm/ImageUpload";
 import { Post } from "@/atoms/postsAtom";
 import { User } from "firebase/auth";
 import { useRouter } from "next/router";
-import { Timestamp, serverTimestamp } from "firebase/firestore";
+import {
+    Timestamp,
+    addDoc,
+    collection,
+    serverTimestamp,
+} from "firebase/firestore";
+import { firestore } from "@/firebase/clientApp";
 
 type Props = {
     user: User;
@@ -55,6 +61,10 @@ const NewPostForm = ({ user }: Props) => {
         };
 
         try {
+            const postDocRef = await addDoc(
+                collection(firestore, "posts"),
+                newPost
+            );
         } catch (error: any) {
             console.log("Handle Create Post error", error);
         }
