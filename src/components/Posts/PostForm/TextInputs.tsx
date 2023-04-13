@@ -13,6 +13,7 @@ const TextInputs = (props: Props) => {
                 fontSize="10pt"
                 borderRadius={4}
                 onChange={() => {}}
+                _placeholder={{ color: "gray.500" }}
             />
             <Textarea placeholder="Post" />
             <Flex>
