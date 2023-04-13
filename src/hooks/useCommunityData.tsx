@@ -83,6 +83,11 @@ const useCommunityData = () => {
             });
 
             await batch.commit();
+
+            setCommunityStateValue((prev) => ({
+                ...prev,
+                mySnippets: [...prev.mySnippets, newSnippet],
+            }));
         } catch (error: any) {
             console.log("Join community error", error);
             setError(error.message);
