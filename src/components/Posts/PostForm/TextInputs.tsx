@@ -1,9 +1,12 @@
 import { Button, Flex, Input, Stack, Textarea } from "@chakra-ui/react";
-import React from "react";
+import React, { ChangeEvent } from "react";
 
-type Props = {};
+type Props = {
+    textInputs: { title: string; body: string };
+    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+};
 
-const TextInputs = (props: Props) => {
+const TextInputs = ({ textInputs, onChange }: Props) => {
     return (
         <Stack spacing={3} width="100%">
             <Input
