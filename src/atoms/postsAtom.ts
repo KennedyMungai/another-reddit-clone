@@ -22,3 +22,8 @@ interface PostState
     posts: Post[]
     // postVotes
 }
+
+const defaultState: PostState = {
+    selectedPost: null,
+    posts: []
+}
