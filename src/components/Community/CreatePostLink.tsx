@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const CreatePostLink = (props: Props) => {
+const CreatePostLink = () => {
     return <div>CreatePostLink</div>;
 };
 
