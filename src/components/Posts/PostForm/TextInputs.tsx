@@ -52,7 +52,7 @@ const TextInputs = ({
                     height="34px"
                     padding="0px 30px"
                     isLoading={loading}
-                    // disabled={}
+                    disabled={!textInputs.title}
                     onClick={() => {}}
                 >
                     Post
