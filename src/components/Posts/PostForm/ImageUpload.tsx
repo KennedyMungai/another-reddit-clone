@@ -1,6 +1,5 @@
 import { Button, Flex, Image, Stack } from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import React, { ChangeEvent, useRef } from "react";
+import { ChangeEvent, useRef } from "react";
 
 type Props = {
     selectedFile?: string;
@@ -16,7 +15,6 @@ const ImageUpload = ({
     setSelectedTab,
 }: Props) => {
     const selectedFileRef = useRef<HTMLInputElement>(null);
-    const router = useRouter();
 
     return (
         <Flex justify="center" align="center" width="100%">
