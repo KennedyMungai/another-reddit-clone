@@ -5,6 +5,7 @@ type Props = {
     selectedFile?: string;
     onSelectImage: (e: ChangeEvent<HTMLInputElement>) => void;
     setSelectedTab: (value: string) => void;
+    setSelectedFile: (value: string) => void;
 };
 
 const ImageUpload = (props: Props) => {
