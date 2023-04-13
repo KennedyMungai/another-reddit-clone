@@ -33,7 +33,9 @@ const NewPostForm = () => {
 
     const handleCreatePost = async () => {};
 
-    const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {};
+    const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
+        const reader = new FileReader();
+    };
 
     const onTextChange = (
         e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
