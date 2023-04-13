@@ -19,7 +19,7 @@ const ImageUpload = ({
     return (
         <Flex justify="center" align="center" width="100%">
             {selectedFile ? (
-                <>
+                <Flex direction="column" align="center" justify="center">
                     <Image
                         src={selectedFile}
                         maxWidth="400px"
@@ -31,7 +31,7 @@ const ImageUpload = ({
                             Remove
                         </Button>
                     </Stack>
-                </>
+                </Flex>
             ) : (
                 <Flex
                     justify="center"
