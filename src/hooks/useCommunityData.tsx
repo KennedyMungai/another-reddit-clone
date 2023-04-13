@@ -96,7 +96,10 @@ const useCommunityData = () => {
         setLoading(false);
     };
 
-    const leaveCommunity = (communityId: string) => {};
+    const leaveCommunity = (communityId: string) => {
+        try {
+        } catch (error) {}
+    };
 
     useEffect(() => {
         if (!user) return;
