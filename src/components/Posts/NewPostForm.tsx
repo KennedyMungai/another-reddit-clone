@@ -28,6 +28,7 @@ const NewPostForm = () => {
         body: string;
     }>({ title: "", body: "" });
     const [selectedFile, setSelectedFile] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false);
 
     const handleCreatePost = async () => {};
 
