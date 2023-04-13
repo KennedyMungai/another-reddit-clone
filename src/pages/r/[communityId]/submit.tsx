@@ -1,4 +1,5 @@
 import PageContent from "@/components/Layout/PageContent";
+import NewPostForm from "@/components/Posts/NewPostForm";
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 
