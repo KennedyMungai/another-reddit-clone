@@ -5,7 +5,13 @@ import { BsLink45Deg, BsMic } from "react-icons/bs";
 import { IoDocumentText, IoImageOutline } from "react-icons/io5";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-const formTabs = [{ title: "", icon: IoDocumentText }];
+const formTabs = [
+    { title: "Post", icon: IoDocumentText },
+    { title: "Images & Video", icon: IoImageOutline },
+    { title: "Link", icon: BsLink45Deg },
+    { title: "Poll", icon: BiPoll },
+    { title: "Talk", icon: BsMic },
+];
 
 const NewPostForm = () => {
     return (
