@@ -20,7 +20,7 @@ const TabItem = ({ item, selected, setSelectedTab }: Props) => {
             color={selected ? "blue.500" : "gray.500"}
             borderWidth={selected ? "0px 0px 3px 0px" : ""}
             borderColor="blue.500"
-            onClick={() => {}}
+            onClick={() => setSelectedTab(item.title)}
         >
             <Flex align="center" height="20px" mr={2}>
                 <Icon as={item.icon} />
