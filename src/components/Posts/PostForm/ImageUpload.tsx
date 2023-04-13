@@ -15,7 +15,7 @@ const ImageUpload = (props: Props) => {
                 width="100%"
                 borderRadius={4}
             >
-                <Button variant={"outline"} height={"28px"}>
+                <Button variant={"outline"} height={"28px"} onClick={() => {}}>
                     Image Upload
                 </Button>
             </Flex>
