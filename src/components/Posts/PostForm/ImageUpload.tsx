@@ -20,7 +20,11 @@ const ImageUpload = ({
         <Flex justify="center" align="center" width="100%">
             {selectedFile ? (
                 <>
-                    <Image src={selectedFile} />
+                    <Image
+                        src={selectedFile}
+                        maxWidth="400px"
+                        maxHeight="400px"
+                    />
                 </>
             ) : (
                 <Flex
