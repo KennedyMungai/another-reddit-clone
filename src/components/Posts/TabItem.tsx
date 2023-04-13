@@ -5,7 +5,7 @@ import { Flex, Icon, Text } from "@chakra-ui/react";
 type Props = {
     item: TabItemType;
     selected: boolean;
-    setSelectedTab: SetStateAction<string>;
+    setSelectedTab: (value: string) => void;
 };
 
 const TabItem = ({ item, selected, setSelectedTab }: Props) => {
