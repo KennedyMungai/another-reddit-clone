@@ -22,7 +22,7 @@ const TextInputs = ({
                 // value={}
                 fontSize="10pt"
                 borderRadius={4}
-                onChange={() => {}}
+                onChange={onChange}
                 _placeholder={{ color: "gray.500" }}
                 _focus={{
                     outline: "none",
@@ -38,7 +38,7 @@ const TextInputs = ({
                 fontSize="10pt"
                 height="100px"
                 borderRadius={4}
-                onChange={() => {}}
+                onChange={onChange}
                 _placeholder={{ color: "gray.500" }}
                 _focus={{
                     outline: "none",
