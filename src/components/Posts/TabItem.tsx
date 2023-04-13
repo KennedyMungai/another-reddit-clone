@@ -4,7 +4,7 @@ import { TabItem } from "./NewPostForm";
 type Props = { item: TabItem };
 
 const TabItem = ({ item }: Props) => {
-    return <div>TabItem</div>;
+    return <div>{item.title}</div>;
 };
 
 export default TabItem;
