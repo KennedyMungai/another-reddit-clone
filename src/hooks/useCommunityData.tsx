@@ -58,6 +58,7 @@ const useCommunityData = () => {
         try {
         } catch (error) {
             console.log("Join community error", error);
+            setError(error.message);
         }
     };
 
