@@ -32,7 +32,7 @@ const NewPostForm = () => {
     const [loading, setLoading] = useState<boolean>(false);
 
     const handleCreatePost = async () => {
-        const newPost = {};
+        const newPost: Post = {};
     };
 
     const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
