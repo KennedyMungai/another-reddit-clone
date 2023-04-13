@@ -11,6 +11,10 @@ import ImageUpload from "./PostForm/ImageUpload";
 import { Post } from "@/atoms/postsAtom";
 import { User } from "firebase/auth";
 
+type Props = {
+    user: User;
+};
+
 export type TabItemType = {
     title: string;
     icon: typeof Icon.arguments;
@@ -24,7 +28,7 @@ const formTabs: TabItemType[] = [
     { title: "Talk", icon: BsMic },
 ];
 
-const NewPostForm = (user: User) => {
+const NewPostForm = ({ user }: Props) => {
     const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
     const [textInputs, setTextInputs] = useState<{
         title: string;
