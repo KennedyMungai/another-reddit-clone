@@ -1,10 +1,14 @@
-import React from "react";
+import React, { SetStateAction } from "react";
 import { TabItemType } from "./NewPostForm";
 import { Flex, Icon, Text } from "@chakra-ui/react";
 
-type Props = { item: TabItemType; selected: boolean };
+type Props = {
+    item: TabItemType;
+    selected: boolean;
+    setSelectedTab: SetStateAction<string>;
+};
 
-const TabItem = ({ item, selected }: Props) => {
+const TabItem = ({ item, selected, setSelectedTab }: Props) => {
     return (
         <Flex
             justify="center"
