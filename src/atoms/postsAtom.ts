@@ -15,3 +15,10 @@ export type Post = {
     communityImageURL?: string
     createdAt: Timestamp
 }
+
+interface PostState 
+{
+    selectedPost: Post | null
+    posts: Post[]
+    // postVotes
+}
