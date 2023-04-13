@@ -19,7 +19,7 @@ const TextInputs = ({
             <Input
                 placeholder="Title"
                 name="title"
-                // value={}
+                value={textInputs.title}
                 fontSize="10pt"
                 borderRadius={4}
                 onChange={onChange}
@@ -34,7 +34,7 @@ const TextInputs = ({
             <Textarea
                 placeholder="Text (Optional)"
                 name="body"
-                // value={}
+                value={textInputs.body}
                 fontSize="10pt"
                 height="100px"
                 borderRadius={4}
