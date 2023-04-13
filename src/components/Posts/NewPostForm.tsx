@@ -64,6 +64,9 @@ const NewPostForm = () => {
                         loading={loading}
                     />
                 )}
+                {selectedTab === "Images & Video" && 
+                // <ImageUpload />
+                }
             </Flex>
         </Flex>
     );
