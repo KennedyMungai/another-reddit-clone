@@ -7,7 +7,7 @@ type Props = { item: TabItemType; selected: boolean };
 const TabItem = ({ item, selected }: Props) => {
     return (
         <Flex>
-            <Flex align="center">
+            <Flex align="center" height="20px" mr={2}>
                 <Icon as={item.icon} />
             </Flex>
             <Text>{item.title}</Text>
