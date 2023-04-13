@@ -1,5 +1,5 @@
 import { Flex, Icon } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { BiPoll } from "react-icons/bi";
 import { BsLink45Deg, BsMic } from "react-icons/bs";
 import { IoDocumentText, IoImageOutline } from "react-icons/io5";
@@ -20,6 +20,8 @@ export type TabItem = {
 };
 
 const NewPostForm = () => {
+    const [selectedTab, setSelectedTab] = useState(formTabs[0]);
+
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
             <Flex width="100%">
