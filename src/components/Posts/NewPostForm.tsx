@@ -22,6 +22,8 @@ const formTabs: TabItemType[] = [
 const NewPostForm = () => {
     const [selectedTab, setSelectedTab] = useState<string>(formTabs[0].title);
 
+    const handleCreatePost = async () => {};
+
     return (
         <Flex direction="column" bg="white" borderRadius={4} mt={2}>
             <Flex width="100%">
