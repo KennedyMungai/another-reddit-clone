@@ -11,9 +11,10 @@ import ImageUpload from "./PostForm/ImageUpload";
 import { Post } from "@/atoms/postsAtom";
 import { User } from "firebase/auth";
 import { useRouter } from "next/router";
+import { Timestamp, serverTimestamp } from "firebase/firestore";
 
 type Props = {
-    user: User | null;
+    user: User;
 };
 
 export type TabItemType = {
@@ -42,7 +43,16 @@ const NewPostForm = ({ user }: Props) => {
     const { communityId } = router.query;
 
     const handleCreatePost = async () => {
-        const newPost: Post = {};
+        const newPost: Post = {
+            communityId: communityId as string,
+            creatorId: user.uid,
+            creatorDisplayName: user.email!.split("@")[0],
+            title: textInputs.title,
+            body: textInputs.body,
+            numberOfComments: 0,
+            voteStatus: 0,
+            createdAt: serverTimestamp() as Timestamp,
+        };
     };
 
     const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
