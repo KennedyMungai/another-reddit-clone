@@ -3,7 +3,6 @@ import React from "react";
 
 type Props = {
     communityData: Community;
-    userId: string;
 };
 
 const Posts = ({ communityData }: Props) => {
