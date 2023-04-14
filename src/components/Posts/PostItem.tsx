@@ -36,7 +36,13 @@ const PostItem = ({
     const handleDelete = async () => {
         try {
             const success = await onDeletePost(post);
-        } catch (error: any) {}
+
+            if (!success) {
+                throw new Error("Failed to delete the post");
+            }
+        } catch (error: any) {
+            // Error state
+        }
     };
 
     return (
