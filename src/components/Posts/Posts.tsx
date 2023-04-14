@@ -1,4 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
+import { Post } from "@/atoms/postsAtom";
 import { firestore } from "@/firebase/clientApp";
 import usePosts from "@/hooks/usePosts";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
@@ -26,6 +27,11 @@ const Posts = ({ communityData }: Props) => {
             const posts = postDocs.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data(),
+            }));
+
+            setPostStateValue((prev) => ({
+                ...prev,
+                posts: posts as Post[],
             }));
         } catch (error: any) {
             console.log(error.message);
