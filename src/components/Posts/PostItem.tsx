@@ -109,7 +109,7 @@ const PostItem = ({
                 {error && (
                     <Alert status="error">
                         <AlertIcon />
-                        <Text mr={2}>Error creating post</Text>
+                        <Text mr={2}>{error}</Text>
                     </Alert>
                 )}
                 <Stack spacing={1} padding={"2rem"}>
