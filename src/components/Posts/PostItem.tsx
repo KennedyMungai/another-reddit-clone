@@ -116,6 +116,32 @@ const PostItem = ({
                     <Icon as={BsChat} />
                     <Text fontSize={"9pt"}>{post.numberOfComments}</Text>
                 </Flex>
+                <Flex
+                    justify="center"
+                    align="center"
+                    gap={3}
+                    color={"gray.50"}
+                    p="8px 10px"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                    cursor="pointer"
+                >
+                    <Icon as={BsChat} />
+                    <Text fontSize={"9pt"}>{post.numberOfComments}</Text>
+                </Flex>
+                <Flex
+                    justify="center"
+                    align="center"
+                    gap={3}
+                    color={"gray.50"}
+                    p="8px 10px"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                    cursor="pointer"
+                >
+                    <Icon as={BsChat} />
+                    <Text fontSize={"9pt"}>{post.numberOfComments}</Text>
+                </Flex>
             </Flex>
         </Flex>
     );
