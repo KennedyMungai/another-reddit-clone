@@ -5,7 +5,10 @@ import { useRecoilState } from "recoil";
 const usePosts = () => {
     const [postStateValue, setPostStateValue] = useRecoilState(postState);
 
-    return <div>usePosts</div>;
+    return {
+        postStateValue,
+        setPostStateValue,
+    };
 };
 
 export default usePosts;
