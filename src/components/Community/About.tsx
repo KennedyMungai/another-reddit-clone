@@ -1,6 +1,7 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 type Props = {
     communityData: Community;
