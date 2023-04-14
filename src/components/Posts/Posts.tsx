@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import React from "react";
+import React, { useEffect } from "react";
 
 type Props = {
     communityData: Community;
@@ -7,6 +7,8 @@ type Props = {
 
 const Posts = ({ communityData }: Props) => {
     const getPosts = async () => {};
+
+    useEffect(() => {}, []);
 
     return <div>Posts</div>;
 };
