@@ -32,6 +32,8 @@ const About = ({ communityData }: Props) => {
     const { selectedFile, setSelectedFile, onSelectFile } = useSelectFile();
     const [uploadingImage, setUploadingImage] = useState<boolean>(false);
 
+    const onUpdateImage = async () => {};
+
     return (
         <Box position={"sticky"} top={"2rem"}>
             <Flex
