@@ -10,7 +10,14 @@ type Props = {
     onSelectPost: () => {};
 };
 
-const PostItem = (props: Props) => {
+const PostItem = ({
+    post,
+    userIsCreator,
+    userVoteValue,
+    onVote,
+    onDeletePost,
+    onSelectPost,
+}: Props) => {
     return <div>PostItem</div>;
 };
 
