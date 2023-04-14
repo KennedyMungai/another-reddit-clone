@@ -19,7 +19,7 @@ type Props = {
     userVoteValue?: number;
     onVote: () => {};
     onDeletePost: () => {};
-    onSelectPost: () => {};
+    onSelectPost: () => void;
 };
 
 const PostItem = ({
