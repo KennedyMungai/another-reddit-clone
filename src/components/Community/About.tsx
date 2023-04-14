@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {
@@ -15,8 +15,12 @@ const About = ({ communityData }: Props) => {
                 bg="blue.400"
                 color="white"
                 p={3}
-                borderRadius='4px 4px 0px 0px'
-            ></Flex>
+                borderRadius="4px 4px 0px 0px"
+            >
+                <Text fontSize="10pt" fontWeight={700}>
+                    About Community
+                </Text>
+            </Flex>
             <Flex></Flex>
         </Box>
     );
