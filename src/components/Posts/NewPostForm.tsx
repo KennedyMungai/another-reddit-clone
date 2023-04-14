@@ -3,6 +3,7 @@ import {
     AlertDescription,
     AlertIcon,
     AlertTitle,
+    Text,
     Flex,
     Icon,
 } from "@chakra-ui/react";
@@ -151,10 +152,7 @@ const NewPostForm = ({ user }: Props) => {
             {error && (
                 <Alert status="error">
                     <AlertIcon />
-                    <AlertTitle>Your browser is outdated!</AlertTitle>
-                    <AlertDescription>
-                        Your Chakra experience may be degraded.
-                    </AlertDescription>
+                    <Text mr={2}>Error creating post</Text>
                 </Alert>
             )}
         </Flex>
