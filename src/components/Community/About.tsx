@@ -86,7 +86,17 @@ const About = ({ communityData }: Props) => {
                             Create Post
                         </Button>
                     </Link>
-                    {}
+                    {user?.uid === communityData.creatorId && (
+                        <>
+                            <Divider />
+                            <Stack spacing={1} fontSize="10pt">
+                                <Text fontWeight={600}>Admin</Text>
+                                <Flex align="center" justify="space-between">
+                                    <Text>Change Image</Text>
+                                </Flex>
+                            </Stack>
+                        </>
+                    )}
                 </Stack>
             </Flex>
         </Box>
