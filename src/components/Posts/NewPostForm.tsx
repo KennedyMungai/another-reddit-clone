@@ -1,23 +1,7 @@
-import {
-    Alert,
-    AlertDescription,
-    AlertIcon,
-    AlertTitle,
-    Text,
-    Flex,
-    Icon,
-} from "@chakra-ui/react";
-import React, { ChangeEvent, useState } from "react";
-import { BiPoll } from "react-icons/bi";
-import { BsLink45Deg, BsMic } from "react-icons/bs";
-import { IoDocumentText, IoImageOutline } from "react-icons/io5";
-import { AiFillCloseCircle } from "react-icons/ai";
-import TabItem from "./TabItem";
-import TextInputs from "./PostForm/TextInputs";
-import ImageUpload from "./PostForm/ImageUpload";
 import { Post } from "@/atoms/postsAtom";
+import { firestore, storage } from "@/firebase/clientApp";
+import { Alert, AlertIcon, Flex, Icon, Text } from "@chakra-ui/react";
 import { User } from "firebase/auth";
-import { useRouter } from "next/router";
 import {
     Timestamp,
     addDoc,
@@ -25,8 +9,15 @@ import {
     serverTimestamp,
     updateDoc,
 } from "firebase/firestore";
-import { firestore, storage } from "@/firebase/clientApp";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
+import { useRouter } from "next/router";
+import { ChangeEvent, useState } from "react";
+import { BiPoll } from "react-icons/bi";
+import { BsLink45Deg, BsMic } from "react-icons/bs";
+import { IoDocumentText, IoImageOutline } from "react-icons/io5";
+import ImageUpload from "./PostForm/ImageUpload";
+import TextInputs from "./PostForm/TextInputs";
+import TabItem from "./TabItem";
 
 type Props = {
     user: User;
