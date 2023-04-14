@@ -1,13 +1,6 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { firestore } from "@/firebase/clientApp";
-import {
-    collection,
-    getDocs,
-    orderBy,
-    orderBy,
-    query,
-    where,
-} from "firebase/firestore";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 
 type Props = {
