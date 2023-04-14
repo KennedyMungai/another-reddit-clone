@@ -89,7 +89,7 @@ const PostItem = ({
                             {(moment(new Date(post.createdAt?.seconds * 1000)).fromNow())}
                         </Text>
                     </Stack>
-                    <Text>{post.title}</Text>
+                    <Text fontSize={'12pt'} fontWeight={600}>{post.title}</Text>
                 </Stack>
             </Flex>
             {post.title}
