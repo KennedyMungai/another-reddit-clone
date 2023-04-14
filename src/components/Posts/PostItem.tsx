@@ -1,5 +1,13 @@
 import { Post } from "@/atoms/postsAtom";
-import { Flex, Icon, Image, Skeleton, Stack, Text } from "@chakra-ui/react";
+import {
+    Flex,
+    Icon,
+    Image,
+    Skeleton,
+    Spinner,
+    Stack,
+    Text,
+} from "@chakra-ui/react";
 import moment from "moment";
 import React, { useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -185,8 +193,14 @@ const PostItem = ({
                         cursor="pointer"
                         onClick={handleDelete}
                     >
-                        <Icon as={AiOutlineDelete} />
-                        <Text fontSize={"9pt"}>Delete</Text>
+                        {loadingDelete ? (
+                            <Spinner size={"sm"} />
+                        ) : (
+                            <>
+                                <Icon as={AiOutlineDelete} />
+                                <Text fontSize={"9pt"}>Delete</Text>
+                            </>
+                        )}
                     </Flex>
                 )}
             </Flex>
