@@ -1,4 +1,5 @@
 import { Post } from "@/atoms/postsAtom";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
@@ -29,7 +30,11 @@ const PostItem = ({
     onDeletePost,
     onSelectPost,
 }: Props) => {
-    return <div>PostItem</div>;
+    return (
+        <Flex border="1px solid" bg="white">
+            {post.title}
+        </Flex>
+    );
 };
 
 export default PostItem;
