@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const useSelectFile = (props: Props) => {
+const useSelectFile = () => {
     return <div>useSelectFile</div>;
 };
 
