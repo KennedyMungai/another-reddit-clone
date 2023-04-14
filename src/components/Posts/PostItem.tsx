@@ -92,6 +92,7 @@ const PostItem = ({
                     <Text fontSize={'12pt'} fontWeight={600}>
                         {post.title}
                     </Text>
+                    <Text>{post.body}</Text>
                     {post.imageURL && (
                         <Flex justify='center' align='center' p={2}>
                             <Image src={post.imageURL} maxHeight='460px' alt='Post Image' />
