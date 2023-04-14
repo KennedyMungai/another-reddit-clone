@@ -40,7 +40,14 @@ const PostItem = ({
             cursor="pointer"
             onClick={onSelectPost}
         >
-            <Flex></Flex>
+            <Flex
+                direction="column"
+                align="center"
+                bg="gray.100"
+                p={2}
+                width={"40px"}
+                borderRadius={4}
+            ></Flex>
             {post.title}
         </Flex>
     );
