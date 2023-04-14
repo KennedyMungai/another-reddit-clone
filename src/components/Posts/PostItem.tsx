@@ -178,6 +178,7 @@ const PostItem = ({
                         borderRadius={4}
                         _hover={{ bg: "gray.200" }}
                         cursor="pointer"
+                        onClick={handleDelete}
                     >
                         <Icon as={AiOutlineDelete} />
                         <Text fontSize={"9pt"}>Delete</Text>
