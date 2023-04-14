@@ -65,7 +65,7 @@ const PostItem = ({
                             ? IoArrowDownCircleSharp
                             : IoArrowDownCircleOutline
                     }
-                    color={userVoteValue === -1 ? "brand.100" : "gray.400"}
+                    color={userVoteValue === -1 ? "#4379ff" : "gray.400"}
                     fontSize={22}
                     onClick={onVote}
                 />
