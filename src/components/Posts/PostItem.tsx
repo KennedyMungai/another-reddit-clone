@@ -57,6 +57,7 @@ const PostItem = ({
                     color={userVoteValue === 1 ? "brand.100" : "gray.400"}
                     fontSize={22}
                     onClick={onVote}
+                    cursor="pointer"
                 />
                 <Text fontSize={"9pt"}>{post.voteStatus}</Text>
                 <Icon
@@ -68,6 +69,7 @@ const PostItem = ({
                     color={userVoteValue === -1 ? "#4379ff" : "gray.400"}
                     fontSize={22}
                     onClick={onVote}
+                    cursor="pointer"
                 />
             </Flex>
             {post.title}
