@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
@@ -21,6 +21,7 @@ const About = ({ communityData }: Props) => {
                 <Text fontSize="10pt" fontWeight={700}>
                     About Community
                 </Text>
+                <Icon as={HiOutlineDotsHorizontal} />
             </Flex>
             <Flex></Flex>
         </Box>
