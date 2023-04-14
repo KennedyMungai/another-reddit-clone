@@ -12,7 +12,7 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
-import { updateDoc, doc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import moment from "moment";
 import Link from "next/link";
