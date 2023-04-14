@@ -63,7 +63,7 @@ const About = ({ communityData }: Props) => {
                                     new Date(
                                         communityData.createdAt.seconds * 1000
                                     )
-                                )}
+                                ).format("MMM DDD, YYYY")}
                             </Text>
                         )}
                     </Flex>
