@@ -32,6 +32,7 @@ const PostItem = ({
     onSelectPost,
 }: Props) => {
     const [loadingImage, setLoadingImage] = useState<boolean>(false);
+    const [error, setError] = useState<boolean>(false);
 
     const handleDelete = async () => {
         try {
