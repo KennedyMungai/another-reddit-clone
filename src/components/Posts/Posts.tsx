@@ -6,7 +6,7 @@ type Props = {
     userId: string;
 };
 
-const Posts = (props: Props) => {
+const Posts = ({ communityData }: Props) => {
     return <div>Posts</div>;
 };
 
