@@ -126,8 +126,8 @@ const PostItem = ({
                     _hover={{ bg: "gray.200" }}
                     cursor="pointer"
                 >
-                    <Icon as={BsChat} />
-                    <Text fontSize={"9pt"}>{post.numberOfComments}</Text>
+                    <Icon as={IoArrowRedoCircleOutline} />
+                    <Text fontSize={"9pt"}>Share</Text>
                 </Flex>
                 <Flex
                     justify="center"
