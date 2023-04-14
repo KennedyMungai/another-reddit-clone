@@ -83,6 +83,7 @@ const PostItem = ({
                         fontSize={"9pt"}
                     >
                         {/* Home Page check for selective rendering */}
+                        <Text>Posted By u/{post.creatorDisplayName}</Text>
                     </Stack>
                 </Stack>
             </Flex>
