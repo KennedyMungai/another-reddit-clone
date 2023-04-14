@@ -1,6 +1,13 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { firestore } from "@/firebase/clientApp";
-import { collection, query, where } from "firebase/firestore";
+import {
+    collection,
+    getDocs,
+    orderBy,
+    orderBy,
+    query,
+    where,
+} from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 
 type Props = {
@@ -14,8 +21,16 @@ const Posts = ({ communityData }: Props) => {
         try {
             const postsQuery = query(
                 collection(firestore, "posts"),
-                where("communityId", "==")
+                where("communityId", "==", communityData.id),
+                orderBy("createdAt", "desc")
             );
+
+            const postDocs = await getDocs(postsQuery);
+
+            const posts = postDocs.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
         } catch (error: any) {
             console.log(error.message);
         }
