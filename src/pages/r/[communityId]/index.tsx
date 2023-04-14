@@ -1,4 +1,4 @@
-import { Community } from "@/atoms/communitiesAtom";
+import { Community, communityState } from "@/atoms/communitiesAtom";
 import CreatePostLink from "@/components/Community/CreatePostLink";
 import Header from "@/components/Community/Header";
 import NotFound from "@/components/Community/NotFound";
@@ -8,6 +8,7 @@ import { firestore } from "@/firebase/clientApp";
 import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
 import { useEffect } from "react";
+import { useSetRecoilState } from "recoil";
 import safeJsonStringify from "safe-json-stringify";
 
 type CommunityPageProps = {
@@ -15,12 +16,19 @@ type CommunityPageProps = {
 };
 
 const CommunityPage = ({ communityData }: CommunityPageProps) => {
+    const setCommunityStateValue = useSetRecoilState(communityState);
+
     if (!communityData) {
         return <NotFound />;
     }
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {}, []);
+    useEffect(() => {
+        setCommunityStateValue((prev) => ({
+            ...prev,
+            currentCommunity: communityData,
+        }));
+    }, []);
 
     return (
         <>
