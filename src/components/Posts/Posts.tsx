@@ -54,19 +54,21 @@ const Posts = ({ communityData }: Props) => {
     }, []);
 
     return (
-        <Stack>
-            {postStateValue.posts.map((item) => (
-                <PostItem
-                    key={item.id}
-                    post={item}
-                    onVote={onVote}
-                    onDeletePost={onDeletePost}
-                    onSelectPost={onSelectPost}
-                    userIsCreator={user?.uid === item.creatorId}
-                    userVoteValue={undefined}
-                />
-            ))}
-        </Stack>
+        <>
+            <Stack>
+                {postStateValue.posts.map((item) => (
+                    <PostItem
+                        key={item.id}
+                        post={item}
+                        onVote={onVote}
+                        onDeletePost={onDeletePost}
+                        onSelectPost={onSelectPost}
+                        userIsCreator={user?.uid === item.creatorId}
+                        userVoteValue={undefined}
+                    />
+                ))}
+            </Stack>
+        </>
     );
 };
 
