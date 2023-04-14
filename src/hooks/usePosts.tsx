@@ -1,4 +1,4 @@
-import { postState } from "@/atoms/postsAtom";
+import { Post, postState } from "@/atoms/postsAtom";
 import { useRecoilState } from "recoil";
 
 const usePosts = () => {
@@ -8,7 +8,9 @@ const usePosts = () => {
 
     const onSelectPost = () => {};
 
-    const onDeletePost = async () => {};
+    const onDeletePost = async (post: Post): Promise<boolean> => {
+        return true;
+    };
 
     return {
         postStateValue,
