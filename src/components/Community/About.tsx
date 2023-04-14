@@ -94,7 +94,14 @@ const About = ({ communityData }: Props) => {
                             <Stack spacing={1} fontSize="10pt">
                                 <Text fontWeight={600}>Admin</Text>
                                 <Flex align="center" justify="space-between">
-                                    <Text>Change Image</Text>
+                                    <Text
+                                        color="blue.500"
+                                        cursor="pointer"
+                                        _hover={{ textDecoration: "underline" }}
+                                        onClick={() => {}}
+                                    >
+                                        Change Image
+                                    </Text>
                                 </Flex>
                             </Stack>
                         </>
