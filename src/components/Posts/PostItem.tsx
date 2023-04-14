@@ -142,6 +142,21 @@ const PostItem = ({
                     <Icon as={IoBookmarkOutline} />
                     <Text fontSize={"9pt"}>Save</Text>
                 </Flex>
+                {userIsCreator && (
+                    <Flex
+                        justify="center"
+                        align="center"
+                        gap={3}
+                        color={"gray.50"}
+                        p="8px 10px"
+                        borderRadius={4}
+                        _hover={{ bg: "gray.200" }}
+                        cursor="pointer"
+                    >
+                        <Icon as={AiOutlineDelete} />
+                        <Text fontSize={"9pt"}>Delete</Text>
+                    </Flex>
+                )}
             </Flex>
         </Flex>
     );
