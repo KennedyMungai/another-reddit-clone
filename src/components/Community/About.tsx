@@ -1,6 +1,16 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Box, Divider, Flex, Icon, Stack, Text } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    Divider,
+    Flex,
+    Icon,
+    Stack,
+    Text,
+} from "@chakra-ui/react";
 import moment from "moment";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiCakeLine } from "react-icons/ri";
@@ -10,6 +20,8 @@ type Props = {
 };
 
 const About = ({ communityData }: Props) => {
+    const router = useRouter();
+
     return (
         <Box position={"sticky"} top={"2rem"}>
             <Flex
@@ -67,6 +79,9 @@ const About = ({ communityData }: Props) => {
                             </Text>
                         )}
                     </Flex>
+                    <Link href={`/r/${router.query.communityId}/submit`}>
+                        <Button height="30px">Create Post</Button>
+                    </Link>
                 </Stack>
             </Flex>
         </Box>
