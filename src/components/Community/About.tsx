@@ -130,7 +130,12 @@ const About = ({ communityData }: Props) => {
                                     (uploadingImage ? (
                                         <Spinner />
                                     ) : (
-                                        <Text>Save Changes</Text>
+                                        <Text
+                                            cursor="pointer"
+                                            onClick={() => {}}
+                                        >
+                                            Save Changes
+                                        </Text>
                                     ))}
                             </Stack>
                         </>
