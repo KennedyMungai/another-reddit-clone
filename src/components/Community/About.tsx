@@ -134,7 +134,7 @@ const About = ({ communityData }: Props) => {
                                     ) : (
                                         <Text
                                             cursor="pointer"
-                                            onClick={() => {}}
+                                            onClick={onUpdateImage}
                                         >
                                             Save Changes
                                         </Text>
