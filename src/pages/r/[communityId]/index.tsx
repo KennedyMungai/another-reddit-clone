@@ -24,7 +24,7 @@ const CommunityPage = ({ communityData }: CommunityPageProps) => {
             <PageContent>
                 <>
                     <CreatePostLink />
-                    <Posts />
+                    <Posts communityData={communityData} />
                 </>
                 <>
                     <div>RHS</div>
