@@ -29,6 +29,7 @@ const About = ({ communityData }: Props) => {
     const [user] = useAuthState(auth);
     const selectedFileRef = useRef<string>();
     const { selectedFile, setSelectedFile, onSelectFile } = useSelectFile();
+    const [uploadingImage, setUploadingImage] = useState<boolean>(false);
 
     return (
         <Box position={"sticky"} top={"2rem"}>
@@ -124,6 +125,7 @@ const About = ({ communityData }: Props) => {
                                         />
                                     )}
                                 </Flex>
+                                {selectedFile && <Text>Save Changes</Text>}
                             </Stack>
                         </>
                     )}
