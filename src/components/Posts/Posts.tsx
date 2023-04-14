@@ -1,5 +1,6 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { firestore } from "@/firebase/clientApp";
+import usePosts from "@/hooks/usePosts";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 
@@ -9,6 +10,8 @@ type Props = {
 
 const Posts = ({ communityData }: Props) => {
     const [loading, setLoading] = useState<boolean>(false);
+
+    const { postStateValue, setPostStateValue } = usePosts();
 
     const getPosts = async () => {
         try {
