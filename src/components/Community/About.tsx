@@ -1,4 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
+import { auth } from "@/firebase/clientApp";
 import {
     Box,
     Button,
@@ -11,6 +12,7 @@ import {
 import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiCakeLine } from "react-icons/ri";
 
@@ -20,6 +22,7 @@ type Props = {
 
 const About = ({ communityData }: Props) => {
     const router = useRouter();
+    const [user] = useAuthState(auth);
 
     return (
         <Box position={"sticky"} top={"2rem"}>
@@ -83,6 +86,7 @@ const About = ({ communityData }: Props) => {
                             Create Post
                         </Button>
                     </Link>
+                    {}
                 </Stack>
             </Flex>
         </Box>
