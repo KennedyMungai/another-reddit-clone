@@ -42,7 +42,7 @@ const PostItem = ({
                 throw new Error("Failed to delete the post");
             }
         } catch (error: any) {
-            // Error state
+            setError(error.message);
         }
     };
 
