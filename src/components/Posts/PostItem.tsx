@@ -36,6 +36,9 @@ const PostItem = ({
             bg="white"
             borderColor={"gray.300"}
             borderRadius={4}
+            _hover={{ borderColor: "gray.500" }}
+            cursor="pointer"
+            onClick={onSelectPost}
         >
             {post.title}
         </Flex>
