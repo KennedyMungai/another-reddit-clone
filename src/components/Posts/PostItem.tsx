@@ -99,6 +99,9 @@ const PostItem = ({
                         </Flex>
                     )}
                 </Stack>
+                <Flex justify='center' align='center' gap={3} color={'gray.50'} fontWeight={600}>
+
+                </Flex>
             </Flex>
         </Flex>
     );
