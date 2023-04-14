@@ -89,6 +89,7 @@ const PostItem = ({
                             {(moment(new Date(post.createdAt?.seconds * 1000)).fromNow())}
                         </Text>
                     </Stack>
+                    <Text>{post.title}</Text>
                 </Stack>
             </Flex>
             {post.title}
