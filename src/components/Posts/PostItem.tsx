@@ -1,5 +1,5 @@
 import { Post } from "@/atoms/postsAtom";
-import { Flex, Icon, Text } from "@chakra-ui/react";
+import { Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
@@ -72,7 +72,16 @@ const PostItem = ({
                     cursor="pointer"
                 />
             </Flex>
-            <Flex direction="column"></Flex>
+            <Flex direction="column" width={"100%"}>
+                <Stack spacing={1} padding={"2rem"}>
+                    <Stack
+                        direction="row"
+                        spacing={0.6}
+                        align={"center"}
+                        fontSize={"9pt"}
+                    ></Stack>
+                </Stack>
+            </Flex>
             {post.title}
         </Flex>
     );
