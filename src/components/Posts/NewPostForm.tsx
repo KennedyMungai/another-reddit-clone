@@ -79,6 +79,7 @@ const NewPostForm = ({ user }: Props) => {
             }
         } catch (error: any) {
             console.log("Handle Create Post error", error);
+            setError(true);
         }
 
         setLoading(false);
