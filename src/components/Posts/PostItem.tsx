@@ -31,7 +31,12 @@ const PostItem = ({
     onSelectPost,
 }: Props) => {
     return (
-        <Flex border="1px solid" bg="white" borderColor={"gray.300"}>
+        <Flex
+            border="1px solid"
+            bg="white"
+            borderColor={"gray.300"}
+            borderRadius={4}
+        >
             {post.title}
         </Flex>
     );
