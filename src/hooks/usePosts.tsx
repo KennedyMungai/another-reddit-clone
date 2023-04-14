@@ -7,6 +7,8 @@ const usePosts = () => {
 
     const onVote = async () => {};
 
+    const onSelectPost = () => {};
+
     return {
         postStateValue,
         setPostStateValue,
