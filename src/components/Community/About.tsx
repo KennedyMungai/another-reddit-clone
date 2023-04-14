@@ -143,6 +143,7 @@ const About = ({ communityData }: Props) => {
                                         color="blue.500"
                                         cursor="pointer"
                                         _hover={{ textDecoration: "underline" }}
+                                        onClick={onUpdateImage}
                                     >
                                         Change Image
                                     </Text>
