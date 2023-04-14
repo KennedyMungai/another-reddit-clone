@@ -1,16 +1,19 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { Post } from "@/atoms/postsAtom";
-import { firestore } from "@/firebase/clientApp";
+import { auth, firestore } from "@/firebase/clientApp";
 import usePosts from "@/hooks/usePosts";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import PostItem from "./PostItem";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 type Props = {
     communityData: Community;
 };
 
 const Posts = ({ communityData }: Props) => {
+    const [user] = useAuthState(auth);
+
     const [loading, setLoading] = useState<boolean>(false);
 
     const {
@@ -53,10 +56,13 @@ const Posts = ({ communityData }: Props) => {
         <>
             {postStateValue.posts.map((item) => (
                 <PostItem
+                    key={item.id}
                     post={item}
                     onVote={onVote}
                     onDeletePost={onDeletePost}
                     onSelectPost={onSelectPost}
+                    userIsCreator={user?.uid === item.creatorId}
+                    userVoteValue={undefined}
                 />
             ))}
         </>
