@@ -8,7 +8,9 @@ type Props = {
 const Posts = ({ communityData }: Props) => {
     const getPosts = async () => {};
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        getPosts();
+    }, []);
 
     return <div>Posts</div>;
 };
