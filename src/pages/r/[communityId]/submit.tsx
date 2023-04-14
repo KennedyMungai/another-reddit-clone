@@ -10,6 +10,8 @@ const SubmitPostPage = () => {
     const [user] = useAuthState(auth);
     const communityStateValue = useRecoilValue(communityState);
 
+    console.log("COMMUNITY", communityStateValue);
+
     return (
         <PageContent>
             <>
