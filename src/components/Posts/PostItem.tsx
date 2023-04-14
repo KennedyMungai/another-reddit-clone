@@ -33,6 +33,7 @@ const PostItem = ({
 }: Props) => {
     const [loadingImage, setLoadingImage] = useState<boolean>(false);
     const [error, setError] = useState<boolean>(false);
+    const [loadingDelete, setLoadingDelete] = useState<boolean>(false);
 
     const handleDelete = async () => {
         try {
