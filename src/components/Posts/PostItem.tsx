@@ -1,5 +1,7 @@
 import { Post } from "@/atoms/postsAtom";
 import {
+    Alert,
+    AlertIcon,
     Flex,
     Icon,
     Image,
@@ -104,6 +106,12 @@ const PostItem = ({
                 />
             </Flex>
             <Flex direction="column" width={"100%"}>
+                {error && (
+                    <Alert status="error">
+                        <AlertIcon />
+                        <Text mr={2}>Error creating post</Text>
+                    </Alert>
+                )}
                 <Stack spacing={1} padding={"2rem"}>
                     <Stack
                         direction="row"
