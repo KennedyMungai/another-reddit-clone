@@ -27,6 +27,8 @@ const Posts = ({ communityData }: Props) => {
     } = usePosts();
 
     const getPosts = async () => {
+        setLoading(true);
+
         try {
             const postsQuery = query(
                 collection(firestore, "posts"),
@@ -48,6 +50,8 @@ const Posts = ({ communityData }: Props) => {
         } catch (error: any) {
             console.log(error.message);
         }
+
+        setLoading(false);
     };
 
     useEffect(() => {
