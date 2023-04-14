@@ -18,6 +18,7 @@ import { IoDocumentText, IoImageOutline } from "react-icons/io5";
 import ImageUpload from "./PostForm/ImageUpload";
 import TextInputs from "./PostForm/TextInputs";
 import TabItem from "./TabItem";
+import useSelectFile from "@/hooks/useSelectFile";
 
 type Props = {
     user: User;
@@ -43,7 +44,7 @@ const NewPostForm = ({ user }: Props) => {
         title: string;
         body: string;
     }>({ title: "", body: "" });
-    const [selectedFile, setSelectedFile] = useState<string>("");
+    const { selectedFile, setSelectedFile, onSelectFile } = useSelectFile();
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<boolean>(false);
 
@@ -84,20 +85,6 @@ const NewPostForm = ({ user }: Props) => {
         }
 
         setLoading(false);
-    };
-
-    const onSelectImage = (e: ChangeEvent<HTMLInputElement>) => {
-        const reader = new FileReader();
-
-        if (e.target.files?.[0]) {
-            reader.readAsDataURL(e.target.files[0]);
-        }
-
-        reader.onload = (readerEvent) => {
-            if (readerEvent.target?.result) {
-                setSelectedFile(readerEvent.target.result as string);
-            }
-        };
     };
 
     const onTextChange = (
