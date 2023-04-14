@@ -4,6 +4,7 @@ import { firestore } from "@/firebase/clientApp";
 import usePosts from "@/hooks/usePosts";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
+import PostItem from "./PostItem";
 
 type Props = {
     communityData: Community;
@@ -42,7 +43,11 @@ const Posts = ({ communityData }: Props) => {
         getPosts();
     }, []);
 
-    return <div>Posts</div>;
+    return (
+        <>
+            <PostItem />
+        </>
+    );
 };
 
 export default Posts;
