@@ -9,7 +9,7 @@ const usePosts = () => {
 
     const onSelectPost = () => {};
 
-    const onDeletePost = () => {};
+    const onDeletePost = async () => {};
 
     return {
         postStateValue,
