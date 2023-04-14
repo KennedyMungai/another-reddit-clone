@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
@@ -23,7 +23,27 @@ const About = ({ communityData }: Props) => {
                 </Text>
                 <Icon as={HiOutlineDotsHorizontal} />
             </Flex>
-            <Flex></Flex>
+            <Flex
+                direction="column"
+                p={3}
+                bg={"white"}
+                borderRadius="0px 0px 4px 4px"
+            >
+                <Stack>
+                    <Flex
+                        width={"100%"}
+                        p={2}
+                        fontSize={"10pt"}
+                        fontWeight={700}
+                    >
+                        <Flex direction="column" flexGrow={1}>
+                            <Text>{communityData.numberOfMembers}</Text>
+                            <Text>Members</Text>
+                        </Flex>
+                        <Flex direction="column" flexGrow={1}></Flex>
+                    </Flex>
+                </Stack>
+            </Flex>
         </Box>
     );
 };
