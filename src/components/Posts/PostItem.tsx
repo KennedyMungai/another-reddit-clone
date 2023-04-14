@@ -1,5 +1,5 @@
 import { Post } from "@/atoms/postsAtom";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Icon } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
@@ -47,7 +47,18 @@ const PostItem = ({
                 p={2}
                 width={"40px"}
                 borderRadius={4}
-            ></Flex>
+            >
+                <Icon
+                    as={
+                        userVoteValue === 1
+                            ? IoArrowUpCircleSharp
+                            : IoArrowDownCircleOutline
+                    }
+                    color={userVoteValue === 1 ? "brand.100" : "gray.400"}
+                    fontSize={22}
+                    onClick={onVote}
+                />
+            </Flex>
             {post.title}
         </Flex>
     );
