@@ -1,5 +1,5 @@
-import { Community } from "@/atoms/communitiesAtom";
-import { auth } from "@/firebase/clientApp";
+import { Community, communityState } from "@/atoms/communitiesAtom";
+import { auth, firestore, storage } from "@/firebase/clientApp";
 import useSelectFile from "@/hooks/useSelectFile";
 import {
     Box,
@@ -12,6 +12,8 @@ import {
     Stack,
     Text,
 } from "@chakra-ui/react";
+import { updateDoc, doc } from "firebase/firestore";
+import { getDownloadURL, ref, uploadString } from "firebase/storage";
 import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -20,6 +22,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { FaReddit } from "react-icons/fa";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiCakeLine } from "react-icons/ri";
+import { useSetRecoilState } from "recoil";
 
 type Props = {
     communityData: Community;
@@ -31,8 +34,42 @@ const About = ({ communityData }: Props) => {
     const selectedFileRef = useRef<HTMLInputElement>(null);
     const { selectedFile, setSelectedFile, onSelectFile } = useSelectFile();
     const [uploadingImage, setUploadingImage] = useState<boolean>(false);
+    const setCommunityStateValue = useSetRecoilState(communityState);
 
-    const onUpdateImage = async () => {};
+    const onUpdateImage = async () => {
+        if (!selectedFileRef) {
+            return;
+        }
+
+        setUploadingImage(true);
+
+        try {
+            const imageRef = ref(
+                storage,
+                `/communities/${communityData.id}/image`
+            );
+
+            await uploadString(imageRef, selectedFile, "data_url");
+
+            const downloadURL = await getDownloadURL(imageRef);
+
+            await updateDoc(doc(firestore, "communities", communityData.id), {
+                imageURL: downloadURL,
+            });
+
+            setCommunityStateValue((prev) => ({
+                ...prev,
+                currentCommunity: {
+                    ...prev.currentCommunity,
+                    imageURL: downloadURL,
+                } as Community,
+            }));
+        } catch (error: any) {
+            console.log("onUpdateImage error", error);
+        }
+
+        setUploadingImage(false);
+    };
 
     return (
         <Box position={"sticky"} top={"2rem"}>
