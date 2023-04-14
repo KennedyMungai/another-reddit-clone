@@ -84,7 +84,10 @@ const PostItem = ({
                         fontSize={"9pt"}
                     >
                         {/* Home Page check for selective rendering */}
-                        <Text>Posted By u/{post.creatorDisplayName} {(moment(new Date(post.createdAt?.seconds * 1000)).fromNow())}</Text>
+                        <Text>
+                            Posted By u/{post.creatorDisplayName}
+                            {(moment(new Date(post.createdAt?.seconds * 1000)).fromNow())}
+                        </Text>
                     </Stack>
                 </Stack>
             </Flex>
