@@ -40,7 +40,10 @@ const About = ({ communityData }: Props) => {
                             <Text>{communityData.numberOfMembers}</Text>
                             <Text>Members</Text>
                         </Flex>
-                        <Flex direction="column" flexGrow={1}></Flex>
+                        <Flex direction="column" flexGrow={1}>
+                            <Text>1</Text>
+                            <Text>Online</Text>
+                        </Flex>
                     </Flex>
                 </Stack>
             </Flex>
