@@ -33,6 +33,11 @@ const PostItem = ({
 }: Props) => {
     const [loadingImage, setLoadingImage] = useState<boolean>(false);
 
+    const handleDelete = async () => {
+        try {
+        } catch (error: any) {}
+    };
+
     return (
         <Flex
             border="1px solid"
