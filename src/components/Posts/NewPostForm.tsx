@@ -1,4 +1,11 @@
-import { Flex, Icon } from "@chakra-ui/react";
+import {
+    Alert,
+    AlertDescription,
+    AlertIcon,
+    AlertTitle,
+    Flex,
+    Icon,
+} from "@chakra-ui/react";
 import React, { ChangeEvent, useState } from "react";
 import { BiPoll } from "react-icons/bi";
 import { BsLink45Deg, BsMic } from "react-icons/bs";
@@ -141,6 +148,15 @@ const NewPostForm = ({ user }: Props) => {
                     />
                 )}
             </Flex>
+            {error && (
+                <Alert status="error">
+                    <AlertIcon />
+                    <AlertTitle>Your browser is outdated!</AlertTitle>
+                    <AlertDescription>
+                        Your Chakra experience may be degraded.
+                    </AlertDescription>
+                </Alert>
+            )}
         </Flex>
     );
 };
