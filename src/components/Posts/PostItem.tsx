@@ -139,8 +139,8 @@ const PostItem = ({
                     _hover={{ bg: "gray.200" }}
                     cursor="pointer"
                 >
-                    <Icon as={BsChat} />
-                    <Text fontSize={"9pt"}>{post.numberOfComments}</Text>
+                    <Icon as={IoBookmarkOutline} />
+                    <Text fontSize={"9pt"}>Save</Text>
                 </Flex>
             </Flex>
         </Flex>
