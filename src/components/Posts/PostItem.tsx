@@ -52,13 +52,23 @@ const PostItem = ({
                     as={
                         userVoteValue === 1
                             ? IoArrowUpCircleSharp
-                            : IoArrowDownCircleOutline
+                            : IoArrowUpCircleOutline
                     }
                     color={userVoteValue === 1 ? "brand.100" : "gray.400"}
                     fontSize={22}
                     onClick={onVote}
                 />
                 <Text fontSize={"9pt"}>{post.voteStatus}</Text>
+                <Icon
+                    as={
+                        userVoteValue === -1
+                            ? IoArrowDownCircleSharp
+                            : IoArrowDownCircleOutline
+                    }
+                    color={userVoteValue === -1 ? "brand.100" : "gray.400"}
+                    fontSize={22}
+                    onClick={onVote}
+                />
             </Flex>
             {post.title}
         </Flex>
