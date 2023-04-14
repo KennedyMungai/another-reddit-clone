@@ -41,6 +41,8 @@ const PostItem = ({
             if (!success) {
                 throw new Error("Failed to delete the post");
             }
+
+            console.log("The post was successfully deleted");
         } catch (error: any) {
             setError(error.message);
         }
