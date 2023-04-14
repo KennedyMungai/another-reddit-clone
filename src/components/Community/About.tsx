@@ -24,7 +24,7 @@ type Props = {
 const About = ({ communityData }: Props) => {
     const router = useRouter();
     const [user] = useAuthState(auth);
-    const ref = useRef();
+    const selectedFileRef = useRef();
 
     return (
         <Box position={"sticky"} top={"2rem"}>
