@@ -19,7 +19,7 @@ type Props = {
     userIsCreator: boolean;
     userVoteValue?: number;
     onVote: () => {};
-    onDeletePost: () => {};
+    onDeletePost: (post: Post) => Promise<boolean>;
     onSelectPost: () => void;
 };
 
@@ -35,6 +35,7 @@ const PostItem = ({
 
     const handleDelete = async () => {
         try {
+            const success = await onDeletePost(post);
         } catch (error: any) {}
     };
 
