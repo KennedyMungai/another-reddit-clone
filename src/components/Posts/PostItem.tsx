@@ -100,7 +100,6 @@ const PostItem = ({
                     )}
                 </Stack>
             </Flex>
-            {post.title}
         </Flex>
     );
 };
