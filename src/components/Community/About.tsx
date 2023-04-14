@@ -8,13 +8,14 @@ import {
     Flex,
     Icon,
     Image,
+    Spinner,
     Stack,
     Text,
 } from "@chakra-ui/react";
 import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { FaReddit } from "react-icons/fa";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
@@ -125,7 +126,12 @@ const About = ({ communityData }: Props) => {
                                         />
                                     )}
                                 </Flex>
-                                {selectedFile && <Text>Save Changes</Text>}
+                                {selectedFile &&
+                                    (uploadingImage ? (
+                                        <Spinner />
+                                    ) : (
+                                        <Text>Save Changes</Text>
+                                    ))}
                             </Stack>
                         </>
                     )}
