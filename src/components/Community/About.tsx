@@ -1,11 +1,13 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { auth } from "@/firebase/clientApp";
+import useSelectFile from "@/hooks/useSelectFile";
 import {
     Box,
     Button,
     Divider,
     Flex,
     Icon,
+    Image,
     Stack,
     Text,
 } from "@chakra-ui/react";
@@ -14,6 +16,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { FaReddit } from "react-icons/fa";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiCakeLine } from "react-icons/ri";
 
@@ -25,6 +28,7 @@ const About = ({ communityData }: Props) => {
     const router = useRouter();
     const [user] = useAuthState(auth);
     const selectedFileRef = useRef<string>();
+    const { selectedFile, setSelectedFile, onSelectFile } = useSelectFile();
 
     return (
         <Box position={"sticky"} top={"2rem"}>
@@ -98,10 +102,27 @@ const About = ({ communityData }: Props) => {
                                         color="blue.500"
                                         cursor="pointer"
                                         _hover={{ textDecoration: "underline" }}
-                                        onClick={() => {}}
                                     >
                                         Change Image
                                     </Text>
+                                    {communityData.imageURL || selectedFile ? (
+                                        <Image
+                                            src={
+                                                selectedFile ||
+                                                communityData.imageURL
+                                            }
+                                            borderRadius={"full"}
+                                            boxSize="40px"
+                                            alt="Community Image"
+                                        />
+                                    ) : (
+                                        <Icon
+                                            as={FaReddit}
+                                            fontSize={40}
+                                            color="brand.100"
+                                            mr={2}
+                                        />
+                                    )}
                                 </Flex>
                             </Stack>
                         </>
