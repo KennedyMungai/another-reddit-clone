@@ -28,7 +28,7 @@ type Props = {
 const About = ({ communityData }: Props) => {
     const router = useRouter();
     const [user] = useAuthState(auth);
-    const selectedFileRef = useRef<string>();
+    const selectedFileRef = useRef<HTMLInputElement>(null);
     const { selectedFile, setSelectedFile, onSelectFile } = useSelectFile();
     const [uploadingImage, setUploadingImage] = useState<boolean>(false);
 
@@ -139,6 +139,12 @@ const About = ({ communityData }: Props) => {
                                             Save Changes
                                         </Text>
                                     ))}
+                                <input
+                                    type="file"
+                                    style={{ display: "none" }}
+                                    ref={selectedFileRef}
+                                    onChange={onSelectFile}
+                                />
                             </Stack>
                         </>
                     )}
