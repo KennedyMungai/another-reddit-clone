@@ -4,7 +4,8 @@ import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
 import { FaReddit } from "react-icons/fa";
-import {
+import
+{
     IoArrowDownCircleOutline,
     IoArrowDownCircleSharp,
     IoArrowRedoCircleOutline,
@@ -29,7 +30,8 @@ const PostItem = ({
     onVote,
     onDeletePost,
     onSelectPost,
-}: Props) => {
+}: Props) =>
+{
     return (
         <Flex
             border="1px solid"
@@ -79,7 +81,9 @@ const PostItem = ({
                         spacing={0.6}
                         align={"center"}
                         fontSize={"9pt"}
-                    ></Stack>
+                    >
+                        {/* Home Page check for selective rendering */}
+                    </Stack>
                 </Stack>
             </Flex>
             {post.title}
