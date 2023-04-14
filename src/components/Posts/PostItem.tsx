@@ -72,6 +72,7 @@ const PostItem = ({
                     cursor="pointer"
                 />
             </Flex>
+            <Flex direction="column"></Flex>
             {post.title}
         </Flex>
     );
