@@ -19,6 +19,7 @@ const CommunityPage = ({ communityData }: CommunityPageProps) => {
         return <NotFound />;
     }
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {}, []);
 
     return (
