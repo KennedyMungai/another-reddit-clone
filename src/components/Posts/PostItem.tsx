@@ -36,6 +36,8 @@ const PostItem = ({
     const [loadingDelete, setLoadingDelete] = useState<boolean>(false);
 
     const handleDelete = async () => {
+        setLoadingDelete(true);
+
         try {
             const success = await onDeletePost(post);
 
@@ -47,6 +49,8 @@ const PostItem = ({
         } catch (error: any) {
             setError(error.message);
         }
+
+        setLoadingDelete(false);
     };
 
     return (
