@@ -9,6 +9,8 @@ const usePosts = () => {
 
     const onSelectPost = () => {};
 
+    const onDeletePost = () => {};
+
     return {
         postStateValue,
         setPostStateValue,
