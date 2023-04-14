@@ -6,7 +6,10 @@ type Props = {
 };
 
 const Posts = ({ communityData }: Props) => {
-    const getPosts = async () => {};
+    const getPosts = async () => {
+        try {
+        } catch (error) {}
+    };
 
     useEffect(() => {
         getPosts();
