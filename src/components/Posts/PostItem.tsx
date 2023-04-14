@@ -58,7 +58,7 @@ const PostItem = ({
                     fontSize={22}
                     onClick={onVote}
                 />
-                <Text>{post.voteStatus}</Text>
+                <Text fontSize={"9pt"}>{post.voteStatus}</Text>
             </Flex>
             {post.title}
         </Flex>
