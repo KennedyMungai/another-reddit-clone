@@ -121,7 +121,7 @@ const NewPostForm = ({ user }: Props) => {
                 {selectedTab === "Images & Video" && (
                     <ImageUpload
                         selectedFile={selectedFile}
-                        onSelectImage={onSelectImage}
+                        onSelectImage={onSelectFile}
                         setSelectedTab={setSelectedTab}
                         setSelectedFile={setSelectedFile}
                     />
