@@ -7,6 +7,7 @@ import Posts from "@/components/Posts/Posts";
 import { firestore } from "@/firebase/clientApp";
 import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
+import { useEffect } from "react";
 import safeJsonStringify from "safe-json-stringify";
 
 type CommunityPageProps = {
@@ -17,6 +18,8 @@ const CommunityPage = ({ communityData }: CommunityPageProps) => {
     if (!communityData) {
         return <NotFound />;
     }
+
+    useEffect(() => {}, []);
 
     return (
         <>
