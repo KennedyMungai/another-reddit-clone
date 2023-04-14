@@ -13,7 +13,13 @@ type Props = {
 const Posts = ({ communityData }: Props) => {
     const [loading, setLoading] = useState<boolean>(false);
 
-    const { postStateValue, setPostStateValue } = usePosts();
+    const {
+        postStateValue,
+        setPostStateValue,
+        onDeletePost,
+        onSelectPost,
+        onVote,
+    } = usePosts();
 
     const getPosts = async () => {
         try {
@@ -45,7 +51,9 @@ const Posts = ({ communityData }: Props) => {
 
     return (
         <>
-            <PostItem />
+            {postStateValue.posts.map((item) => (
+                <PostItem />
+            ))}
         </>
     );
 };
