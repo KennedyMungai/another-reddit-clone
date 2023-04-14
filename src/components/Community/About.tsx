@@ -2,6 +2,7 @@ import { Community } from "@/atoms/communitiesAtom";
 import { Box, Divider, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { RiCakeLine } from "react-icons/ri";
 
 type Props = {
     communityData: Community;
@@ -46,6 +47,15 @@ const About = ({ communityData }: Props) => {
                         </Flex>
                     </Flex>
                     <Divider />
+                    <Flex
+                        align={"center"}
+                        width={"100%"}
+                        p={1}
+                        fontWeight={500}
+                        fontSize={"10pt"}
+                    >
+                        <Icon as={RiCakeLine} />
+                    </Flex>
                 </Stack>
             </Flex>
         </Box>
