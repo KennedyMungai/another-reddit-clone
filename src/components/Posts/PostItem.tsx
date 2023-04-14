@@ -1,5 +1,5 @@
 import { Post } from "@/atoms/postsAtom";
-import { Flex, Icon, Stack, Text } from "@chakra-ui/react";
+import { Flex, Icon, Image, Stack, Text } from "@chakra-ui/react";
 import moment from "moment";
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
@@ -92,6 +92,11 @@ const PostItem = ({
                     <Text fontSize={'12pt'} fontWeight={600}>
                         {post.title}
                     </Text>
+                    {post.imageURL && (
+                        <Flex justify='center' align='center' p={2}>
+                            <Image src={post.imageURL} maxHeight='460px' alt='Post Image' />
+                        </Flex>
+                    )}
                 </Stack>
             </Flex>
             {post.title}
