@@ -52,7 +52,12 @@ const Posts = ({ communityData }: Props) => {
     return (
         <>
             {postStateValue.posts.map((item) => (
-                <PostItem />
+                <PostItem
+                    post={item}
+                    onVote={onVote}
+                    onDeletePost={onDeletePost}
+                    onSelectPost={onSelectPost}
+                />
             ))}
         </>
     );
