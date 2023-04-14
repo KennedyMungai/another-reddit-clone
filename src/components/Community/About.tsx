@@ -80,7 +80,9 @@ const About = ({ communityData }: Props) => {
                         )}
                     </Flex>
                     <Link href={`/r/${router.query.communityId}/submit`}>
-                        <Button height="30px">Create Post</Button>
+                        <Button height="30px" width="100%">
+                            Create Post
+                        </Button>
                     </Link>
                 </Stack>
             </Flex>
