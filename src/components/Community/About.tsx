@@ -5,7 +5,7 @@ type Props = {
     communityData: Community;
 };
 
-const About = (props: Props) => {
+const About = ({ communityData }: Props) => {
     return <div>About</div>;
 };
 
