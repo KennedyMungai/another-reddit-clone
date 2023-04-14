@@ -1,6 +1,9 @@
+import { Community } from "@/atoms/communitiesAtom";
 import React from "react";
 
-type Props = {};
+type Props = {
+    communityData: Community;
+};
 
 const About = (props: Props) => {
     return <div>About</div>;
