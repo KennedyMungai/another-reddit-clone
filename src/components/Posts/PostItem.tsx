@@ -1,5 +1,5 @@
 import { Post } from "@/atoms/postsAtom";
-import { Flex, Icon } from "@chakra-ui/react";
+import { Flex, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
@@ -58,6 +58,7 @@ const PostItem = ({
                     fontSize={22}
                     onClick={onVote}
                 />
+                <Text></Text>
             </Flex>
             {post.title}
         </Flex>
