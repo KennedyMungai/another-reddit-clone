@@ -10,7 +10,9 @@ const Posts = ({ communityData }: Props) => {
 
     const getPosts = async () => {
         try {
-        } catch (error) {}
+        } catch (error: any) {
+            console.log(error.message);
+        }
     };
 
     useEffect(() => {
