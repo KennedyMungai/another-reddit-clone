@@ -40,6 +40,7 @@ const PostItem = ({
             cursor="pointer"
             onClick={onSelectPost}
         >
+            <Flex></Flex>
             {post.title}
         </Flex>
     );
