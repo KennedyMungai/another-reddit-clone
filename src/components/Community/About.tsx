@@ -1,5 +1,6 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { Box, Divider, Flex, Icon, Stack, Text } from "@chakra-ui/react";
+import moment from "moment";
 import React from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { RiCakeLine } from "react-icons/ri";
@@ -55,6 +56,16 @@ const About = ({ communityData }: Props) => {
                         fontSize={"10pt"}
                     >
                         <Icon as={RiCakeLine} />
+                        {communityData.createdAt && (
+                            <Text>
+                                Created at
+                                {moment(
+                                    new Date(
+                                        communityData.createdAt.seconds * 1000
+                                    )
+                                )}
+                            </Text>
+                        )}
                     </Flex>
                 </Stack>
             </Flex>
