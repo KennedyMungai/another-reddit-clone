@@ -9,6 +9,9 @@ const usePosts = () => {
     const onSelectPost = () => {};
 
     const onDeletePost = async (post: Post): Promise<boolean> => {
+        try {
+        } catch (error: any) {}
+
         return true;
     };
 
