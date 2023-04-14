@@ -1,7 +1,7 @@
 import { Post } from "@/atoms/postsAtom";
 import { Flex, Icon, Image, Stack, Text } from "@chakra-ui/react";
 import moment from "moment";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
 import { FaReddit } from "react-icons/fa";
@@ -31,6 +31,8 @@ const PostItem = ({
     onDeletePost,
     onSelectPost,
 }: Props) => {
+    const [loadingImage, setLoadingImage] = useState<boolean>(false);
+
     return (
         <Flex
             border="1px solid"
