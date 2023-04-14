@@ -25,6 +25,12 @@ const Header = ({ communityData }: Props) => {
                         <Image
                             src={communityStateValue.currentCommunity.imageURL}
                             alt="The Community Logo"
+                            borderRadius={"full"}
+                            boxSize="66px"
+                            position="relative"
+                            top={-3}
+                            color="blue.500"
+                            border="4px solid white"
                         />
                     ) : (
                         <Icon
