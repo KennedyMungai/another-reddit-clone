@@ -1,5 +1,5 @@
 import { Community } from "@/atoms/communitiesAtom";
-import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
@@ -45,6 +45,7 @@ const About = ({ communityData }: Props) => {
                             <Text>Online</Text>
                         </Flex>
                     </Flex>
+                    <Divider />
                 </Stack>
             </Flex>
         </Box>
