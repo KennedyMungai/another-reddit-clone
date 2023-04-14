@@ -5,8 +5,7 @@ import React from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
 import { FaReddit } from "react-icons/fa";
-import
-{
+import {
     IoArrowDownCircleOutline,
     IoArrowDownCircleSharp,
     IoArrowRedoCircleOutline,
@@ -31,8 +30,7 @@ const PostItem = ({
     onVote,
     onDeletePost,
     onSelectPost,
-}: Props) =>
-{
+}: Props) => {
     return (
         <Flex
             border="1px solid"
@@ -86,21 +84,37 @@ const PostItem = ({
                         {/* Home Page check for selective rendering */}
                         <Text>
                             Posted By u/{post.creatorDisplayName}
-                            {(moment(new Date(post.createdAt?.seconds * 1000)).fromNow())}
+                            {moment(
+                                new Date(post.createdAt?.seconds * 1000)
+                            ).fromNow()}
                         </Text>
                     </Stack>
-                    <Text fontSize={'12pt'} fontWeight={600}>
+                    <Text fontSize={"12pt"} fontWeight={600}>
                         {post.title}
                     </Text>
-                    <Text fontSize={'10pt'}>{post.body}</Text>
+                    <Text fontSize={"10pt"}>{post.body}</Text>
                     {post.imageURL && (
-                        <Flex justify='center' align='center' p={2}>
-                            <Image src={post.imageURL} maxHeight='460px' alt='Post Image' />
+                        <Flex justify="center" align="center" p={2}>
+                            <Image
+                                src={post.imageURL}
+                                maxHeight="460px"
+                                alt="Post Image"
+                            />
                         </Flex>
                     )}
                 </Stack>
-                <Flex justify='center' align='center' gap={3} color={'gray.50'} fontWeight={600}>
-
+                <Flex
+                    justify="center"
+                    align="center"
+                    gap={3}
+                    color={"gray.50"}
+                    fontWeight={600}
+                    p="8px 10px"
+                    borderRadius={4}
+                    _hover={{ bg: "gray.200" }}
+                    cursor="pointer"
+                >
+                    <Icon />
                 </Flex>
             </Flex>
         </Flex>
