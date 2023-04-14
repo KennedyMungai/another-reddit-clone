@@ -108,13 +108,13 @@ const PostItem = ({
                     align="center"
                     gap={3}
                     color={"gray.50"}
-                    fontWeight={600}
                     p="8px 10px"
                     borderRadius={4}
                     _hover={{ bg: "gray.200" }}
                     cursor="pointer"
                 >
-                    <Icon />
+                    <Icon as={BsChat} />
+                    <Text fontSize={"9pt"}>{post.numberOfComments}</Text>
                 </Flex>
             </Flex>
         </Flex>
