@@ -73,12 +73,18 @@ const usePosts = () => {
                     };
 
                     batch.update(postVoteRef, { voteValue: vote });
+
+                    setPostStateValue((prev) => ({
+                        ...prev,
+                        posts: updatedPost,
+                        postVotes: updatedPostVotes,
+                    }));
                 }
 
                 const postRef = doc(firestore, "posts", post.id!);
-                batch.update(postRef, { voteStatus: voteStatus + voteChange});
+                batch.update(postRef, { voteStatus: voteStatus + voteChange });
 
-                await batch.commit()
+                await batch.commit();
             }
         } catch (error: any) {
             console.log("onVote error", error);
