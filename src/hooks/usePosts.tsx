@@ -26,18 +26,21 @@ const usePosts = () => {
 
             // Execution block for a new vote
             if (!existingVote) {
-                const postVoteRef = doc(collection(firestore, "users", `${user?.uid}/postVotes/`));
+                const postVoteRef = doc(
+                    collection(firestore, "users", `${user?.uid}/postVotes/`)
+                );
 
                 const newVote: PostVote = {
                     id: postVoteRef.id,
                     postId: post.id!,
                     communityId,
-                    voteValue: vote
-                }
-            
-                batch.set(postVoteRef, newVote)
+                    voteValue: vote,
+                };
 
-                await batch.commit()
+                batch.set(postVoteRef, newVote);
+
+                await batch.commit();
+            }
             // Existing block for an existing vote
             else {
                 if (removingPost) {
