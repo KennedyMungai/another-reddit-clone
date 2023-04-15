@@ -153,9 +153,9 @@ const usePosts = () => {
     };
 
     useEffect(() => {
-        if (!currentCommunity) return;
+        if (!user || !currentCommunity) return;
         getCommunityPostVotes(currentCommunity.id);
-    }, [currentCommunity]);
+    }, [user, currentCommunity]);
 
     return {
         postStateValue,
