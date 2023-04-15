@@ -1,6 +1,6 @@
 import { Post, postState } from "@/atoms/postsAtom";
 import { firestore, storage } from "@/firebase/clientApp";
-import { deleteDoc, doc } from "firebase/firestore";
+import { deleteDoc, doc, writeBatch } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { useRecoilState } from "recoil";
 
@@ -10,12 +10,23 @@ const usePosts = () => {
     const onVote = async (post: Post, vote: number, communityId: string) => {
         try {
             const { voteStatus } = post;
+            const existingVote = postStateValue.postVotes.find(
+                (vote) => vote.postId === post.id
+            );
+
+            const batch = writeBatch(firestore);
+            const updatePost = { ...post };
+            const updatedPost = [...postStateValue.posts];
+            const updatedPostVotes = [...postStateValue.postVotes];
 
             // Execution block for a new vote
-            if (newVote) {
+            if (!existingVote) {
             }
             // Existing block for an existing vote
             else {
+                if (removingPost) {
+                } else {
+                }
             }
         } catch (error: any) {
             console.log("onVote error", error);
