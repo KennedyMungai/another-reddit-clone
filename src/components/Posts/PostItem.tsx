@@ -28,7 +28,7 @@ type Props = {
     post: Post;
     userIsCreator: boolean;
     userVoteValue?: number;
-    onVote: () => {};
+    onVote: (post: Post, vote: number, communityId: string) => void;
     onDeletePost: (post: Post) => Promise<boolean>;
     onSelectPost: () => void;
 };
