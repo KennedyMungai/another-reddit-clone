@@ -15,7 +15,9 @@ const usePosts = () => {
             // Existing block for an existing vote
             else {
             }
-        } catch (error) {}
+        } catch (error: any) {
+            console.log("onVote error", error);
+        }
     };
 
     const onSelectPost = () => {};
