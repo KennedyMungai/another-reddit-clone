@@ -20,7 +20,7 @@ const usePosts = () => {
             const batch = writeBatch(firestore);
             const updatePost = { ...post };
             const updatedPost = [...postStateValue.posts];
-            const updatedPostVotes = [...postStateValue.postVotes];
+            let updatedPostVotes = [...postStateValue.postVotes];
 
             let voteChange = vote;
 
@@ -38,6 +38,10 @@ const usePosts = () => {
                 };
 
                 batch.set(postVoteRef, newVote);
+
+                updatePost.voteStatus = voteStatus + vote;
+
+                updatedPostVotes = [...updatedPostVotes, newVote];
             }
             // Existing block for an existing vote
             else {
