@@ -19,6 +19,8 @@ const usePosts = () => {
             const updatedPost = [...postStateValue.posts];
             const updatedPostVotes = [...postStateValue.postVotes];
 
+            let voteChange = vote;
+
             // Execution block for a new vote
             if (!existingVote) {
             }
