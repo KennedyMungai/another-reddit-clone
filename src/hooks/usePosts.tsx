@@ -50,8 +50,18 @@ const usePosts = () => {
                     `${user?.uid}/postVotes/${existingVote.id}`
                 );
 
-                if (removingPost) {
+                if (existingVote.voteValue === vote) {
+                    updatedPost.voteStatus = voteStatus - vote;
+
+                    updatedPostVotes = updatedPostVotes.filter(
+                        (vote) => vote.id !== existingVote.id
+                    );
+
+                    batch.delete(postVoteRef);
+
+                    voteChange *= -1;
                 } else {
+                    updatedPost.voteStatus = voteStatus + 2 * vote;
                 }
             }
         } catch (error: any) {
