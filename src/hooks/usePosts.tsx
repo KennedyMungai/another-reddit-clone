@@ -1,6 +1,13 @@
 import { Post, PostVote, postState } from "@/atoms/postsAtom";
 import { auth, firestore, storage } from "@/firebase/clientApp";
-import { collection, deleteDoc, doc, writeBatch } from "firebase/firestore";
+import {
+    collection,
+    deleteDoc,
+    doc,
+    query,
+    where,
+    writeBatch,
+} from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState } from "recoil";
@@ -121,7 +128,12 @@ const usePosts = () => {
         }
     };
 
-    const getCommunityPostVotes = async (communityId: string) => {};
+    const getCommunityPostVotes = async (communityId: string) => {
+        const postVotesQuery = query(
+            collection(firestore, "users", `${user?.uid}/postVotes`),
+            where("communityId", "==", communityId)
+        );
+    };
 
     return {
         postStateValue,
