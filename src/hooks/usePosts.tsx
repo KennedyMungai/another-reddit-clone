@@ -38,8 +38,6 @@ const usePosts = () => {
                 };
 
                 batch.set(postVoteRef, newVote);
-
-                await batch.commit();
             }
             // Existing block for an existing vote
             else {
