@@ -27,7 +27,7 @@ interface PostState
 {
     selectedPost: Post | null
     posts: Post[]
-    // postVotes
+    postVotes: PostVote[]
 }
 
 const defaultState: PostState = {
