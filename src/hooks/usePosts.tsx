@@ -21,7 +21,6 @@ const usePosts = () => {
             const updatePost = { ...post };
             const updatedPost = [...postStateValue.posts];
             let updatedPostVotes = [...postStateValue.postVotes];
-
             let voteChange = vote;
 
             // Execution block for a new vote
