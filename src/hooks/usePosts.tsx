@@ -74,6 +74,12 @@ const usePosts = () => {
 
                     batch.update(postVoteRef, { voteValue: vote });
 
+                    const postIdx = postStateValue.posts.findIndex(
+                        (item) => item.id === post.id
+                    );
+
+                    // updatedPosts[postIdx] = updatedPost;
+
                     setPostStateValue((prev) => ({
                         ...prev,
                         posts: updatedPost,
