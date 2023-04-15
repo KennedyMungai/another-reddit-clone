@@ -1,10 +1,13 @@
 import { Post, postState } from "@/atoms/postsAtom";
-import { firestore, storage } from "@/firebase/clientApp";
-import { deleteDoc, doc, writeBatch } from "firebase/firestore";
+import { auth, firestore, storage } from "@/firebase/clientApp";
+import { collection, deleteDoc, doc, writeBatch } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState } from "recoil";
 
 const usePosts = () => {
+    const [user] = useAuthState(auth);
+
     const [postStateValue, setPostStateValue] = useRecoilState(postState);
 
     const onVote = async (post: Post, vote: number, communityId: string) => {
@@ -23,7 +26,8 @@ const usePosts = () => {
 
             // Execution block for a new vote
             if (!existingVote) {
-            }
+                const postVoteRef = doc(collection(firestore, "users", `${user.uid}/postVotes/`));
+            
             // Existing block for an existing vote
             else {
                 if (removingPost) {
