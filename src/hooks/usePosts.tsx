@@ -44,6 +44,12 @@ const usePosts = () => {
             }
             // Existing block for an existing vote
             else {
+                const postVoteRef = doc(
+                    firestore,
+                    "users",
+                    `${user?.uid}/postVotes/${existingVote.id}`
+                );
+
                 if (removingPost) {
                 } else {
                 }
