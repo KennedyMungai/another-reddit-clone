@@ -1,3 +1,5 @@
+import { authModalState } from "@/atoms/AuthModalAtom";
+import { communityState } from "@/atoms/communitiesAtom";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
     Flex,
@@ -15,10 +17,8 @@ import { FaRedditSquare } from "react-icons/fa";
 import { IoSparkles } from "react-icons/io5";
 import { MdOutlineLogin } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
-import { auth } from "../../../firebase/clientApp";
 import { useResetRecoilState, useSetRecoilState } from "recoil";
-import { authModalState } from "@/atoms/AuthModalAtom";
-import { communityState } from "@/atoms/communitiesAtom";
+import { auth } from "../../../firebase/clientApp";
 
 type Props = {
     user: User;
