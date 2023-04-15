@@ -1,3 +1,4 @@
+import { communityState } from "@/atoms/communitiesAtom";
 import { Post, PostVote, postState } from "@/atoms/postsAtom";
 import { auth, firestore, storage } from "@/firebase/clientApp";
 import {
@@ -11,13 +12,16 @@ import {
     writeBatch,
 } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
+import { useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 
 const usePosts = () => {
     const [user] = useAuthState(auth);
 
     const [postStateValue, setPostStateValue] = useRecoilState(postState);
+
+    const currentCommunity = useRecoilValue(communityState).currentCommunity;
 
     const onVote = async (post: Post, vote: number, communityId: string) => {
         try {
@@ -147,6 +151,11 @@ const usePosts = () => {
             postVotes: postVotes as PostVote[],
         }));
     };
+
+    useEffect(() => {
+        if (!currentCommunity) return;
+        getCommunityPostVotes(currentCommunity.id);
+    }, [currentCommunity]);
 
     return {
         postStateValue,
