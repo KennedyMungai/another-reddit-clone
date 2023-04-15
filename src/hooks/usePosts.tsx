@@ -8,6 +8,8 @@ const usePosts = () => {
     const [postStateValue, setPostStateValue] = useRecoilState(postState);
 
     const onVote = async (post: Post, vote: number, communityId: string) => {
+        const { voteStatus } = post;
+
         try {
             // Execution block for a new vote
             if (newVote) {
