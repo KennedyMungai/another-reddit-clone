@@ -51,7 +51,7 @@ const usePosts = () => {
                 );
 
                 if (existingVote.voteValue === vote) {
-                    updatedPost.voteStatus = voteStatus - vote;
+                    updatedPost[0].voteStatus = voteStatus - vote;
 
                     updatedPostVotes = updatedPostVotes.filter(
                         (vote) => vote.id !== existingVote.id
@@ -61,7 +61,18 @@ const usePosts = () => {
 
                     voteChange *= -1;
                 } else {
-                    updatedPost.voteStatus = voteStatus + 2 * vote;
+                    updatedPost[0].voteStatus = voteStatus + 2 * vote;
+
+                    const voteIdx = postStateValue.postVotes.findIndex(
+                        (vote) => vote.id === existingVote.id
+                    );
+
+                    updatedPostVotes[voteIdx] = {
+                        ...existingVote,
+                        voteValue: vote,
+                    };
+
+                    batch.update(postVoteRef, { voteValue: vote });
                 }
             }
         } catch (error: any) {
