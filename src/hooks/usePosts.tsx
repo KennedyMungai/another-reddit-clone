@@ -4,6 +4,8 @@ import {
     collection,
     deleteDoc,
     doc,
+    getDoc,
+    getDocs,
     query,
     where,
     writeBatch,
@@ -133,6 +135,17 @@ const usePosts = () => {
             collection(firestore, "users", `${user?.uid}/postVotes`),
             where("communityId", "==", communityId)
         );
+
+        const postVoteDocs = await getDocs(postVotesQuery);
+        const postVotes = postVoteDocs.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data,
+        }));
+
+        setPostStateValue((prev) => ({
+            ...prev,
+            postVotes: postVotes as PostVote[],
+        }));
     };
 
     return {
