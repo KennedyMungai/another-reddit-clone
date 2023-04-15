@@ -8,12 +8,14 @@ const usePosts = () => {
     const [postStateValue, setPostStateValue] = useRecoilState(postState);
 
     const onVote = async (post: Post, vote: number, communityId: string) => {
-        // Execution block for a new vote
-        if (newVote) {
-        }
-        // Existing block for an existing vote
-        else {
-        }
+        try {
+            // Execution block for a new vote
+            if (newVote) {
+            }
+            // Existing block for an existing vote
+            else {
+            }
+        } catch (error) {}
     };
 
     const onSelectPost = () => {};
