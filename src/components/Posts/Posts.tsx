@@ -72,7 +72,11 @@ const Posts = ({ communityData }: Props) => {
                             onDeletePost={onDeletePost}
                             onSelectPost={onSelectPost}
                             userIsCreator={user?.uid === item.creatorId}
-                            userVoteValue={undefined}
+                            userVoteValue={
+                                postStateValue.postVotes.find(
+                                    (vote) => vote.postId === item.id
+                                )?.voteValue
+                            }
                         />
                     ))}
                 </Stack>
