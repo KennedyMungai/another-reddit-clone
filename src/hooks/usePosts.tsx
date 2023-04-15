@@ -35,6 +35,7 @@ const usePosts = () => {
                     voteValue: vote
                 }
             
+                batch.set(postVoteRef, newVote)
             // Existing block for an existing vote
             else {
                 if (removingPost) {
