@@ -32,7 +32,7 @@ const UserMenu = ({ user }: Props) => {
         await signOut(auth);
 
         //Clear the community state
-        resetCommunityState();
+        // resetCommunityState();
     };
 
     return (
