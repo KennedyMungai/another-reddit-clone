@@ -1,4 +1,4 @@
-import { Post, postState } from "@/atoms/postsAtom";
+import { Post, PostVote, postState } from "@/atoms/postsAtom";
 import { auth, firestore, storage } from "@/firebase/clientApp";
 import { collection, deleteDoc, doc, writeBatch } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
@@ -27,6 +27,13 @@ const usePosts = () => {
             // Execution block for a new vote
             if (!existingVote) {
                 const postVoteRef = doc(collection(firestore, "users", `${user?.uid}/postVotes/`));
+
+                const newVote: PostVote = {
+                    id: postVoteRef.id,
+                    postId: post.id!,
+                    communityId,
+                    voteValue: vote
+                }
             
             // Existing block for an existing vote
             else {
