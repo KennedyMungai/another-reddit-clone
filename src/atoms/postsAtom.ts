@@ -32,7 +32,8 @@ interface PostState
 
 const defaultState: PostState = {
     selectedPost: null,
-    posts: []
+    posts: [],
+    postVotes: []
 }
 
 export const postState = atom<PostState>({
