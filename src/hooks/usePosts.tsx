@@ -26,7 +26,7 @@ const usePosts = () => {
 
             // Execution block for a new vote
             if (!existingVote) {
-                const postVoteRef = doc(collection(firestore, "users", `${user.uid}/postVotes/`));
+                const postVoteRef = doc(collection(firestore, "users", `${user?.uid}/postVotes/`));
             
             // Existing block for an existing vote
             else {
