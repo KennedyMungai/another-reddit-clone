@@ -121,6 +121,8 @@ const usePosts = () => {
         }
     };
 
+    const getCommunityPostVotes = async () => {};
+
     return {
         postStateValue,
         setPostStateValue,
