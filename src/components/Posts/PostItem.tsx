@@ -29,7 +29,7 @@ type Props = {
     userVoteValue?: number;
     onVote: (post: Post, vote: number, communityId: string) => void;
     onDeletePost: (post: Post) => Promise<boolean>;
-    onSelectPost: () => void;
+    onSelectPost?: () => void;
 };
 
 const PostItem = ({
