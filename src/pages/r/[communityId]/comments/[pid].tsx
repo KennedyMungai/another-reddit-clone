@@ -63,7 +63,11 @@ const PostPage = () => {
 				)}
 			</>
 			<>
-				<About communityData={communityStateValue.currentCommunity} />
+				{communityStateValue.currentCommunity && (
+					<About
+						communityData={communityStateValue.currentCommunity}
+					/>
+				)}
 			</>
 		</PageContent>
 	)
