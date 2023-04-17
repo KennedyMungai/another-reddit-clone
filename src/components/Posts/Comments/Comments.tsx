@@ -3,6 +3,8 @@ import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
 import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
+import { writeBatch } from 'firebase/firestore'
+import { firestore } from '@/firebase/clientApp'
 
 type Props = {
 	user: User
