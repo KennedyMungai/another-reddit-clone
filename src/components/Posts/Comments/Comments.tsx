@@ -29,7 +29,7 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 	const [fetchLoading, setFetchLoading] = useState<boolean>(false)
 	const [createLoading, setCreateLoading] = useState<boolean>(false)
 
-	const onCreateComment = async (commentText: string) => {
+	const onCreateComment = async () => {
 		try {
 			const batch = writeBatch(firestore)
 
