@@ -113,7 +113,9 @@ const usePosts = () => {
         }
     };
 
-    const onSelectPost = () => {};
+    const onSelectPost = (post: Post) => {
+        setPostStateValue((prev) => ({ ...prev, selectedPost: post }));
+    };
 
     const onDeletePost = async (post: Post): Promise<boolean> => {
         try {
