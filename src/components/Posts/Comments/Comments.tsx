@@ -73,6 +73,14 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 
 			setCommentText('')
 			setComments((prev) => [newComment, ...prev])
+
+			setPostState((prev) => ({
+				...prev,
+				selectedPost: {
+					...prev.selectedPost,
+					numberOfComments: prev.selectedPost?.numberOfComments! + 1
+				} as Post
+			}))
 		} catch (error: any) {
 			console.log('OnCreateComment', error)
 		}
