@@ -137,7 +137,7 @@ const useCommunityData = () => {
 		setLoading(false)
 	}
 
-	const getCommunityData = async () => {}
+	const getCommunityData = async (communityId: string) => {}
 
 	useEffect(() => {
 		if (!user) {
