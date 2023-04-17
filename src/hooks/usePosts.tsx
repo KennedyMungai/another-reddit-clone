@@ -25,7 +25,7 @@ const usePosts = () => {
     const router = useRouter();
 
     const onVote = async (
-        event: MouseEvent,
+        event: MouseEvent<SVGElement, MouseEvent>,
         post: Post,
         vote: number,
         communityId: string
