@@ -12,6 +12,7 @@ import {
 } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
+import { Comment } from './CommentItem'
 import { useSetRecoilState } from 'recoil'
 
 type Props = {
