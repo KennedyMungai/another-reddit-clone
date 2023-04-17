@@ -31,8 +31,6 @@ const PostPage = () => {
 		}
 	}
 
-	const getCommunityData = async () => {}
-
 	useEffect(() => {
 		const { pid } = router.query
 
@@ -40,8 +38,6 @@ const PostPage = () => {
 			fetchPosts(pid as string)
 		}
 	}, [router.query, postStateValue.selectedPost])
-
-	useEffect(() => {}, [])
 
 	return (
 		<PageContent>
