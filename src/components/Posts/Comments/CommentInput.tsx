@@ -1,5 +1,4 @@
 import { User } from 'firebase/auth'
-import React from 'react'
 
 type Props = {
 	commentText: string
