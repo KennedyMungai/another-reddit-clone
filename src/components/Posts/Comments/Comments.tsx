@@ -20,9 +20,11 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 		getPostComments()
 	}, [])
 
-	return <Box bg='white' borderRadius={'0px 0px 4px 4px'}>
-        Here are comments
-    </Box>
+	return (
+		<Box bg='white' borderRadius={'0px 0px 4px 4px'} p={2}>
+			Here are comments
+		</Box>
+	)
 }
 
 export default Comments
