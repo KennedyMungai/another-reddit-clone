@@ -12,6 +12,7 @@ import {
 	increment,
 	writeBatch
 } from 'firebase/firestore'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useRecoilState, useSetRecoilState } from 'recoil'
@@ -23,6 +24,7 @@ const useCommunityData = () => {
 	const [loading, setLoading] = useState<boolean>(false)
 	const [error, setError] = useState<string>('')
 	const setAuthModalState = useSetRecoilState(authModalState)
+	const router = useRouter()
 
 	const onJoinOrLeaveCommunity = (
 		communityData: Community,
