@@ -9,7 +9,7 @@ const PostPage = () => {
     const { postStateValue, setPostStateValue, onDeletePost, onVote } =
         usePosts();
 
-    const fetchPosts = async () => {};
+    const fetchPosts = async (postId: string) => {};
 
     return (
         <PageContent>
