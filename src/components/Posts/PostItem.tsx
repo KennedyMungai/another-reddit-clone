@@ -50,7 +50,11 @@ const PostItem = ({
     const [loadingDelete, setLoadingDelete] = useState<boolean>(false);
     const singlePostPage = !onSelectPost;
 
-    const handleDelete = async () => {
+    const handleDelete = async (
+        event: MouseEvent<HTMLDivElement, MouseEvent>
+    ) => {
+        event.stopPropagation();
+
         setLoadingDelete(true);
 
         try {
