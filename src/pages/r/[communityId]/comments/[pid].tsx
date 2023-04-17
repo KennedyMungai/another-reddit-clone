@@ -17,7 +17,9 @@ const PostPage = () => {
     useEffect(() => {
         const { pid } = router.query;
 
-        fetchPosts();
+        if (pid && !postStateValue.selectedPost) {
+            fetchPosts(pid as string);
+        }
     }, []);
 
     return (
