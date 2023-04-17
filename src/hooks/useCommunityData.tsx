@@ -137,7 +137,7 @@ const useCommunityData = () => {
 		setLoading(false)
 	}
 
-    const getCommunityData = async () => {}
+	const getCommunityData = async () => {}
 
 	useEffect(() => {
 		if (!user) {
@@ -148,7 +148,13 @@ const useCommunityData = () => {
 		getMySnippets()
 	}, [user])
 
-	useEffect(() => {}, [])
+	useEffect(() => {
+		const { communityId } = router.query
+
+		if (communityId && !communityStateValue.currentCommunity) {
+			getCommunityData(communityId)
+		}
+	}, [])
 
 	return {
 		// Data and functions
