@@ -6,6 +6,7 @@ import {
 	Timestamp,
 	collection,
 	doc,
+	increment,
 	serverTimestamp,
 	writeBatch
 } from 'firebase/firestore'
@@ -59,6 +60,12 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 				'posts',
 				selectedPost?.id as string
 			)
+
+			batch.update(postDocRef, {
+				numberOfComments: increment(1)
+			})
+
+			await batch.commit()
 		} catch (error: any) {
 			console.log('OnCreateComment', error)
 		}
