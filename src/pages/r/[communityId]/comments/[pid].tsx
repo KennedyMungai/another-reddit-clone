@@ -9,6 +9,8 @@ const PostPage = () => {
     const { postStateValue, setPostStateValue, onDeletePost, onVote } =
         usePosts();
 
+    const fetchPosts = () => {};
+
     return (
         <PageContent>
             <>
