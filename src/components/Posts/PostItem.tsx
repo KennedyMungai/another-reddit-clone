@@ -11,6 +11,7 @@ import {
     Text,
 } from "@chakra-ui/react";
 import moment from "moment";
+import { useRouter } from "next/router";
 import { MouseEvent, useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat } from "react-icons/bs";
@@ -49,6 +50,7 @@ const PostItem = ({
     const [error, setError] = useState<boolean>(false);
     const [loadingDelete, setLoadingDelete] = useState<boolean>(false);
     const singlePostPage = !onSelectPost;
+    const router = useRouter();
 
     const handleDelete = async (
         event: MouseEvent<HTMLDivElement, MouseEvent>
