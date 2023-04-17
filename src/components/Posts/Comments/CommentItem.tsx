@@ -1,5 +1,4 @@
 import { Timestamp } from 'firebase/firestore'
-import React from 'react'
 
 type Props = {}
 
