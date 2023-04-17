@@ -6,7 +6,7 @@ type Props = {
 	setCommentText: (value: string) => void
 	user: User
 	createLoading: boolean
-	onCreateComment: (commentText: string) => {}
+	onCreateComment: (commentText: string) => void
 }
 
 const CommentInput = ({
