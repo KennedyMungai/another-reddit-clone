@@ -34,7 +34,13 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 				fontSize='10pt'
 				width='100%'
 			>
-				<CommentInput />
+				<CommentInput
+					commentText={commentText}
+					createLoading={createLoading}
+					setCommentText={setCommentText}
+					user={}
+					onCreateComment={onCreateComment}
+				/>
 			</Flex>
 		</Box>
 	)
