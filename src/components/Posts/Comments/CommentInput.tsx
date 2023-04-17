@@ -1,5 +1,5 @@
 import AuthButtons from '@/components/NavBar/RightContent/AuthButtons'
-import { Flex, Textarea, Button, Text } from '@chakra-ui/react'
+import { Button, Flex, Text, Textarea } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
 
 type Props = {
