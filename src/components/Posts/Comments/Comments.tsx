@@ -2,7 +2,7 @@ import { Post } from '@/atoms/postsAtom'
 import { firestore } from '@/firebase/clientApp'
 import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
-import { Timestamp, writeBatch } from 'firebase/firestore'
+import { Timestamp, collection, doc, writeBatch } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
 
@@ -33,7 +33,17 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 		try {
 			const batch = writeBatch(firestore)
 
-			const newComment: Comment
+			const commentDocRef = doc(collection(firestore, 'comments'))
+
+			const newComment: Comment = {
+				id: commentDocRef.id,
+				creatorId: user.uid,
+				creatorDisplayText: user.email!.split('@')[0],
+				communityId,
+				postId: selectedPost?.id! as string,
+				postTitle: selectedPost?.title! as string,
+				text: commentText
+			}
 		} catch (error: any) {
 			console.log('OnCreateComment', error)
 		}
