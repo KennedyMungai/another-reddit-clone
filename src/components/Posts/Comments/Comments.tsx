@@ -9,6 +9,8 @@ type Props = {
 }
 
 const Comments = ({ userObject, selectedPost, communityId }: Props) => {
+	const onCreateComment = async (commentText: string) => {}
+
 	return <div>Here are the comments</div>
 }
 
