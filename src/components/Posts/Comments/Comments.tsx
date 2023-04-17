@@ -66,6 +66,9 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 			})
 
 			await batch.commit()
+
+			setCommentText('')
+			setComments((prev) => [newComment, ...prev])
 		} catch (error: any) {
 			console.log('OnCreateComment', error)
 		}
