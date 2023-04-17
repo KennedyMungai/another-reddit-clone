@@ -14,7 +14,9 @@ const PostPage = () => {
 
 	const fetchPosts = async (postId: string) => {
 		try {
-		} catch (error: any) {}
+		} catch (error: any) {
+			console.log('Fetch Posts error', error)
+		}
 	}
 
 	useEffect(() => {
