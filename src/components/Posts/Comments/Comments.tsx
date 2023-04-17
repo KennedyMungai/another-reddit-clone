@@ -2,7 +2,7 @@ import { Post } from '@/atoms/postsAtom'
 import { firestore } from '@/firebase/clientApp'
 import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
-import { writeBatch } from 'firebase/firestore'
+import { Timestamp, writeBatch } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
 
@@ -20,6 +20,7 @@ export type Comment = {
 	postId: string
 	postTitle: string
 	text: string
+	createdAt: Timestamp
 }
 
 const Comments = ({ user, selectedPost, communityId }: Props) => {
