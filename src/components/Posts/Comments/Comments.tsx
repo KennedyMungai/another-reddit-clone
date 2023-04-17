@@ -13,6 +13,7 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 	const [commentText, setCommentText] = useState<string>('')
 	const [comments, setComments] = useState<string[]>([])
 	const [fetchLoading, setFetchLoading] = useState<boolean>(false)
+	const [createLoading, setCreateLoading] = useState<boolean>(false)
 
 	const onCreateComment = async (commentText: string) => {}
 	const onDeleteComment = async (comment: any) => {}
