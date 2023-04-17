@@ -13,6 +13,8 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 
 	const onDeleteComment = async (comment: any) => {}
 
+	const getPostComments = async () => {}
+
 	return <div>Here are the comments</div>
 }
 
