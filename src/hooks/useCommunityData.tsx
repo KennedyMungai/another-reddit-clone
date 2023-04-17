@@ -139,7 +139,9 @@ const useCommunityData = () => {
 
 	const getCommunityData = async (communityId: string) => {
 		try {
-		} catch (error: any) {}
+		} catch (error: any) {
+			console.log('Get Community Data', error)
+		}
 	}
 
 	useEffect(() => {
