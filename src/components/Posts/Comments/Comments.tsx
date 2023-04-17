@@ -2,6 +2,7 @@ import { Post } from '@/atoms/postsAtom'
 import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
 import { useEffect, useState } from 'react'
+import CommentInput from './CommentInput'
 
 type Props = {
 	userObject: User
@@ -33,7 +34,7 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 				fontSize='10pt'
 				width='100%'
 			>
-				{/* <CommentInput /> */}
+				<CommentInput />
 			</Flex>
 		</Box>
 	)
