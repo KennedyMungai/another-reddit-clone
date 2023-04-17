@@ -1,6 +1,6 @@
 import { Post } from '@/atoms/postsAtom'
 import { User } from 'firebase/auth'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 
 type Props = {
 	userObject: User
@@ -16,7 +16,7 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 	const getPostComments = async () => {}
 
 	useEffect(() => {
-		getPostComments()
+		getPostComments
 	}, [])
 
 	return <div>Here are the comments</div>
