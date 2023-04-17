@@ -1,4 +1,4 @@
-import { Post } from '@/atoms/postsAtom'
+import { Post, postState } from '@/atoms/postsAtom'
 import { firestore } from '@/firebase/clientApp'
 import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
@@ -12,6 +12,7 @@ import {
 } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
+import { useSetRecoilState } from 'recoil'
 
 type Props = {
 	user: User
@@ -35,6 +36,7 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 	const [comments, setComments] = useState<Comment[]>([])
 	const [fetchLoading, setFetchLoading] = useState<boolean>(false)
 	const [createLoading, setCreateLoading] = useState<boolean>(false)
+	const setPostState = useSetRecoilState(postState)
 
 	const onCreateComment = async () => {
 		setCreateLoading(true)
