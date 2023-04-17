@@ -67,6 +67,10 @@ const PostItem = ({
             }
 
             console.log("The post was successfully deleted");
+
+            if (singlePostPage) {
+                router.push(`/r/${post.communityId}`);
+            }
         } catch (error: any) {
             setError(error.message);
         }
