@@ -13,7 +13,7 @@ import {
 } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { MouseEvent, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 
@@ -24,7 +24,12 @@ const usePosts = () => {
     const setAuthModalState = useSetRecoilState(authModalState);
     const router = useRouter();
 
-    const onVote = async (post: Post, vote: number, communityId: string) => {
+    const onVote = async (
+        event: MouseEvent,
+        post: Post,
+        vote: number,
+        communityId: string
+    ) => {
         if (!user?.uid) {
             setAuthModalState({ open: true, view: "login" });
         }
