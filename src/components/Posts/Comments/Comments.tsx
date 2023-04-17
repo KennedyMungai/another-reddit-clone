@@ -53,6 +53,12 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 			}
 
 			batch.set(commentDocRef, newComment)
+
+			const postDocRef = doc(
+				firestore,
+				'posts',
+				selectedPost?.id as string
+			)
 		} catch (error: any) {
 			console.log('OnCreateComment', error)
 		}
