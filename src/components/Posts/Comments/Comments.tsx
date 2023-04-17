@@ -2,7 +2,13 @@ import { Post } from '@/atoms/postsAtom'
 import { firestore } from '@/firebase/clientApp'
 import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
-import { Timestamp, collection, doc, serverTimestamp, writeBatch } from 'firebase/firestore'
+import {
+	Timestamp,
+	collection,
+	doc,
+	serverTimestamp,
+	writeBatch
+} from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
 
