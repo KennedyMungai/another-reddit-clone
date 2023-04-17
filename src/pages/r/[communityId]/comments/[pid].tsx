@@ -4,8 +4,11 @@ import React from "react";
 const PostPage = () => {
     return (
         <PageContent>
-            <></>
-            <></>
+            <>
+                {/* Selected Post */}
+                {/* Comments */}
+            </>
+            <>{/* About */}</>
         </PageContent>
     );
 };
