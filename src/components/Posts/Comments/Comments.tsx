@@ -11,9 +11,9 @@ import {
 	writeBatch
 } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
+import { useSetRecoilState } from 'recoil'
 import CommentInput from './CommentInput'
 import { Comment } from './CommentItem'
-import { useSetRecoilState } from 'recoil'
 
 type Props = {
 	user: User
