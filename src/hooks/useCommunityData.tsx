@@ -170,7 +170,7 @@ const useCommunityData = () => {
 		if (communityId && !communityStateValue.currentCommunity) {
 			getCommunityData(communityId as string)
 		}
-	}, [])
+	}, [router.query, communityStateValue.currentCommunity])
 
 	return {
 		// Data and functions
