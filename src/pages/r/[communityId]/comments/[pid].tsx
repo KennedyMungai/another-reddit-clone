@@ -20,7 +20,7 @@ const PostPage = () => {
         if (pid && !postStateValue.selectedPost) {
             fetchPosts(pid as string);
         }
-    }, []);
+    }, [router.query, postStateValue.selectedPost]);
 
     return (
         <PageContent>
