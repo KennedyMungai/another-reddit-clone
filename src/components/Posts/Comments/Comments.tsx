@@ -51,6 +51,8 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 				text: commentText,
 				createdAt: serverTimestamp() as Timestamp
 			}
+
+			batch.set(commentDocRef, newComment)
 		} catch (error: any) {
 			console.log('OnCreateComment', error)
 		}
