@@ -40,6 +40,8 @@ const PostPage = () => {
 		}
 	}, [router.query, postStateValue.selectedPost])
 
+	useEffect(() => {}, [])
+
 	return (
 		<PageContent>
 			<>
