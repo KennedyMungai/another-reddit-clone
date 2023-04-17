@@ -1,4 +1,5 @@
 import { Post } from '@/atoms/postsAtom'
+import { Box } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
 import { useEffect } from 'react'
 
@@ -19,7 +20,9 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 		getPostComments()
 	}, [])
 
-	return <div>Here are the comments</div>
+	return <Box bg='white' borderRadius={'0px 0px 4px 4px'}>
+        Here are comments
+    </Box>
 }
 
 export default Comments
