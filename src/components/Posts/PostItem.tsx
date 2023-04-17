@@ -43,6 +43,7 @@ const PostItem = ({
     const [loadingImage, setLoadingImage] = useState<boolean>(false);
     const [error, setError] = useState<boolean>(false);
     const [loadingDelete, setLoadingDelete] = useState<boolean>(false);
+    const singlePostPage = !onSelectPost;
 
     const handleDelete = async () => {
         setLoadingDelete(true);
