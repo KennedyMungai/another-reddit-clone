@@ -62,11 +62,13 @@ const PostPage = () => {
 					/>
 				)}
 
-				<Comments
-					user={user}
-					selectedPost={postStateValue.selectedPost}
-					communityId={postStateValue.selectedPost.communityId}
-				/>
+				{postStateValue.selectedPost && user && (
+					<Comments
+						user={user}
+						selectedPost={postStateValue.selectedPost}
+						communityId={postStateValue.selectedPost?.communityId}
+					/>
+				)}
 			</>
 			<>
 				{communityStateValue.currentCommunity && (
