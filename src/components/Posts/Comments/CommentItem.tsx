@@ -18,7 +18,7 @@ export type Comment = {
 	createdAt: Timestamp
 }
 
-const CommentItem = (props: Props) => {
+const CommentItem = ({ comment, onDelete, loadingDelete, userId }: Props) => {
 	return <div>CommentItem</div>
 }
 
