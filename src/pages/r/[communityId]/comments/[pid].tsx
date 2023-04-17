@@ -1,4 +1,5 @@
 import { Post } from '@/atoms/postsAtom'
+import About from '@/components/Community/About'
 import PageContent from '@/components/Layout/PageContent'
 import PostItem from '@/components/Posts/PostItem'
 import { auth, firestore } from '@/firebase/clientApp'
@@ -13,6 +14,7 @@ const PostPage = () => {
 	const { postStateValue, setPostStateValue, onDeletePost, onVote } =
 		usePosts()
 	const router = useRouter()
+	const { communityStateValue } = useCommunityData()
 
 	const fetchPosts = async (postId: string) => {
 		try {
@@ -59,7 +61,9 @@ const PostPage = () => {
 					/>
 				)}
 			</>
-			<>{/* About */}</>
+			<>
+				<About communityData={communityStateValue.currentCommunity} />
+			</>
 		</PageContent>
 	)
 }
