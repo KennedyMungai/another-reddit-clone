@@ -8,6 +8,7 @@ import { auth, firestore } from '@/firebase/clientApp'
 import {
 	collection,
 	doc,
+	getDoc,
 	getDocs,
 	increment,
 	writeBatch
@@ -139,6 +140,8 @@ const useCommunityData = () => {
 
 	const getCommunityData = async (communityId: string) => {
 		try {
+			const communityDocRef = doc(firestore, 'communities', communityId)
+			const communityDoc = await getDoc(communityDocRef)
 		} catch (error: any) {
 			console.log('Get Community Data', error)
 		}
