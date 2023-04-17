@@ -12,7 +12,10 @@ const PostPage = () => {
 		usePosts()
 	const router = useRouter()
 
-	const fetchPosts = async (postId: string) => {}
+	const fetchPosts = async (postId: string) => {
+		try {
+		} catch (error: any) {}
+	}
 
 	useEffect(() => {
 		const { pid } = router.query
