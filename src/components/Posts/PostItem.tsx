@@ -11,7 +11,7 @@ import {
     Text,
 } from "@chakra-ui/react";
 import moment from "moment";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat } from "react-icons/bs";
 import {
@@ -27,7 +27,12 @@ type Props = {
     post: Post;
     userIsCreator: boolean;
     userVoteValue?: number;
-    onVote: (post: Post, vote: number, communityId: string) => void;
+    onVote: (
+        event: MouseEvent<SVGElement, MouseEvent>,
+        post: Post,
+        vote: number,
+        communityId: string
+    ) => void;
     onDeletePost: (post: Post) => Promise<boolean>;
     onSelectPost?: (post: Post) => void;
 };
