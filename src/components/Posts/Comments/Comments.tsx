@@ -20,17 +20,6 @@ type Props = {
 	communityId: string
 }
 
-export type Comment = {
-	id: string
-	creatorId: string
-	creatorDisplayText: string
-	communityId: string
-	postId: string
-	postTitle: string
-	text: string
-	createdAt: Timestamp
-}
-
 const Comments = ({ user, selectedPost, communityId }: Props) => {
 	const [commentText, setCommentText] = useState<string>('')
 	const [comments, setComments] = useState<Comment[]>([])
