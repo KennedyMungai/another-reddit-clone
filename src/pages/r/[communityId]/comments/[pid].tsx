@@ -6,6 +6,7 @@ import PostItem from '@/components/Posts/PostItem'
 import { auth, firestore } from '@/firebase/clientApp'
 import useCommunityData from '@/hooks/useCommunityData'
 import usePosts from '@/hooks/usePosts'
+import { User } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
@@ -62,13 +63,13 @@ const PostPage = () => {
 					/>
 				)}
 
-				{postStateValue.selectedPost && user && (
-					<Comments
-						user={user}
-						selectedPost={postStateValue.selectedPost}
-						communityId={postStateValue.selectedPost?.communityId}
-					/>
-				)}
+				<Comments
+					user={user as User}
+					selectedPost={postStateValue.selectedPost as Post}
+					communityId={
+						postStateValue.selectedPost?.communityId as string
+					}
+				/>
 			</>
 			<>
 				{communityStateValue.currentCommunity && (
