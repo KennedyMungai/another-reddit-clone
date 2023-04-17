@@ -9,7 +9,13 @@ type Props = {
 	onCreateComment: (commentText: string) => {}
 }
 
-const CommentInput = (props: Props) => {
+const CommentInput = ({
+	commentText,
+	setCommentText,
+	user,
+	createLoading,
+	onCreateComment
+}: Props) => {
 	return <div>CommentInput</div>
 }
 
