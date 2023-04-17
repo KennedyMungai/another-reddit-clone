@@ -96,12 +96,17 @@ const usePosts = () => {
                         (item) => item.id === post.id
                     );
 
-                    // updatedPosts[postIdx] = updatedPost;
-
                     setPostStateValue((prev) => ({
                         ...prev,
                         posts: updatedPost,
                         postVotes: updatedPostVotes,
+                    }));
+                }
+
+                if (postStateValue.selectedPost) {
+                    setPostStateValue((prev) => ({
+                        ...prev,
+                        selectedPost: updatedPost,
                     }));
                 }
 
