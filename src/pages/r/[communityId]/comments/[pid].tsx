@@ -30,6 +30,8 @@ const PostPage = () => {
 		}
 	}
 
+	const getCommunityData = async () => {}
+
 	useEffect(() => {
 		const { pid } = router.query
 
