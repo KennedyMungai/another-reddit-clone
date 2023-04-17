@@ -1,7 +1,7 @@
 import { Post } from '@/atoms/postsAtom'
 import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 type Props = {
 	userObject: User
@@ -10,6 +10,8 @@ type Props = {
 }
 
 const Comments = ({ userObject, selectedPost, communityId }: Props) => {
+	const [commentText, setCommentText] = useState<string>('')
+
 	const onCreateComment = async (commentText: string) => {}
 	const onDeleteComment = async (comment: any) => {}
 	const getPostComments = async () => {}
