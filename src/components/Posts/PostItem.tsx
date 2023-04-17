@@ -76,10 +76,10 @@ const PostItem = ({
             <Flex
                 direction="column"
                 align="center"
-                bg="gray.100"
+                bg={singlePostPage ? "none" : "gray.100"}
                 p={2}
                 width={"40px"}
-                borderRadius={4}
+                borderRadius={singlePostPage ? "4px 4px 0px 0px" : "4"}
             >
                 <Icon
                     as={
