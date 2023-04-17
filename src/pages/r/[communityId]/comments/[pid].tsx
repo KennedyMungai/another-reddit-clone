@@ -15,6 +15,8 @@ const PostPage = () => {
     const fetchPosts = async (postId: string) => {};
 
     useEffect(() => {
+        const { pid } = router.query;
+
         fetchPosts();
     }, []);
 
