@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react'
 import CommentInput from './CommentInput'
 
 type Props = {
-	userObject: User
+	user: User
 	selectedPost: Post
 	communityId: string
 }
 
-const Comments = ({ userObject, selectedPost, communityId }: Props) => {
+const Comments = ({ user, selectedPost, communityId }: Props) => {
 	const [commentText, setCommentText] = useState<string>('')
 	const [comments, setComments] = useState<string[]>([])
 	const [fetchLoading, setFetchLoading] = useState<boolean>(false)
@@ -38,7 +38,7 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 					commentText={commentText}
 					createLoading={createLoading}
 					setCommentText={setCommentText}
-					user={}
+					user={user}
 					onCreateComment={onCreateComment}
 				/>
 			</Flex>
