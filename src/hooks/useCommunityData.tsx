@@ -137,6 +137,8 @@ const useCommunityData = () => {
 		setLoading(false)
 	}
 
+    const getCommunityData = async () => {}
+
 	useEffect(() => {
 		if (!user) {
 			setCommunityStateValue((prev) => ({ ...prev, mySnippets: [] }))
