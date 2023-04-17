@@ -2,6 +2,7 @@ import PageContent from "@/components/Layout/PageContent";
 import PostItem from "@/components/Posts/PostItem";
 import { auth } from "@/firebase/clientApp";
 import usePosts from "@/hooks/usePosts";
+import { useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const PostPage = () => {
@@ -10,6 +11,10 @@ const PostPage = () => {
         usePosts();
 
     const fetchPosts = async (postId: string) => {};
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
 
     return (
         <PageContent>
