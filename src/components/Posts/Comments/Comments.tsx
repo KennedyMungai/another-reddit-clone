@@ -8,7 +8,7 @@ type Props = {
 	communityId: string
 }
 
-const Comments = (props: Props) => {
+const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 	return <div>Here are the comments</div>
 }
 
