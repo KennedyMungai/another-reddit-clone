@@ -16,7 +16,7 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 	const getPostComments = async () => {}
 
 	useEffect(() => {
-		getPostComments
+		getPostComments()
 	}, [])
 
 	return <div>Here are the comments</div>
