@@ -142,6 +142,11 @@ const useCommunityData = () => {
 		try {
 			const communityDocRef = doc(firestore, 'communities', communityId)
 			const communityDoc = await getDoc(communityDocRef)
+
+			setCommunityStateValue((prev) => ({
+				...prev,
+                currentCommunity: {id: communityDoc.id, ...communityDoc.data()}
+			}))
 		} catch (error: any) {
 			console.log('Get Community Data', error)
 		}
