@@ -17,7 +17,9 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 	const [createLoading, setCreateLoading] = useState<boolean>(false)
 
 	const onCreateComment = async (commentText: string) => {}
+
 	const onDeleteComment = async (comment: any) => {}
+
 	const getPostComments = async () => {}
 
 	useEffect(() => {
