@@ -1,6 +1,11 @@
 import { Timestamp } from 'firebase/firestore'
 
-type Props = {}
+type Props = {
+	comment: Comment
+	onDelete: (comment: Comment) => void
+	loadingDelete: boolean
+	userId: string
+}
 
 export type Comment = {
 	id: string
