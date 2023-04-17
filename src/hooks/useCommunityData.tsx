@@ -145,7 +145,10 @@ const useCommunityData = () => {
 
 			setCommunityStateValue((prev) => ({
 				...prev,
-                currentCommunity: {id: communityDoc.id, ...communityDoc.data()}
+				currentCommunity: {
+					id: communityDoc.id,
+					...communityDoc.data()
+				} as Community
 			}))
 		} catch (error: any) {
 			console.log('Get Community Data', error)
