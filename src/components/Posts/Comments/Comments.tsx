@@ -32,7 +32,7 @@ export type Comment = {
 
 const Comments = ({ user, selectedPost, communityId }: Props) => {
 	const [commentText, setCommentText] = useState<string>('')
-	const [comments, setComments] = useState<string[]>([])
+	const [comments, setComments] = useState<Comment[]>([])
 	const [fetchLoading, setFetchLoading] = useState<boolean>(false)
 	const [createLoading, setCreateLoading] = useState<boolean>(false)
 
