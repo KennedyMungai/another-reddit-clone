@@ -79,7 +79,7 @@ const PostItem = ({
                 bg={singlePostPage ? "none" : "gray.100"}
                 p={2}
                 width={"40px"}
-                borderRadius={singlePostPage ? "4px 4px 0px 0px" : "4"}
+                borderRadius={singlePostPage ? "0px" : "3px 0px 0px 3px"}
             >
                 <Icon
                     as={
