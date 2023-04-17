@@ -70,7 +70,7 @@ const PostItem = ({
             borderRadius={4}
             _hover={{ borderColor: "gray.500" }}
             cursor="pointer"
-            onClick={onSelectPost}
+            onClick={() => onSelectPost(post)}
         >
             <Flex
                 direction="column"
