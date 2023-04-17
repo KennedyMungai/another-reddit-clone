@@ -1,5 +1,5 @@
 import { Post } from '@/atoms/postsAtom'
-import { Box } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
 import { useEffect } from 'react'
 
@@ -22,7 +22,7 @@ const Comments = ({ userObject, selectedPost, communityId }: Props) => {
 
 	return (
 		<Box bg='white' borderRadius={'0px 0px 4px 4px'} p={2}>
-			Here are comments
+			<Flex>{/* <CommentInput /> */}</Flex>
 		</Box>
 	)
 }
