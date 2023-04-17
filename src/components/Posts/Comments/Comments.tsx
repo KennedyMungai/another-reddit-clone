@@ -18,7 +18,9 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 
 	const onCreateComment = async (commentText: string) => {
 		try {
-		} catch (error: any) {}
+		} catch (error: any) {
+			console.log('OnCreateComment', error)
+		}
 	}
 
 	const onDeleteComment = async (comment: any) => {}
