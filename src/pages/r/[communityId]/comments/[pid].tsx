@@ -1,3 +1,4 @@
+import { Post } from '@/atoms/postsAtom'
 import PageContent from '@/components/Layout/PageContent'
 import PostItem from '@/components/Posts/PostItem'
 import { auth, firestore } from '@/firebase/clientApp'
@@ -17,6 +18,11 @@ const PostPage = () => {
 		try {
 			const postDocRef = doc(firestore, 'posts', postId)
 			const postDoc = await getDoc(postDocRef)
+
+			setPostStateValue((prev) => ({
+				...prev,
+				selectedPost: { id: postDoc.id, ...postDoc.data() } as Post
+			}))
 		} catch (error: any) {
 			console.log('Fetch Posts error', error)
 		}
