@@ -1,5 +1,6 @@
 import { Box, Flex, Icon, Stack, Text } from '@chakra-ui/react'
 import { Timestamp } from 'firebase/firestore'
+import moment from 'moment'
 import { FaReddit } from 'react-icons/fa'
 import {
 	IoArrowDownCircleOutline,
@@ -32,8 +33,12 @@ const CommentItem = ({ comment, onDelete, loadingDelete, userId }: Props) => {
 			</Box>
 			<Stack spacing={1}>
 				<Stack direction={'row'} align={'center'} fontSize={'8pt'}>
-					<Text></Text>
-					<Text></Text>
+					<Text>{comment.creatorDisplayText}</Text>
+					<Text>
+						{moment(
+							new Date(comment.createdAt?.seconds * 1000)
+						).fromNow()}
+					</Text>
 				</Stack>
 			</Stack>
 		</Flex>
