@@ -1,4 +1,6 @@
+import { Box, Flex, Icon } from '@chakra-ui/react'
 import { Timestamp } from 'firebase/firestore'
+import { FaReddit } from 'react-icons/fa'
 
 type Props = {
 	comment: Comment
@@ -19,7 +21,13 @@ export type Comment = {
 }
 
 const CommentItem = ({ comment, onDelete, loadingDelete, userId }: Props) => {
-	return <div>CommentItem</div>
+	return (
+		<Flex>
+			<Box>
+				<Icon as={FaReddit} />
+			</Box>
+		</Flex>
+	)
 }
 
 export default CommentItem
