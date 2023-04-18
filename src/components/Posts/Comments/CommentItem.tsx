@@ -1,6 +1,10 @@
 import { Box, Flex, Icon } from '@chakra-ui/react'
 import { Timestamp } from 'firebase/firestore'
 import { FaReddit } from 'react-icons/fa'
+import {
+	IoArrowDownCircleOutline,
+	IoArrowUpCircleOutline
+} from 'react-icons/io5'
 
 type Props = {
 	comment: Comment
