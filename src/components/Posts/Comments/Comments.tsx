@@ -1,6 +1,6 @@
 import { Post, postState } from '@/atoms/postsAtom'
 import { firestore } from '@/firebase/clientApp'
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, Stack } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
 import {
 	Timestamp,
@@ -13,7 +13,7 @@ import {
 import { useEffect, useState } from 'react'
 import { useSetRecoilState } from 'recoil'
 import CommentInput from './CommentInput'
-import { Comment } from './CommentItem'
+import CommentItem, { Comment } from './CommentItem'
 
 type Props = {
 	user: User
@@ -104,6 +104,11 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 					onCreateComment={onCreateComment}
 				/>
 			</Flex>
+			<Stack spacing={6}>
+				{comments.map((item) => ({
+					<CommentItem key={item} comment={item} onDelete={onDeleteComment} loadingDelete={false} userId={user.uid} />
+				}))}
+			</Stack>
 		</Box>
 	)
 }
