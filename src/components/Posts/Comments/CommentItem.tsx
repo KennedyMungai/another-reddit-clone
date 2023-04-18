@@ -1,4 +1,4 @@
-import { Box, Flex, Icon } from '@chakra-ui/react'
+import { Box, Flex, Icon, Stack } from '@chakra-ui/react'
 import { Timestamp } from 'firebase/firestore'
 import { FaReddit } from 'react-icons/fa'
 import {
@@ -30,6 +30,13 @@ const CommentItem = ({ comment, onDelete, loadingDelete, userId }: Props) => {
 			<Box>
 				<Icon as={FaReddit} />
 			</Box>
+			<Stack spacing={1}>
+				<Stack
+					direction={'row'}
+					align={'center'}
+					fontSize={'8pt'}
+				></Stack>
+			</Stack>
 		</Flex>
 	)
 }
