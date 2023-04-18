@@ -2,14 +2,15 @@ import { Post, postState } from '@/atoms/postsAtom'
 import { firestore } from '@/firebase/clientApp'
 import { Box, Flex, Stack } from '@chakra-ui/react'
 import { User } from 'firebase/auth'
-import {
-	Timestamp,
-	collection,
-	doc,
-	increment,
-	serverTimestamp,
-	writeBatch
-} from 'firebase/firestore'
+import
+	{
+		Timestamp,
+		collection,
+		doc,
+		increment,
+		serverTimestamp,
+		writeBatch
+	} from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { useSetRecoilState } from 'recoil'
 import CommentInput from './CommentInput'
@@ -21,17 +22,20 @@ type Props = {
 	communityId: string
 }
 
-const Comments = ({ user, selectedPost, communityId }: Props) => {
+const Comments = ({ user, selectedPost, communityId }: Props) =>
+{
 	const [commentText, setCommentText] = useState<string>('')
 	const [comments, setComments] = useState<Comment[]>([])
 	const [fetchLoading, setFetchLoading] = useState<boolean>(false)
 	const [createLoading, setCreateLoading] = useState<boolean>(false)
 	const setPostState = useSetRecoilState(postState)
 
-	const onCreateComment = async () => {
+	const onCreateComment = async () =>
+	{
 		setCreateLoading(true)
 
-		try {
+		try
+		{
 			const batch = writeBatch(firestore)
 
 			const commentDocRef = doc(collection(firestore, 'comments'))
@@ -48,6 +52,8 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 			}
 
 			batch.set(commentDocRef, newComment)
+
+			newComment.createdAt = { seconds: Date.now / 1000 } as Timestamp
 
 			const postDocRef = doc(
 				firestore,
@@ -71,18 +77,20 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 					numberOfComments: prev.selectedPost?.numberOfComments! + 1
 				} as Post
 			}))
-		} catch (error: any) {
+		} catch (error: any)
+		{
 			console.log('OnCreateComment', error)
 		}
 
 		setCreateLoading(false)
 	}
 
-	const onDeleteComment = async (comment: any) => {}
+	const onDeleteComment = async (comment: any) => { }
 
-	const getPostComments = async () => {}
+	const getPostComments = async () => { }
 
-	useEffect(() => {
+	useEffect(() =>
+	{
 		getPostComments()
 	}, [])
 
@@ -106,7 +114,7 @@ const Comments = ({ user, selectedPost, communityId }: Props) => {
 			</Flex>
 			<Stack spacing={6}>
 				{comments.map((item) => ({
-					<CommentItem key={item} comment={item} onDelete={onDeleteComment} loadingDelete={false} userId={user.uid} />
+					< CommentItem key = { item } comment = { item } onDelete = { onDeleteComment } loadingDelete = { false} userId = { user.uid } />
 				}))}
 			</Stack>
 		</Box>
